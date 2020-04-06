@@ -77,7 +77,18 @@ int main()
     return 0;
 }
 
-void initialize() {}
+void initialize()
+{
+    TPCollected = 0;
+
+    // Load the background's palette and tiles into a desired space in memory
+    DMANow(3, MenuBackgroundPal, PALETTE, 256);
+    DMANow(3, MenuBackgroundTiles, &CHARBLOCK[0], MenuBackgroundTilesLen / 2);
+    DMANow(3, MenuBackgroundMap, &SCREENBLOCK[28], MenuBackgroundMapLen / 2);
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_8BPP | BG_SIZE_SMALL;
+
+    REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
+}
 void goToMenu()
 {
 
@@ -93,6 +104,8 @@ void goToMenu()
 }
 void menu()
 {
+    initialize();
+    seed++;
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
     {
@@ -100,7 +113,7 @@ void menu()
     }
     if (BUTTON_PRESSED(BUTTON_A))
     {
-        GoToInstructions();
+        goToInstructions();
     }
 }
 void goToInstructions()
@@ -108,7 +121,7 @@ void goToInstructions()
     DMANow(3, instructionBackgroundPal, PALETTE, instructionBackgroundPalLen / 2);
     DMANow(3, instructionBackgroundTiles, &CHARBLOCK[1], instructionBackgroundTilesLen / 2);
     DMANow(3, instructionBackgroundMap, &SCREENBLOCK[21], instructionBackgroundMapLen / 2);
-    REG_BG1CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(21) | BG_SIZE_SMALL;
+    REG_BG1CNT = BG_CHARBLOCK(1) | BG_SCREENBLOCK(21) | BG_SIZE_SMALL | BG_4BPP;
     REG_DISPCTL = MODE0 | BG1_ENABLE;
 
     hideSprites();
@@ -158,7 +171,7 @@ void pause()
     if (BUTTON_PRESSED(BUTTON_START))
         goToGame();
     else if (BUTTON_PRESSED(BUTTON_SELECT))
-        goToStart();
+        goToMenu();
 }
 void goToLose()
 {
