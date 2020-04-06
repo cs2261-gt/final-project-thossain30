@@ -5,6 +5,7 @@
 #include "loseBackground.h"
 #include "pauseBackground.h"
 #include "instructionBackground.h"
+#include "spritesheet.h"
 
 // Prototypes
 void initialize();
@@ -130,4 +131,9 @@ void instructions()
 }
 void goToGame()
 {
+    hideSprites();
+    waitForVBlank();
+    DMANow(3, shadowOAM, OAM, 512);
+
+    state = GAME;
 }
