@@ -143,35 +143,7 @@ void instructions()
         goToGame();
     }
 }
-void goToGame()
-{
-    DMANow(3, gameBackgroundPal, PALETTE, gameBackgroundPalLen / 2);
-    DMANow(3, gameBackgroundTiles, &CHARBLOCK[0], gameBackgroundTilesLen / 2);
-    DMANow(3, gameBackgroundMap, &SCREENBLOCK[24], gameBackgroundMapLen / 2);
-    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(24) | BG_SIZE_WIDE | BG_8BPP;
-    REG_DISPCTL = MODE0 | BG0_ENABLE;
 
-    hideSprites();
-    waitForVBlank();
-    DMANow(3, shadowOAM, OAM, 512);
-
-    state = GAME;
-}
-void game()
-{
-    if (BUTTON_PRESSED(BUTTON_A))
-    {
-        goToWin();
-    }
-    if (BUTTON_PRESSED(BUTTON_B))
-    {
-        goToLose();
-    }
-    if (BUTTON_PRESSED(BUTTON_START))
-    {
-        gotoPause();
-    }
-}
 void gotoPause()
 {
     DMANow(3, pauseBackgroundPal, PALETTE, loseBackgroundPalLen / 2);
@@ -236,5 +208,34 @@ void win()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         goToMenu();
+    }
+}
+void goToGame()
+{
+    DMANow(3, gameBackgroundPal, PALETTE, gameBackgroundPalLen / 2);
+    DMANow(3, gameBackgroundTiles, &CHARBLOCK[0], gameBackgroundTilesLen / 2);
+    DMANow(3, gameBackgroundMap, &SCREENBLOCK[24], gameBackgroundMapLen / 2);
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(24) | BG_SIZE_WIDE | BG_8BPP;
+    REG_DISPCTL = MODE0 | BG0_ENABLE;
+
+    hideSprites();
+    waitForVBlank();
+    DMANow(3, shadowOAM, OAM, 512);
+
+    state = GAME;
+}
+void game()
+{
+    if (BUTTON_PRESSED(BUTTON_A))
+    {
+        goToWin();
+    }
+    if (BUTTON_PRESSED(BUTTON_B))
+    {
+        goToLose();
+    }
+    if (BUTTON_PRESSED(BUTTON_START))
+    {
+        gotoPause();
     }
 }
