@@ -112,9 +112,14 @@ typedef struct{
 int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, int widthB, int heightB);
 # 2 "game.h" 2
 
+
+
+
 extern int lost;
 extern int won;
 extern int TPCollected;
+int hOff;
+int vOff;
 
 
 
@@ -127,11 +132,16 @@ void updatePlayer();
 void initPaper();
 void drawPaper();
 void updatePaper();
+void initCustomer();
+void drawCustomer();
+void updateCustomer();
 
-typedef struct paper
+typedef struct
 {
-    int row;
-    int col;
+    int screenRow;
+    int screenCol;
+    int worldCol;
+    int worldRow;
     int height;
     int width;
     int curFrame;
@@ -962,11 +972,14 @@ extern long double strtold (const char *restrict, char **restrict);
 
 
 # 6 "game.c"
+int hOff;
+int vOff;
 OBJ_ATTR shadowOAM[128];
 extern int lost;
 extern int won;
 extern int TPCollected;
 TOILETPAPER paper[10];
+ANISPRITE player;
 int playerTimer;
 
 void initPlayer()
@@ -977,16 +990,71 @@ void initPlayer()
     player.rdel = 1;
     player.height = 32;
     player.width = 32;
-    player.worldRow = 200;
-    player.worldCol = 140;
-    player.hide = 1;
+    player.worldRow = 160 / 2 - player.width / 2 + vOff;
+    player.worldCol = 240 / 2 - player.height / 2 + hOff;
+}
+void drawPlayer()
+{
+    shadowOAM[0].attr0 = player.screenRow | (0<<14);
+    shadowOAM[0].attr1 = player.screenCol | (2<<14);
+    shadowOAM[0].attr2 = ((player.aniState * 4)*32+(player.curFrame * 4)) | ((0)<<12);
+}
+void updatePlayer()
+{
+    playerTimer++;
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<5))))
+    {
+        if (player.screenCol > 0)
+        {
+            player.worldCol -= player.cdel;
+            if (hOff >= 0 && player.screenCol < 240 / 2)
+            {
+                hOff--;
+            }
+        }
+    }
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<4))))
+    {
+        if (player.screenCol < 512)
+        {
+            player.worldCol += player.cdel;
+            if (hOff < 512 - 240 && player.screenCol > 240 / 2)
+            {
+                hOff++;
+            }
+        }
+    }
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<6))))
+    {
+        if (player.screenRow > 0)
+        {
+            player.worldRow -= player.rdel;
+            if (vOff >= 0 && player.screenRow < 160 / 2)
+            {
+                vOff--;
+            }
+        }
+    }
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<7))))
+    {
+        if (player.screenRow < 256)
+        {
+            player.worldRow += player.rdel;
+            if (vOff < 256 - 160 && player.screenRow > 160 / 2)
+            {
+                vOff++;
+            }
+        }
+    }
+    player.screenRow = player.worldRow - vOff;
+    player.screenCol = player.worldCol - hOff;
 }
 void initPaper()
 {
     for (int i = 0; i < 10; i++)
     {
-        paper[i].col = (rand() % 500) + 5;
-        paper[i].row = (rand() % 240) + 5;
+        paper[i].worldCol = (rand() % 500) + 5;
+        paper[i].worldRow = (rand() % 240) + 5;
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
@@ -994,16 +1062,59 @@ void initPaper()
         paper[i].active = 1;
     }
 }
+void drawPaper()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        if (paper[i].active)
+        {
+            shadowOAM[i + 1].attr0 = paper[i].screenRow | (0<<14);
+            shadowOAM[i + 1].attr1 = paper[i].screenCol | (2<<14);
+            shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32+(paper[i].aniState * 4));
+        }
+    }
+}
+void updatePaper()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        if (collision(player.worldCol, player.worldRow, player.width, player.height,
+                      paper[i].worldCol, paper[i].worldRow, paper[i].width, paper[i].height) &&
+            paper[i].active)
+        {
+            paper[i].active = 0;
+            TPCollected++;
+        }
+        paper[i].screenRow = paper[i].worldRow - vOff;
+        paper[i].screenCol = paper[i].worldCol - hOff;
+    }
+}
 void initGame()
 {
+    vOff = 96;
+    hOff = 9;
+
     initPlayer();
     initPaper();
-
-    DMANow(3, spritesheetPal, ((unsigned short *)0x5000200), 512 / 2);
-    DMANow(3, spritesheetTiles, &((charblock *)0x6000000)[4], 32768 / 2);
 
     TPCollected = 0;
     won = 0;
     lost = 0;
     playerTimer = 0;
+}
+void updateGame()
+{
+    updatePlayer();
+    updatePaper();
+}
+void drawGame()
+{
+    drawPlayer();
+    drawPaper();
+
+    waitForVBlank();
+    DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 512);
+
+    (*(volatile unsigned short *)0x04000010) = hOff;
+    (*(volatile unsigned short *)0x04000012) = vOff;
 }

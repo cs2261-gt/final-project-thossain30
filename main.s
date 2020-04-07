@@ -443,31 +443,46 @@ goToGame:
 	ldr	r1, .L38+8
 	mov	lr, pc
 	bx	r4
-	mov	r0, #3
 	mov	r3, #2048
+	mov	r0, #3
 	ldr	r2, .L38+12
 	ldr	r1, .L38+16
 	mov	lr, pc
 	bx	r4
-	mov	r1, #256
-	mov	r3, #67108864
-	ldr	r2, .L38+20
-	strh	r1, [r3]	@ movhi
-	strh	r2, [r3, #8]	@ movhi
+	mov	r2, #67108864
+	mov	r1, #4352
+	ldr	r3, .L38+20
+	strh	r3, [r2, #8]	@ movhi
 	ldr	r3, .L38+24
-	mov	lr, pc
-	bx	r3
+	strh	r1, [r2]	@ movhi
+	ldrh	r1, [r3]
 	ldr	r3, .L38+28
+	strh	r1, [r2, #18]	@ movhi
+	ldrh	r1, [r3]
+	mov	r0, #3
+	strh	r1, [r2, #16]	@ movhi
+	mov	r3, #256
+	ldr	r2, .L38+32
+	ldr	r1, .L38+36
+	mov	lr, pc
+	bx	r4
+	mov	r0, #3
+	ldr	r2, .L38+40
+	ldr	r1, .L38+44
+	mov	r3, #16384
+	mov	lr, pc
+	bx	r4
+	ldr	r3, .L38+48
 	mov	lr, pc
 	bx	r3
 	mov	r3, #512
 	mov	r2, #117440512
 	mov	r0, #3
-	ldr	r1, .L38+32
+	ldr	r1, .L38+52
 	mov	lr, pc
 	bx	r4
 	mov	r2, #2
-	ldr	r3, .L38+36
+	ldr	r3, .L38+56
 	pop	{r4, lr}
 	str	r2, [r3]
 	bx	lr
@@ -480,8 +495,13 @@ goToGame:
 	.word	100712448
 	.word	gameBackgroundMap
 	.word	22656
+	.word	vOff
+	.word	hOff
+	.word	83886592
+	.word	spritesheetPal
+	.word	100728832
+	.word	spritesheetTiles
 	.word	hideSprites
-	.word	waitForVBlank
 	.word	shadowOAM
 	.word	state
 	.size	goToGame, .-goToGame
@@ -527,6 +547,9 @@ menu:
 	b	goToInstructions
 .L50:
 	bl	goToGame
+	ldr	r3, .L52+16
+	mov	lr, pc
+	bx	r3
 	ldrh	r3, [r4]
 	b	.L41
 .L53:
@@ -536,6 +559,7 @@ menu:
 	.word	oldButtons
 	.word	waitForVBlank
 	.word	buttons
+	.word	initGame
 	.size	menu, .-menu
 	.align	2
 	.global	instructions
@@ -570,8 +594,17 @@ instructions:
 	pop	{r4, lr}
 	bx	lr
 .L65:
+	ldr	r2, .L66+12
+	ldr	r3, .L66+16
+	ldr	r0, [r2]
+	mov	lr, pc
+	bx	r3
+	bl	goToGame
+	ldr	r3, .L66+20
+	mov	lr, pc
+	bx	r3
 	pop	{r4, lr}
-	b	goToGame
+	bx	lr
 .L64:
 	bl	goToMenu
 	ldrh	r3, [r4]
@@ -582,6 +615,9 @@ instructions:
 	.word	oldButtons
 	.word	waitForVBlank
 	.word	buttons
+	.word	seed
+	.word	srand
+	.word	initGame
 	.size	instructions, .-instructions
 	.align	2
 	.global	pause
@@ -638,34 +674,50 @@ game:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, lr}
-	ldr	r4, .L99
+	push	{r4, r5, r6, lr}
+	ldr	r3, .L99
+	mov	lr, pc
+	bx	r3
+	ldr	r3, .L99+4
+	mov	lr, pc
+	bx	r3
+	ldr	r4, .L99+8
+	ldr	r3, .L99+12
+	mov	lr, pc
+	bx	r3
+	ldr	r5, .L99+16
+	mov	r3, #512
+	mov	r2, #117440512
+	mov	r0, #3
+	ldr	r1, .L99+20
+	mov	lr, pc
+	bx	r5
 	ldrh	r3, [r4]
 	tst	r3, #1
 	beq	.L83
-	ldr	r2, .L99+4
+	ldr	r2, .L99+24
 	ldrh	r2, [r2]
 	tst	r2, #1
 	beq	.L96
 .L83:
 	tst	r3, #2
 	beq	.L84
-	ldr	r2, .L99+4
+	ldr	r2, .L99+24
 	ldrh	r2, [r2]
 	tst	r2, #2
 	beq	.L97
 .L84:
 	tst	r3, #8
 	beq	.L82
-	ldr	r3, .L99+4
+	ldr	r3, .L99+24
 	ldrh	r3, [r3]
 	tst	r3, #8
 	beq	.L98
 .L82:
-	pop	{r4, lr}
+	pop	{r4, r5, r6, lr}
 	bx	lr
 .L98:
-	pop	{r4, lr}
+	pop	{r4, r5, r6, lr}
 	b	gotoPause
 .L96:
 	bl	goToWin
@@ -678,7 +730,12 @@ game:
 .L100:
 	.align	2
 .L99:
+	.word	updateGame
+	.word	drawGame
 	.word	oldButtons
+	.word	waitForVBlank
+	.word	DMANow
+	.word	shadowOAM
 	.word	buttons
 	.size	game, .-game
 	.section	.text.startup,"ax",%progbits
@@ -760,4 +817,6 @@ main:
 	.comm	oldButtons,2,2
 	.comm	buttons,2,2
 	.comm	state,4,4
+	.comm	vOff,4,4
+	.comm	hOff,4,4
 	.ident	"GCC: (devkitARM release 53) 9.1.0"

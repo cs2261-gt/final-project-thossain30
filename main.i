@@ -113,9 +113,14 @@ int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, i
 # 1 "game.h" 1
 
 
+
+
+
 extern int lost;
 extern int won;
 extern int TPCollected;
+int hOff;
+int vOff;
 
 
 
@@ -128,11 +133,16 @@ void updatePlayer();
 void initPaper();
 void drawPaper();
 void updatePaper();
+void initCustomer();
+void drawCustomer();
+void updateCustomer();
 
-typedef struct paper
+typedef struct
 {
-    int row;
-    int col;
+    int screenRow;
+    int screenCol;
+    int worldCol;
+    int worldRow;
     int height;
     int width;
     int curFrame;
@@ -314,6 +324,7 @@ void menu()
     if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3)))))
     {
         goToGame();
+        initGame();
     }
     if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))))
     {
@@ -343,7 +354,9 @@ void instructions()
     }
     if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3)))))
     {
+        srand(seed);
         goToGame();
+        initGame();
     }
 }
 
@@ -419,16 +432,25 @@ void goToGame()
     DMANow(3, gameBackgroundTiles, &((charblock *)0x6000000)[0], 5504 / 2);
     DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[24], 4096 / 2);
     (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((24)<<8) | (1<<14) | (1<<7);
-    (*(unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(unsigned short *)0x4000000) = 0 | (1<<8) | (1<<12);
 
+    (*(volatile unsigned short *)0x04000012) = vOff;
+    (*(volatile unsigned short *)0x04000010) = hOff;
+
+    DMANow(3, spritesheetPal, ((unsigned short *)0x5000200), 512 / 2);
+    DMANow(3, spritesheetTiles, &((charblock *)0x6000000)[4], 32768 / 2);
     hideSprites();
-    waitForVBlank();
     DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 512);
 
     state = GAME;
 }
 void game()
 {
+    updateGame();
+    drawGame();
+    waitForVBlank();
+    DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 512);
+
     if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))))
     {
         goToWin();

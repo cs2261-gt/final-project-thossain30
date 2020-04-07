@@ -111,6 +111,7 @@ void menu()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         goToGame();
+        initGame();
     }
     if (BUTTON_PRESSED(BUTTON_A))
     {
@@ -140,7 +141,9 @@ void instructions()
     }
     if (BUTTON_PRESSED(BUTTON_START))
     {
+        srand(seed);
         goToGame();
+        initGame();
     }
 }
 
@@ -216,16 +219,25 @@ void goToGame()
     DMANow(3, gameBackgroundTiles, &CHARBLOCK[0], gameBackgroundTilesLen / 2);
     DMANow(3, gameBackgroundMap, &SCREENBLOCK[24], gameBackgroundMapLen / 2);
     REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(24) | BG_SIZE_WIDE | BG_8BPP;
-    REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
 
+    REG_BG0VOFF = vOff;
+    REG_BG0HOFF = hOff;
+
+    DMANow(3, spritesheetPal, SPRITEPALETTE, spritesheetPalLen / 2);
+    DMANow(3, spritesheetTiles, &CHARBLOCK[4], spritesheetTilesLen / 2);
     hideSprites();
-    waitForVBlank();
     DMANow(3, shadowOAM, OAM, 512);
 
     state = GAME;
 }
 void game()
 {
+    updateGame();
+    drawGame();
+    waitForVBlank();
+    DMANow(3, shadowOAM, OAM, 512);
+
     if (BUTTON_PRESSED(BUTTON_A))
     {
         goToWin();
