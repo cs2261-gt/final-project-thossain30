@@ -1,3 +1,5 @@
+#include "myLib.h"
+
 extern int lost;
 extern int won;
 extern int TPCollected;

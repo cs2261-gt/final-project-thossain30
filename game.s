@@ -10,4 +10,20 @@
 	.eabi_attribute 18, 4
 	.file	"game.c"
 	.text
+	.align	2
+	.global	initPlayer
+	.arch armv4t
+	.syntax unified
+	.arm
+	.fpu softvfp
+	.type	initPlayer, %function
+initPlayer:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	bx	lr
+	.size	initPlayer, .-initPlayer
+	.comm	paper,280,4
+	.comm	shadowOAM,1024,4
 	.ident	"GCC: (devkitARM release 53) 9.1.0"

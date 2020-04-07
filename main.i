@@ -111,6 +111,8 @@ typedef struct{
 int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, int widthB, int heightB);
 # 2 "main.c" 2
 # 1 "game.h" 1
+
+
 extern int lost;
 extern int won;
 extern int TPCollected;
@@ -141,6 +143,16 @@ typedef struct paper
 extern TOILETPAPER paper[10];
 extern ANISPRITE player;
 # 3 "main.c" 2
+# 1 "gameBackground.h" 1
+# 22 "gameBackground.h"
+extern const unsigned short gameBackgroundTiles[2752];
+
+
+extern const unsigned short gameBackgroundMap[2048];
+
+
+extern const unsigned short gameBackgroundPal[256];
+# 4 "main.c" 2
 # 1 "winBackground.h" 1
 # 22 "winBackground.h"
 extern const unsigned short winBackgroundTiles[720];
@@ -150,17 +162,17 @@ extern const unsigned short winBackgroundMap[1024];
 
 
 extern const unsigned short winBackgroundPal[256];
-# 4 "main.c" 2
+# 5 "main.c" 2
 # 1 "MenuBackground.h" 1
 # 22 "MenuBackground.h"
-extern const unsigned short MenuBackgroundTiles[8864];
+extern const unsigned short MenuBackgroundTiles[11072];
 
 
 extern const unsigned short MenuBackgroundMap[1024];
 
 
 extern const unsigned short MenuBackgroundPal[256];
-# 5 "main.c" 2
+# 6 "main.c" 2
 # 1 "loseBackground.h" 1
 # 22 "loseBackground.h"
 extern const unsigned short loseBackgroundTiles[1104];
@@ -170,7 +182,7 @@ extern const unsigned short loseBackgroundMap[1024];
 
 
 extern const unsigned short loseBackgroundPal[256];
-# 6 "main.c" 2
+# 7 "main.c" 2
 # 1 "pauseBackground.h" 1
 # 22 "pauseBackground.h"
 extern const unsigned short pauseBackgroundTiles[1664];
@@ -180,7 +192,7 @@ extern const unsigned short pauseBackgroundMap[1024];
 
 
 extern const unsigned short pauseBackgroundPal[256];
-# 7 "main.c" 2
+# 8 "main.c" 2
 # 1 "instructionBackground.h" 1
 # 22 "instructionBackground.h"
 extern const unsigned short instructionBackgroundTiles[6928];
@@ -190,14 +202,14 @@ extern const unsigned short instructionBackgroundMap[1024];
 
 
 extern const unsigned short instructionBackgroundPal[256];
-# 8 "main.c" 2
+# 9 "main.c" 2
 # 1 "spritesheet.h" 1
 # 21 "spritesheet.h"
 extern const unsigned short spritesheetTiles[16384];
 
 
 extern const unsigned short spritesheetPal[256];
-# 9 "main.c" 2
+# 10 "main.c" 2
 
 
 void initialize();
@@ -275,7 +287,7 @@ void initialize()
 
 
     DMANow(3, MenuBackgroundPal, ((unsigned short *)0x5000000), 256);
-    DMANow(3, MenuBackgroundTiles, &((charblock *)0x6000000)[0], 17728 / 2);
+    DMANow(3, MenuBackgroundTiles, &((charblock *)0x6000000)[0], 22144 / 2);
     DMANow(3, MenuBackgroundMap, &((screenblock *)0x6000000)[28], 2048 / 2);
     (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((28)<<8) | (1<<7) | (0<<14);
 
@@ -336,13 +348,33 @@ void instructions()
 }
 void goToGame()
 {
+    DMANow(3, gameBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
+    DMANow(3, gameBackgroundTiles, &((charblock *)0x6000000)[0], 5504 / 2);
+    DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[24], 4096 / 2);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((24)<<8) | (1<<14) | (1<<7);
+    (*(unsigned short *)0x4000000) = 0 | (1<<8);
+
     hideSprites();
     waitForVBlank();
     DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 512);
 
     state = GAME;
 }
-void game() {}
+void game()
+{
+    if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))))
+    {
+        goToWin();
+    }
+    if ((!(~(oldButtons)&((1<<1))) && (~buttons & ((1<<1)))))
+    {
+        goToLose();
+    }
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3)))))
+    {
+        gotoPause();
+    }
+}
 void gotoPause()
 {
     DMANow(3, pauseBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
