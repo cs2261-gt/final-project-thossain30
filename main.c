@@ -246,7 +246,7 @@ void game()
     {
         goToWin();
     }
-    if (BUTTON_PRESSED(BUTTON_B))
+    if (lost)
     {
         goToLose();
     }

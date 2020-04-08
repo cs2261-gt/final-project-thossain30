@@ -124,6 +124,7 @@ int vOff;
 
 
 
+
 void initGame();
 void drawGame();
 void updateGame();
@@ -137,7 +138,7 @@ void initCustomer();
 void drawCustomer();
 void updateCustomer();
 
-typedef struct
+typedef struct pool
 {
     int screenRow;
     int screenCol;
@@ -148,9 +149,10 @@ typedef struct
     int curFrame;
     int aniState;
     int active;
-} TOILETPAPER;
+} TOILETPAPER, CUSTOMER;
 
 extern TOILETPAPER paper[10];
+extern CUSTOMER customers[3];
 extern ANISPRITE player;
 # 3 "main.c" 2
 # 1 "gameBackground.h" 1
@@ -455,11 +457,11 @@ void game()
     waitForVBlank();
     DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 512);
 
-    if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))))
+    if (won)
     {
         goToWin();
     }
-    if ((!(~(oldButtons)&((1<<1))) && (~buttons & ((1<<1)))))
+    if (lost)
     {
         goToLose();
     }

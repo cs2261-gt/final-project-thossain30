@@ -123,6 +123,7 @@ int vOff;
 
 
 
+
 void initGame();
 void drawGame();
 void updateGame();
@@ -136,7 +137,7 @@ void initCustomer();
 void drawCustomer();
 void updateCustomer();
 
-typedef struct
+typedef struct pool
 {
     int screenRow;
     int screenCol;
@@ -147,9 +148,10 @@ typedef struct
     int curFrame;
     int aniState;
     int active;
-} TOILETPAPER;
+} TOILETPAPER, CUSTOMER;
 
 extern TOILETPAPER paper[10];
+extern CUSTOMER customers[3];
 extern ANISPRITE player;
 # 2 "game.c" 2
 
@@ -980,6 +982,7 @@ extern int won;
 extern int TPCollected;
 TOILETPAPER paper[10];
 ANISPRITE player;
+CUSTOMER customers[3];
 int playerTimer;
 
 void initPlayer()
@@ -1072,7 +1075,7 @@ void drawPaper()
             shadowOAM[i + 1].attr1 = paper[i].screenCol | (2<<14);
             shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32+(paper[i].aniState * 4));
         }
-        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol)
+        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + 160 < paper[i].worldRow || hOff + 240 < paper[i].worldRow)
         {
             shadowOAM[i + 1].attr0 = (2<<8);
         }
@@ -1091,8 +1094,60 @@ void updatePaper()
             paper[i].active = 0;
             TPCollected++;
         }
+        if (TPCollected == 10)
+        {
+            won = 1;
+        }
         paper[i].screenRow = paper[i].worldRow - vOff;
         paper[i].screenCol = paper[i].worldCol - hOff;
+    }
+}
+void initCustomer()
+{
+    for (int i = 0; i < 3; i++)
+    {
+        customers[i].worldCol = (rand() % 479) + 10;
+        customers[i].worldRow = (rand() % 220) + 10;
+        customers[i].aniState = 1;
+        customers[i].curFrame = 0;
+        customers[i].width = 32;
+        customers[i].height = 32;
+        customers[i].active = 1;
+    }
+}
+void drawCustomer()
+{
+    for (int i = 0; i < 3; i++)
+    {
+        if (customers[i].active)
+        {
+            shadowOAM[i + 50].attr0 = customers[i].screenRow | (0<<14);
+            shadowOAM[i + 50].attr1 = customers[i].screenCol | (2<<14);
+            shadowOAM[i + 50].attr2 = ((customers[i].curFrame * 4)*32+(customers[i].aniState * 4));
+        }
+        if (customers[i].active == 0 || vOff > customers[i].worldRow || hOff > customers[i].worldCol || hOff + 240 < customers[i].worldCol || vOff + 160 < customers[i].worldRow)
+        {
+            shadowOAM[i + 50].attr0 = (2<<8);
+        }
+    }
+}
+void updateCustomer()
+{
+    for (int i = 0; i < 3; i++)
+    {
+        if (collision(player.worldCol, player.worldRow, player.width, player.height, customers[i].worldCol, customers[i].worldRow,
+                      customers[i].width, customers[i].height) &&
+            customers[i].active)
+        {
+            lost = 1;
+        }
+        if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))) && collision(player.worldCol - 25, player.worldRow - 25, player.width + 50, player.height + 50, customers[i].worldCol, customers[i].worldRow, customers[i].width, customers[i].height) &&
+            customers[i].active)
+        {
+            customers[i].active = 0;
+        }
+        customers[i].screenRow = customers[i].worldRow - vOff;
+        customers[i].screenCol = customers[i].worldCol - hOff;
     }
 }
 void initGame()
@@ -1102,6 +1157,7 @@ void initGame()
 
     initPlayer();
     initPaper();
+    initCustomer();
 
     TPCollected = 0;
     won = 0;
@@ -1112,15 +1168,13 @@ void updateGame()
 {
     updatePaper();
     updatePlayer();
+    updateCustomer();
 }
 void drawGame()
 {
     drawPlayer();
     drawPaper();
-
-
-
-
+    drawCustomer();
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
 }

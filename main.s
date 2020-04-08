@@ -682,68 +682,64 @@ game:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, lr}
+	push	{r4, lr}
 	ldr	r3, .L99
 	mov	lr, pc
 	bx	r3
 	ldr	r3, .L99+4
 	mov	lr, pc
 	bx	r3
-	ldr	r4, .L99+8
-	ldr	r3, .L99+12
+	ldr	r3, .L99+8
 	mov	lr, pc
 	bx	r3
-	ldr	r5, .L99+16
+	ldr	r4, .L99+12
 	mov	r3, #512
 	mov	r2, #117440512
 	mov	r0, #3
-	ldr	r1, .L99+20
+	ldr	r1, .L99+16
 	mov	lr, pc
-	bx	r5
-	ldrh	r3, [r4]
-	tst	r3, #1
-	beq	.L83
-	ldr	r2, .L99+24
-	ldrh	r2, [r2]
-	tst	r2, #1
-	beq	.L96
+	bx	r4
+	ldr	r3, .L99+20
+	ldr	r3, [r3]
+	cmp	r3, #0
+	bne	.L96
 .L83:
-	tst	r3, #2
-	beq	.L84
-	ldr	r2, .L99+24
-	ldrh	r2, [r2]
-	tst	r2, #2
-	beq	.L97
+	ldr	r3, .L99+24
+	ldr	r3, [r3]
+	cmp	r3, #0
+	bne	.L97
 .L84:
+	ldr	r3, .L99+28
+	ldrh	r3, [r3]
 	tst	r3, #8
 	beq	.L82
-	ldr	r3, .L99+24
+	ldr	r3, .L99+32
 	ldrh	r3, [r3]
 	tst	r3, #8
 	beq	.L98
 .L82:
-	pop	{r4, r5, r6, lr}
+	pop	{r4, lr}
 	bx	lr
-.L98:
-	pop	{r4, r5, r6, lr}
-	b	gotoPause
-.L96:
-	bl	goToWin
-	ldrh	r3, [r4]
-	b	.L83
 .L97:
 	bl	goToLose
-	ldrh	r3, [r4]
 	b	.L84
+.L96:
+	bl	goToWin
+	b	.L83
+.L98:
+	pop	{r4, lr}
+	b	gotoPause
 .L100:
 	.align	2
 .L99:
 	.word	updateGame
 	.word	drawGame
-	.word	oldButtons
 	.word	waitForVBlank
 	.word	DMANow
 	.word	shadowOAM
+	.word	won
+	.word	lost
+	.word	oldButtons
 	.word	buttons
 	.size	game, .-game
 	.section	.text.startup,"ax",%progbits
