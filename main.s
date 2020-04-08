@@ -21,40 +21,48 @@ initialize:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, lr}
-	mov	lr, #0
-	ldr	ip, .L4
-	ldr	r4, .L4+4
+	push	{r4, r5, r6, lr}
+	mov	r1, #0
+	mov	r4, #67108864
+	ldr	r0, .L4
+	ldr	r2, .L4+4
+	ldr	r3, .L4+8
+	str	r1, [r0]
+	str	r1, [r2]
+	str	r1, [r3]
+	ldr	r5, .L4+12
+	strh	r1, [r4, #16]	@ movhi
 	mov	r3, #256
+	strh	r1, [r4, #18]	@ movhi
 	mov	r2, #83886080
 	mov	r0, #3
-	ldr	r1, .L4+8
-	str	lr, [ip]
+	ldr	r1, .L4+16
 	mov	lr, pc
-	bx	r4
+	bx	r5
 	mov	r3, #11072
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L4+12
-	mov	lr, pc
-	bx	r4
-	mov	r3, #1024
-	ldr	r2, .L4+16
 	ldr	r1, .L4+20
-	mov	r0, #3
 	mov	lr, pc
-	bx	r4
-	mov	r3, #67108864
-	mov	r1, #7296
-	mov	r2, #4352
-	strh	r1, [r3, #8]	@ movhi
-	strh	r2, [r3]	@ movhi
-	pop	{r4, lr}
+	bx	r5
+	mov	r3, #1024
+	ldr	r2, .L4+24
+	mov	r0, #3
+	ldr	r1, .L4+28
+	mov	lr, pc
+	bx	r5
+	mov	r2, #7296
+	mov	r3, #4352
+	strh	r2, [r4, #8]	@ movhi
+	strh	r3, [r4]	@ movhi
+	pop	{r4, r5, r6, lr}
 	bx	lr
 .L5:
 	.align	2
 .L4:
 	.word	TPCollected
+	.word	vOff
+	.word	hOff
 	.word	DMANow
 	.word	MenuBackgroundPal
 	.word	MenuBackgroundTiles

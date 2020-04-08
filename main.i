@@ -294,6 +294,10 @@ int main()
 void initialize()
 {
     TPCollected = 0;
+    vOff = 0;
+    hOff = 0;
+    (*(volatile unsigned short *)0x04000010) = hOff;
+    (*(volatile unsigned short *)0x04000012) = vOff;
 
 
     DMANow(3, MenuBackgroundPal, ((unsigned short *)0x5000000), 256);

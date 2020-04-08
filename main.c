@@ -81,6 +81,10 @@ int main()
 void initialize()
 {
     TPCollected = 0;
+    vOff = 0;
+    hOff = 0;
+    REG_BG0HOFF = hOff;
+    REG_BG0VOFF = vOff;
 
     // Load the background's palette and tiles into a desired space in memory
     DMANow(3, MenuBackgroundPal, PALETTE, 256);
@@ -238,7 +242,7 @@ void game()
     waitForVBlank();
     DMANow(3, shadowOAM, OAM, 512);
 
-    if (BUTTON_PRESSED(BUTTON_A))
+    if (won)
     {
         goToWin();
     }

@@ -11,6 +11,7 @@ extern int won;
 extern int TPCollected;
 TOILETPAPER paper[TOTALPAPER];
 ANISPRITE player;
+CUSTOMER customers[TOTALCUSTOMER];
 int playerTimer;
 
 void initPlayer()
@@ -46,7 +47,7 @@ void updatePlayer()
     }
     if (BUTTON_HELD(BUTTON_RIGHT))
     {
-        if (player.screenCol < MAPWIDTH)
+        if (player.worldCol + player.width - 1 < MAPWIDTH - 1)
         {
             player.worldCol += player.cdel;
             if (hOff < MAPWIDTH - SCREENWIDTH && player.screenCol > SCREENWIDTH / 2)
@@ -68,7 +69,7 @@ void updatePlayer()
     }
     if (BUTTON_HELD(BUTTON_DOWN))
     {
-        if (player.screenRow < MAPHEIGHT)
+        if (player.worldRow + player.height - 1 < MAPHEIGHT - 1)
         {
             player.worldRow += player.rdel;
             if (vOff < MAPHEIGHT - SCREENHEIGHT && player.screenRow > SCREENHEIGHT / 2)
@@ -84,8 +85,8 @@ void initPaper()
 {
     for (int i = 0; i < TOTALPAPER; i++)
     {
-        paper[i].worldCol = (rand() % 500) + 5;
-        paper[i].worldRow = (rand() % 240) + 5;
+        paper[i].worldCol = (rand() % 479) + 5;
+        paper[i].worldRow = (rand() % 220) + 5;
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
@@ -103,14 +104,18 @@ void drawPaper()
             shadowOAM[i + 1].attr1 = paper[i].screenCol | ATTR1_MEDIUM;
             shadowOAM[i + 1].attr2 = ATTR2_TILEID(paper[i].aniState * 4, paper[i].curFrame * 4);
         }
+        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol)
+        {
+            shadowOAM[i + 1].attr0 = ATTR0_HIDE;
+        }
     }
 }
 void updatePaper()
 {
+
     for (int i = 0; i < TOTALPAPER; i++)
     {
-        paper[i].screenRow = paper[i].worldRow - vOff;
-        paper[i].screenCol = paper[i].worldCol - hOff;
+
         if (collision(player.worldCol, player.worldRow, player.width, player.height,
                       paper[i].worldCol, paper[i].worldRow, paper[i].width, paper[i].height) &&
             paper[i].active)
@@ -118,6 +123,20 @@ void updatePaper()
             paper[i].active = 0;
             TPCollected++;
         }
+        if (TPCollected == TOTALPAPER)
+        {
+            won = 1;
+        }
+        paper[i].screenRow = paper[i].worldRow - vOff;
+        paper[i].screenCol = paper[i].worldCol - hOff;
+    }
+}
+void initCustomer()
+{
+    for (int i = 0; i < TOTALCUSTOMER; i++)
+    {
+        customers[i].worldCol = (rand() % 479) + 10;
+        customers[i].worldRow = (rand() % 220) + 10;
     }
 }
 void initGame()
@@ -135,17 +154,13 @@ void initGame()
 }
 void updateGame()
 {
-    updatePlayer();
     updatePaper();
+    updatePlayer();
 }
 void drawGame()
 {
     drawPlayer();
     drawPaper();
-
-    waitForVBlank();
-    DMANow(3, shadowOAM, OAM, 512);
-
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
 }

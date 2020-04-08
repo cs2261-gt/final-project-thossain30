@@ -1015,7 +1015,7 @@ void updatePlayer()
     }
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<4))))
     {
-        if (player.screenCol < 512)
+        if (player.worldCol + player.width - 1 < 512 - 1)
         {
             player.worldCol += player.cdel;
             if (hOff < 512 - 240 && player.screenCol > 240 / 2)
@@ -1037,7 +1037,7 @@ void updatePlayer()
     }
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<7))))
     {
-        if (player.screenRow < 256)
+        if (player.worldRow + player.height - 1 < 256 - 1)
         {
             player.worldRow += player.rdel;
             if (vOff < 256 - 160 && player.screenRow > 160 / 2)
@@ -1053,8 +1053,8 @@ void initPaper()
 {
     for (int i = 0; i < 10; i++)
     {
-        paper[i].worldCol = (rand() % 500) + 5;
-        paper[i].worldRow = (rand() % 240) + 5;
+        paper[i].worldCol = (rand() % 479) + 5;
+        paper[i].worldRow = (rand() % 220) + 5;
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
@@ -1072,12 +1072,18 @@ void drawPaper()
             shadowOAM[i + 1].attr1 = paper[i].screenCol | (2<<14);
             shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32+(paper[i].aniState * 4));
         }
+        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol)
+        {
+            shadowOAM[i + 1].attr0 = (2<<8);
+        }
     }
 }
 void updatePaper()
 {
+
     for (int i = 0; i < 10; i++)
     {
+
         if (collision(player.worldCol, player.worldRow, player.width, player.height,
                       paper[i].worldCol, paper[i].worldRow, paper[i].width, paper[i].height) &&
             paper[i].active)
@@ -1104,16 +1110,16 @@ void initGame()
 }
 void updateGame()
 {
-    updatePlayer();
     updatePaper();
+    updatePlayer();
 }
 void drawGame()
 {
     drawPlayer();
     drawPaper();
 
-    waitForVBlank();
-    DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 512);
+
+
 
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
