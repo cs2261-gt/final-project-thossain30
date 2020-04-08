@@ -104,7 +104,7 @@ void drawPaper()
             shadowOAM[i + 1].attr1 = paper[i].screenCol | ATTR1_MEDIUM;
             shadowOAM[i + 1].attr2 = ATTR2_TILEID(paper[i].aniState * 4, paper[i].curFrame * 4);
         }
-        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol)
+        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + SCREENHEIGHT < paper[i].worldRow || hOff + SCREENWIDTH < paper[i].worldRow)
         {
             shadowOAM[i + 1].attr0 = ATTR0_HIDE;
         }
@@ -137,6 +137,46 @@ void initCustomer()
     {
         customers[i].worldCol = (rand() % 479) + 10;
         customers[i].worldRow = (rand() % 220) + 10;
+        customers[i].aniState = 1;
+        customers[i].curFrame = 0;
+        customers[i].width = 32;
+        customers[i].height = 32;
+        customers[i].active = 1;
+    }
+}
+void drawCustomer()
+{
+    for (int i = 0; i < TOTALCUSTOMER; i++)
+    {
+        if (customers[i].active)
+        {
+            shadowOAM[i + 50].attr0 = customers[i].screenRow | ATTR0_SQUARE;
+            shadowOAM[i + 50].attr1 = customers[i].screenCol | ATTR1_MEDIUM;
+            shadowOAM[i + 50].attr2 = ATTR2_TILEID(customers[i].aniState * 4, customers[i].curFrame * 4);
+        }
+        if (customers[i].active == 0 || vOff > customers[i].worldRow || hOff > customers[i].worldCol || hOff + SCREENWIDTH < customers[i].worldCol || vOff + SCREENHEIGHT < customers[i].worldRow)
+        {
+            shadowOAM[i + 50].attr0 = ATTR0_HIDE;
+        }
+    }
+}
+void updateCustomer()
+{
+    for (int i = 0; i < TOTALCUSTOMER; i++)
+    {
+        if (collision(player.worldCol, player.worldRow, player.width, player.height, customers[i].worldCol, customers[i].worldRow,
+                      customers[i].width, customers[i].height) &&
+            customers[i].active)
+        {
+            lost = 1;
+        }
+        if (BUTTON_PRESSED(BUTTON_A) && collision(player.worldCol - 25, player.worldRow - 25, player.width + 50, player.height + 50, customers[i].worldCol, customers[i].worldRow, customers[i].width, customers[i].height) &&
+            customers[i].active)
+        {
+            customers[i].active = 0;
+        }
+        customers[i].screenRow = customers[i].worldRow - vOff;
+        customers[i].screenCol = customers[i].worldCol - hOff;
     }
 }
 void initGame()
@@ -146,6 +186,7 @@ void initGame()
 
     initPlayer();
     initPaper();
+    initCustomer();
 
     TPCollected = 0;
     won = 0;
@@ -156,11 +197,13 @@ void updateGame()
 {
     updatePaper();
     updatePlayer();
+    updateCustomer();
 }
 void drawGame()
 {
     drawPlayer();
     drawPaper();
+    drawCustomer();
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
 }
