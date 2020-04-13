@@ -100,52 +100,56 @@ updatePlayer:
 	ldr	r1, .L22+8
 	ldr	r3, .L22+12
 	tst	r2, #32
-	ldr	r0, [r1]
+	ldr	ip, [r1]
 	ldr	r2, [r3, #12]
 	bne	.L10
-	ldr	ip, [r3, #4]
-	cmp	ip, #0
+	ldr	r0, [r3, #4]
+	cmp	r0, #0
 	ble	.L10
-	mvn	lr, r0
-	cmp	ip, #119
-	lsr	lr, lr, #31
-	movgt	lr, #0
-	ldr	ip, [r3, #20]
-	cmp	lr, #0
-	sub	r2, r2, ip
-	subne	r0, r0, #1
+	ldr	r4, .L22+16
+	ldr	lr, [r4]
+	mvn	r5, lr
+	cmp	r0, #119
+	lsr	r5, r5, #31
+	movgt	r5, #0
+	ldr	r0, [r3, #20]
+	cmp	r5, #0
+	sub	r2, r2, r0
+	subne	lr, lr, #1
+	subne	ip, ip, #1
 	str	r2, [r3, #12]
-	strne	r0, [r1]
+	strne	lr, [r4]
+	strne	ip, [r1]
 .L10:
-	ldr	ip, .L22+4
-	ldrh	ip, [ip, #48]
-	tst	ip, #16
+	ldr	r0, .L22+4
+	ldrh	r0, [r0, #48]
+	tst	r0, #16
 	bne	.L11
-	ldr	ip, [r3, #24]
-	add	ip, r2, ip
-	cmp	ip, #512
+	ldr	r0, [r3, #24]
+	add	r0, r2, r0
+	cmp	r0, #1024
 	blt	.L21
 .L11:
 	ldr	r1, .L22+4
 	ldrh	r1, [r1, #48]
-	ldr	lr, .L22+16
+	ldr	lr, .L22+20
 	tst	r1, #64
-	ldr	ip, [lr]
+	ldr	r0, [lr]
 	ldr	r1, [r3, #8]
 	bne	.L12
 	ldr	r4, [r3]
 	cmp	r4, #0
 	ble	.L12
-	mvn	r5, ip
+	mvn	r5, r0
 	cmp	r4, #79
 	lsr	r5, r5, #31
 	movgt	r5, #0
 	ldr	r4, [r3, #16]
 	cmp	r5, #0
 	sub	r1, r1, r4
-	subne	ip, ip, #1
+	subne	r0, r0, #1
 	str	r1, [r3, #8]
-	strne	ip, [lr]
+	strne	r0, [lr]
 .L12:
 	ldr	r4, .L22+4
 	ldrh	r4, [r4, #48]
@@ -156,39 +160,46 @@ updatePlayer:
 	cmp	r4, #255
 	bgt	.L13
 	ldr	r4, [r3, #16]
-	cmp	ip, #95
+	cmp	r0, #95
 	add	r1, r1, r4
 	str	r1, [r3, #8]
 	bgt	.L13
 	ldr	r4, [r3]
 	cmp	r4, #80
-	addgt	ip, ip, #1
-	strgt	ip, [lr]
+	addgt	r0, r0, #1
+	strgt	r0, [lr]
 .L13:
-	sub	r1, r1, ip
-	sub	r2, r2, r0
+	sub	r1, r1, r0
+	sub	r2, r2, ip
 	stm	r3, {r1, r2}
 	pop	{r4, r5, lr}
 	bx	lr
 .L21:
-	ldr	ip, [r3, #20]
-	cmp	r0, #272
-	add	r2, r2, ip
+	ldr	lr, .L22+16
+	ldr	r5, .L22+24
+	ldr	r0, [lr]
+	ldr	r4, [r3, #20]
+	cmp	r0, r5
+	add	r2, r2, r4
 	str	r2, [r3, #12]
-	bge	.L11
-	ldr	ip, [r3, #4]
-	cmp	ip, #120
+	bgt	.L11
+	ldr	r4, [r3, #4]
+	cmp	r4, #120
 	addgt	r0, r0, #1
-	strgt	r0, [r1]
+	addgt	ip, ip, #1
+	strgt	r0, [lr]
+	strgt	ip, [r1]
 	b	.L11
 .L23:
 	.align	2
 .L22:
 	.word	playerTimer
 	.word	67109120
-	.word	hOff
+	.word	playerHoff
 	.word	player
+	.word	hOff
 	.word	vOff
+	.word	782
 	.size	updatePlayer, .-updatePlayer
 	.align	2
 	.global	initPaper
@@ -352,16 +363,15 @@ updatePaper:
 .L43:
 	add	r0, r4, #16
 	ldm	r0, {r0, r1}
-	ldr	r2, [r4, #12]
-	ldr	r3, [r4, #8]
+	ldm	r4, {r2, r3}
 	str	r0, [sp, #12]
 	str	r1, [sp, #8]
 	str	r2, [sp, #4]
 	str	r3, [sp]
 	add	r2, r5, #24
 	ldm	r2, {r2, r3}
-	ldr	r1, [r5, #8]
-	ldr	r0, [r5, #12]
+	ldr	r1, [r5]
+	ldr	r0, [r5, #4]
 	mov	lr, pc
 	bx	r10
 	cmp	r0, #0
@@ -628,32 +638,37 @@ initGame:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}
-	mov	r5, #96
-	mov	lr, #9
+	mov	r6, #116
+	mov	r5, #9
 	mov	r4, #0
+	mov	r0, #113
 	mov	r1, #1
 	mov	r2, #32
-	mov	r0, #113
-	mov	ip, #160
+	mov	lr, #180
+	mov	ip, #28
 	ldr	r3, .L92
-	str	r5, [r3]
+	str	r6, [r3]
 	ldr	r3, .L92+4
-	str	lr, [r3]
+	str	r5, [r3]
 	ldr	r3, .L92+8
+	str	r4, [r3]
+	ldr	r3, .L92+12
+	str	r0, [r3, #12]
+	ldr	r0, .L92+16
 	str	r4, [r3, #44]
 	str	r4, [r3, #36]
-	str	r0, [r3, #12]
+	str	lr, [r3, #8]
 	str	r1, [r3, #20]
 	str	r1, [r3, #16]
 	str	r2, [r3, #28]
 	str	r2, [r3, #24]
-	str	ip, [r3, #8]
+	str	ip, [r0]
 	bl	initPaper
 	bl	initCustomer
-	ldr	r0, .L92+12
-	ldr	r1, .L92+16
-	ldr	r2, .L92+20
-	ldr	r3, .L92+24
+	ldr	r0, .L92+20
+	ldr	r1, .L92+24
+	ldr	r2, .L92+28
+	ldr	r3, .L92+32
 	str	r4, [r0]
 	str	r4, [r1]
 	str	r4, [r2]
@@ -665,7 +680,9 @@ initGame:
 .L92:
 	.word	vOff
 	.word	hOff
+	.word	playerHoff
 	.word	player
+	.word	screenBlock
 	.word	TPCollected
 	.word	won
 	.word	lost
@@ -681,11 +698,68 @@ updateGame:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
+	ldr	r2, .L102
+	ldr	r3, [r2]
+	cmp	r3, #256
 	push	{r4, lr}
+	ble	.L95
+	ldr	ip, .L102+4
+	ldr	r1, [ip]
+	cmp	r1, #30
+	ble	.L101
+.L99:
+	ldr	r2, .L102+8
+	ldr	r3, [r2]
+	cmp	r3, #512
+	subgt	r3, r3, #512
+	strgt	r3, [r2]
+	bgt	.L98
+	cmp	r3, #0
+	bge	.L98
+	ldr	r1, .L102+4
+	ldr	r1, [r1]
+	cmp	r1, #29
+	addle	r3, r3, #512
+	strle	r3, [r2]
+.L98:
 	bl	updatePaper
 	bl	updatePlayer
 	pop	{r4, lr}
 	b	updateCustomer
+.L101:
+	mov	lr, #67108864
+	add	r1, r1, #1
+	lsl	r0, r1, #24
+	orr	r0, r0, #1073741824
+	lsr	r0, r0, #16
+	sub	r3, r3, #256
+	str	r1, [ip]
+	str	r3, [r2]
+	strh	r0, [lr, #8]	@ movhi
+	b	.L99
+.L95:
+	cmp	r3, #0
+	bge	.L99
+	ldr	ip, .L102+4
+	ldr	r1, [ip]
+	cmp	r1, #28
+	ble	.L99
+	mov	lr, #67108864
+	sub	r1, r1, #1
+	lsl	r0, r1, #24
+	orr	r0, r0, #1073741824
+	lsr	r0, r0, #16
+	add	r3, r3, #256
+	str	r1, [ip]
+	str	r3, [r2]
+	strh	r0, [lr, #8]	@ movhi
+	b	.L99
+.L103:
+	.align	2
+.L102:
+	.word	hOff
+	.word	screenBlock
+	.word	playerHoff
 	.size	updateGame, .-updateGame
 	.align	2
 	.global	drawGame
@@ -697,13 +771,13 @@ drawGame:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	ldr	r1, .L98
+	ldr	r1, .L106
 	ldr	r2, [r1, #4]
 	mvn	r2, r2, lsl #17
 	mvn	r2, r2, lsr #17
 	ldr	ip, [r1, #36]
 	ldr	r3, [r1, #44]
-	ldr	r0, .L98+4
+	ldr	r0, .L106+4
 	ldr	r1, [r1]
 	add	r3, r3, ip, lsl #5
 	lsl	r3, r3, #2
@@ -714,17 +788,17 @@ drawGame:
 	bl	drawPaper
 	bl	drawCustomer
 	mov	r3, #67108864
-	ldr	r2, .L98+8
+	ldr	r2, .L106+8
 	ldrh	r1, [r2]
-	ldr	r2, .L98+12
+	ldr	r2, .L106+12
 	ldrh	r2, [r2]
 	strh	r1, [r3, #16]	@ movhi
 	pop	{r4, lr}
 	strh	r2, [r3, #18]	@ movhi
 	bx	lr
-.L99:
+.L107:
 	.align	2
-.L98:
+.L106:
 	.word	player
 	.word	shadowOAM
 	.word	hOff
@@ -735,6 +809,8 @@ drawGame:
 	.comm	player,56,4
 	.comm	paper,360,4
 	.comm	shadowOAM,1024,4
+	.comm	screenBlock,4,4
+	.comm	playerHoff,4,4
 	.comm	vOff,4,4
 	.comm	hOff,4,4
 	.ident	"GCC: (devkitARM release 53) 9.1.0"

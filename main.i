@@ -121,6 +121,8 @@ extern int won;
 extern int TPCollected;
 int hOff;
 int vOff;
+int playerHoff;
+int screenBlock;
 
 
 
@@ -157,10 +159,10 @@ extern ANISPRITE player;
 # 3 "main.c" 2
 # 1 "gameBackground.h" 1
 # 22 "gameBackground.h"
-extern const unsigned short gameBackgroundTiles[2752];
+extern const unsigned short gameBackgroundTiles[4672];
 
 
-extern const unsigned short gameBackgroundMap[2048];
+extern const unsigned short gameBackgroundMap[4096];
 
 
 extern const unsigned short gameBackgroundPal[256];
@@ -298,14 +300,16 @@ void initialize()
     TPCollected = 0;
     vOff = 0;
     hOff = 0;
+    playerHoff = 0;
+
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
 
 
     DMANow(3, MenuBackgroundPal, ((unsigned short *)0x5000000), 256);
     DMANow(3, MenuBackgroundTiles, &((charblock *)0x6000000)[0], 22144 / 2);
-    DMANow(3, MenuBackgroundMap, &((screenblock *)0x6000000)[28], 2048 / 2);
-    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((28)<<8) | (1<<7) | (0<<14);
+    DMANow(3, MenuBackgroundMap, &((screenblock *)0x6000000)[24], 2048 / 2);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((24)<<8) | (1<<7) | (1<<14);
 
     (*(unsigned short *)0x4000000) = 0 | (1<<8) | (1<<12);
 }
@@ -435,9 +439,9 @@ void win()
 void goToGame()
 {
     DMANow(3, gameBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, gameBackgroundTiles, &((charblock *)0x6000000)[0], 5504 / 2);
-    DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[24], 4096 / 2);
-    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((24)<<8) | (1<<14) | (1<<7);
+    DMANow(3, gameBackgroundTiles, &((charblock *)0x6000000)[0], 9344 / 2);
+    DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[28], 8192 / 2);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((28)<<8) | (1<<14);
     (*(unsigned short *)0x4000000) = 0 | (1<<8) | (1<<12);
 
     (*(volatile unsigned short *)0x04000012) = vOff;

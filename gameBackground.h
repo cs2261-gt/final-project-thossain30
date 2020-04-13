@@ -3,13 +3,13 @@
 
 //======================================================================
 //
-//	gameBackground, 512x256@8, 
+//	gameBackground, 1024x256@4, 
 //	+ palette 256 entries, not compressed
-//	+ 86 tiles (t|f|p reduced) not compressed
-//	+ regular map (in SBBs), not compressed, 64x32 
-//	Total size: 512 + 5504 + 4096 = 10112
+//	+ 292 tiles (t|f|p reduced) not compressed
+//	+ regular map (in SBBs), not compressed, 128x32 
+//	Total size: 512 + 9344 + 8192 = 18048
 //
-//	Time-stamp: 2020-04-06, 22:43:33
+//	Time-stamp: 2020-04-13, 01:23:04
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.3
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -18,11 +18,11 @@
 #ifndef GRIT_GAMEBACKGROUND_H
 #define GRIT_GAMEBACKGROUND_H
 
-#define gameBackgroundTilesLen 5504
-extern const unsigned short gameBackgroundTiles[2752];
+#define gameBackgroundTilesLen 9344
+extern const unsigned short gameBackgroundTiles[4672];
 
-#define gameBackgroundMapLen 4096
-extern const unsigned short gameBackgroundMap[2048];
+#define gameBackgroundMapLen 8192
+extern const unsigned short gameBackgroundMap[4096];
 
 #define gameBackgroundPalLen 512
 extern const unsigned short gameBackgroundPal[256];

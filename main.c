@@ -83,14 +83,16 @@ void initialize()
     TPCollected = 0;
     vOff = 0;
     hOff = 0;
+    playerHoff = 0;
+
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
 
     // Load the background's palette and tiles into a desired space in memory
     DMANow(3, MenuBackgroundPal, PALETTE, 256);
     DMANow(3, MenuBackgroundTiles, &CHARBLOCK[0], MenuBackgroundTilesLen / 2);
-    DMANow(3, MenuBackgroundMap, &SCREENBLOCK[28], MenuBackgroundMapLen / 2);
-    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_8BPP | BG_SIZE_SMALL;
+    DMANow(3, MenuBackgroundMap, &SCREENBLOCK[24], MenuBackgroundMapLen / 2);
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(24) | BG_8BPP | BG_SIZE_WIDE;
 
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
 }
@@ -221,8 +223,8 @@ void goToGame()
 {
     DMANow(3, gameBackgroundPal, PALETTE, gameBackgroundPalLen / 2);
     DMANow(3, gameBackgroundTiles, &CHARBLOCK[0], gameBackgroundTilesLen / 2);
-    DMANow(3, gameBackgroundMap, &SCREENBLOCK[24], gameBackgroundMapLen / 2);
-    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(24) | BG_SIZE_WIDE | BG_8BPP;
+    DMANow(3, gameBackgroundMap, &SCREENBLOCK[28], gameBackgroundMapLen / 2);
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_SIZE_WIDE;
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
 
     REG_BG0VOFF = vOff;

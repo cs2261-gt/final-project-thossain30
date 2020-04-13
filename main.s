@@ -24,37 +24,39 @@ initialize:
 	push	{r4, r5, r6, lr}
 	mov	r1, #0
 	mov	r4, #67108864
-	ldr	r0, .L4
-	ldr	r2, .L4+4
-	ldr	r3, .L4+8
+	ldr	ip, .L4
+	ldr	r0, .L4+4
+	ldr	r2, .L4+8
+	ldr	r3, .L4+12
+	str	r1, [ip]
 	str	r1, [r0]
 	str	r1, [r2]
 	str	r1, [r3]
-	ldr	r5, .L4+12
+	ldr	r5, .L4+16
 	strh	r1, [r4, #16]	@ movhi
 	mov	r3, #256
 	strh	r1, [r4, #18]	@ movhi
 	mov	r2, #83886080
 	mov	r0, #3
-	ldr	r1, .L4+16
+	ldr	r1, .L4+20
 	mov	lr, pc
 	bx	r5
 	mov	r3, #11072
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L4+20
+	ldr	r1, .L4+24
 	mov	lr, pc
 	bx	r5
 	mov	r3, #1024
-	ldr	r2, .L4+24
+	ldr	r2, .L4+28
 	mov	r0, #3
-	ldr	r1, .L4+28
+	ldr	r1, .L4+32
 	mov	lr, pc
 	bx	r5
-	mov	r2, #7296
-	mov	r3, #4352
-	strh	r2, [r4, #8]	@ movhi
-	strh	r3, [r4]	@ movhi
+	mov	r2, #4352
+	ldr	r3, .L4+36
+	strh	r2, [r4]	@ movhi
+	strh	r3, [r4, #8]	@ movhi
 	pop	{r4, r5, r6, lr}
 	bx	lr
 .L5:
@@ -63,11 +65,13 @@ initialize:
 	.word	TPCollected
 	.word	vOff
 	.word	hOff
+	.word	playerHoff
 	.word	DMANow
 	.word	MenuBackgroundPal
 	.word	MenuBackgroundTiles
-	.word	100720640
+	.word	100712448
 	.word	MenuBackgroundMap
+	.word	22656
 	.size	initialize, .-initialize
 	.align	2
 	.global	goToMenu
@@ -445,52 +449,52 @@ goToGame:
 	ldr	r1, .L38+4
 	mov	lr, pc
 	bx	r4
-	mov	r3, #2752
+	mov	r3, #4672
 	mov	r2, #100663296
 	mov	r0, #3
 	ldr	r1, .L38+8
 	mov	lr, pc
 	bx	r4
-	mov	r3, #2048
+	mov	r3, #4096
 	mov	r0, #3
 	ldr	r2, .L38+12
 	ldr	r1, .L38+16
 	mov	lr, pc
 	bx	r4
 	mov	r2, #67108864
-	mov	r1, #4352
+	mov	r3, #4352
+	mov	r1, #23552
+	strh	r3, [r2]	@ movhi
 	ldr	r3, .L38+20
-	strh	r3, [r2, #8]	@ movhi
-	ldr	r3, .L38+24
-	strh	r1, [r2]	@ movhi
+	strh	r1, [r2, #8]	@ movhi
 	ldrh	r1, [r3]
-	ldr	r3, .L38+28
+	ldr	r3, .L38+24
 	strh	r1, [r2, #18]	@ movhi
 	ldrh	r1, [r3]
 	mov	r0, #3
 	strh	r1, [r2, #16]	@ movhi
 	mov	r3, #256
-	ldr	r2, .L38+32
-	ldr	r1, .L38+36
+	ldr	r2, .L38+28
+	ldr	r1, .L38+32
 	mov	lr, pc
 	bx	r4
 	mov	r0, #3
-	ldr	r2, .L38+40
-	ldr	r1, .L38+44
+	ldr	r2, .L38+36
+	ldr	r1, .L38+40
 	mov	r3, #16384
 	mov	lr, pc
 	bx	r4
-	ldr	r3, .L38+48
+	ldr	r3, .L38+44
 	mov	lr, pc
 	bx	r3
 	mov	r3, #512
 	mov	r2, #117440512
 	mov	r0, #3
-	ldr	r1, .L38+52
+	ldr	r1, .L38+48
 	mov	lr, pc
 	bx	r4
 	mov	r2, #2
-	ldr	r3, .L38+56
+	ldr	r3, .L38+52
 	pop	{r4, lr}
 	str	r2, [r3]
 	bx	lr
@@ -500,9 +504,8 @@ goToGame:
 	.word	DMANow
 	.word	gameBackgroundPal
 	.word	gameBackgroundTiles
-	.word	100712448
+	.word	100720640
 	.word	gameBackgroundMap
-	.word	22656
 	.word	vOff
 	.word	hOff
 	.word	83886592
@@ -821,6 +824,8 @@ main:
 	.comm	oldButtons,2,2
 	.comm	buttons,2,2
 	.comm	state,4,4
+	.comm	screenBlock,4,4
+	.comm	playerHoff,4,4
 	.comm	vOff,4,4
 	.comm	hOff,4,4
 	.ident	"GCC: (devkitARM release 53) 9.1.0"

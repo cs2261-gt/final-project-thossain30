@@ -1,6 +1,6 @@
 #include "myLib.h"
 
-#define MAPWIDTH 512
+#define MAPWIDTH 1024
 #define MAPHEIGHT 256
 
 extern int lost;
@@ -8,6 +8,8 @@ extern int won;
 extern int TPCollected;
 int hOff;
 int vOff;
+int playerHoff;
+int screenBlock;
 
 #define TOTALPAPER 10
 #define TOTALCUSTOMER 3

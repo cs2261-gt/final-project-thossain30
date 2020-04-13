@@ -120,6 +120,8 @@ extern int won;
 extern int TPCollected;
 int hOff;
 int vOff;
+int playerHoff;
+int screenBlock;
 
 
 
@@ -1013,17 +1015,19 @@ void updatePlayer()
             if (hOff >= 0 && player.screenCol < 240 / 2)
             {
                 hOff--;
+                playerHoff--;
             }
         }
     }
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<4))))
     {
-        if (player.worldCol + player.width - 1 < 512 - 1)
+        if (player.worldCol + player.width - 1 < 1024 - 1)
         {
             player.worldCol += player.cdel;
-            if (hOff < 512 - 240 && player.screenCol > 240 / 2)
+            if (hOff < 1024 - 240 - 1 && player.screenCol > 240 / 2)
             {
                 hOff++;
+                playerHoff++;
             }
         }
     }
@@ -1050,7 +1054,7 @@ void updatePlayer()
         }
     }
     player.screenRow = player.worldRow - vOff;
-    player.screenCol = player.worldCol - hOff;
+    player.screenCol = player.worldCol - playerHoff;
 }
 void initPaper()
 {
@@ -1087,8 +1091,8 @@ void updatePaper()
     for (int i = 0; i < 10; i++)
     {
 
-        if (collision(player.worldCol, player.worldRow, player.width, player.height,
-                      paper[i].worldCol, paper[i].worldRow, paper[i].width, paper[i].height) &&
+        if (collision(player.screenCol, player.screenRow, player.width, player.height,
+                      paper[i].screenCol, paper[i].screenRow, paper[i].width, paper[i].height) &&
             paper[i].active)
         {
             paper[i].active = 0;
@@ -1152,8 +1156,10 @@ void updateCustomer()
 }
 void initGame()
 {
-    vOff = 96;
+    vOff = 116;
     hOff = 9;
+    playerHoff = 0;
+    screenBlock = 28;
 
     initPlayer();
     initPaper();
@@ -1166,6 +1172,27 @@ void initGame()
 }
 void updateGame()
 {
+    if (hOff > 256 && screenBlock < 31)
+    {
+        screenBlock++;
+
+        hOff -= 256;
+        (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((screenBlock)<<8) | (1<<14);
+    }
+    if (hOff < 0 && screenBlock > 28)
+    {
+        screenBlock--;
+        hOff += 256;
+        (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((screenBlock)<<8) | (1<<14);
+    }
+    if (playerHoff > 512)
+    {
+        playerHoff -= 512;
+    }
+    if (playerHoff < 0 && screenBlock < 30)
+    {
+        playerHoff += 512;
+    }
     updatePaper();
     updatePlayer();
     updateCustomer();

@@ -42,6 +42,7 @@ void updatePlayer()
             if (hOff >= 0 && player.screenCol < SCREENWIDTH / 2)
             {
                 hOff--;
+                playerHoff--;
             }
         }
     }
@@ -50,9 +51,10 @@ void updatePlayer()
         if (player.worldCol + player.width - 1 < MAPWIDTH - 1)
         {
             player.worldCol += player.cdel;
-            if (hOff < MAPWIDTH - SCREENWIDTH && player.screenCol > SCREENWIDTH / 2)
+            if (hOff < MAPWIDTH - SCREENWIDTH - 1 && player.screenCol > SCREENWIDTH / 2)
             {
                 hOff++;
+                playerHoff++;
             }
         }
     }
@@ -79,7 +81,7 @@ void updatePlayer()
         }
     }
     player.screenRow = player.worldRow - vOff;
-    player.screenCol = player.worldCol - hOff;
+    player.screenCol = player.worldCol - playerHoff;
 }
 void initPaper()
 {
@@ -181,8 +183,10 @@ void updateCustomer()
 }
 void initGame()
 {
-    vOff = 96;
+    vOff = 116;
     hOff = 9;
+    playerHoff = 0;
+    screenBlock = 28;
 
     initPlayer();
     initPaper();
@@ -195,6 +199,27 @@ void initGame()
 }
 void updateGame()
 {
+    if (hOff > 256 && screenBlock < 31)
+    {
+        screenBlock++;
+
+                hOff -= 256;
+        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
+    }
+    if (hOff < 0 && screenBlock > 28)
+    {
+        screenBlock--;
+        hOff += 256;
+        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
+    }
+    if (playerHoff > 512)
+    {
+        playerHoff -= 512;
+    }
+    if (playerHoff < 0 && screenBlock < 30)
+    {
+        playerHoff += 512;
+    }
     updatePaper();
     updatePlayer();
     updateCustomer();
