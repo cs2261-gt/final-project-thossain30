@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "pausebackground.h": "c"
+        "pausebackground.h": "c",
+        "amp_math.h": "c"
     }
 }

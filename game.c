@@ -2,6 +2,7 @@
 #include "myLib.h"
 #include "spritesheet.h"
 #include <stdlib.h>
+#include <math.h>
 
 int hOff;
 int vOff;
@@ -12,7 +13,8 @@ extern int TPCollected;
 TOILETPAPER paper[TOTALPAPER];
 ANISPRITE player;
 CUSTOMER customers[TOTALCUSTOMER];
-int playerTimer;
+int timer;
+int speed, dx, dy, distance;
 
 void initPlayer()
 {
@@ -24,16 +26,17 @@ void initPlayer()
     player.width = 32;
     player.worldRow = SCREENHEIGHT / 2 - player.width / 2 + vOff;
     player.worldCol = SCREENWIDTH / 2 - player.height / 2 + hOff;
+    player.screenRow = player.worldRow;
+    player.screenCol = player.worldCol;
 }
 void drawPlayer()
 {
-    shadowOAM[0].attr0 = player.screenRow | ATTR0_SQUARE;
-    shadowOAM[0].attr1 = player.screenCol | ATTR1_MEDIUM;
+    shadowOAM[0].attr0 = (ROWMASK & player.screenRow) | ATTR0_SQUARE;
+    shadowOAM[0].attr1 = (COLMASK & player.screenCol) | ATTR1_MEDIUM;
     shadowOAM[0].attr2 = ATTR2_TILEID(player.curFrame * 4, player.aniState * 4) | ATTR2_PALROW(0);
 }
 void updatePlayer()
 {
-    playerTimer++;
     if (BUTTON_HELD(BUTTON_LEFT))
     {
         if (player.screenCol > 0)
@@ -51,7 +54,7 @@ void updatePlayer()
         if (player.worldCol + player.width - 1 < MAPWIDTH - 1)
         {
             player.worldCol += player.cdel;
-            if (hOff < MAPWIDTH - SCREENWIDTH - 1 && player.screenCol > SCREENWIDTH / 2)
+            if (playerHoff < MAPWIDTH - SCREENWIDTH - 1 && hOff < MAPWIDTH - SCREENWIDTH - 1 && player.screenCol > SCREENWIDTH / 2)
             {
                 hOff++;
                 playerHoff++;
@@ -80,6 +83,7 @@ void updatePlayer()
             }
         }
     }
+
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
@@ -102,8 +106,8 @@ void drawPaper()
     {
         if (paper[i].active)
         {
-            shadowOAM[i + 1].attr0 = paper[i].screenRow | ATTR0_SQUARE;
-            shadowOAM[i + 1].attr1 = paper[i].screenCol | ATTR1_MEDIUM;
+            shadowOAM[i + 1].attr0 = (ROWMASK & paper[i].screenRow) | ATTR0_SQUARE;
+            shadowOAM[i + 1].attr1 = (COLMASK & paper[i].screenCol) | ATTR1_MEDIUM;
             shadowOAM[i + 1].attr2 = ATTR2_TILEID(paper[i].aniState * 4, paper[i].curFrame * 4);
         }
         if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + SCREENHEIGHT < paper[i].worldRow || hOff + SCREENWIDTH < paper[i].worldRow)
@@ -118,8 +122,8 @@ void updatePaper()
     for (int i = 0; i < TOTALPAPER; i++)
     {
 
-        if (collision(player.worldCol, player.worldRow, player.width, player.height,
-                      paper[i].worldCol, paper[i].worldRow, paper[i].width, paper[i].height) &&
+        if (collision(player.screenCol, player.screenRow, player.width, player.height,
+                      paper[i].screenCol, paper[i].screenRow, paper[i].width, paper[i].height) &&
             paper[i].active)
         {
             paper[i].active = 0;
@@ -144,6 +148,8 @@ void initCustomer()
         customers[i].width = 32;
         customers[i].height = 32;
         customers[i].active = 1;
+        customers[i].livesRemaining = 3;
+        customers[i].follow = 0;
     }
 }
 void drawCustomer()
@@ -152,8 +158,8 @@ void drawCustomer()
     {
         if (customers[i].active)
         {
-            shadowOAM[i + 50].attr0 = customers[i].screenRow | ATTR0_SQUARE;
-            shadowOAM[i + 50].attr1 = customers[i].screenCol | ATTR1_MEDIUM;
+            shadowOAM[i + 50].attr0 = (ROWMASK & customers[i].screenRow) | ATTR0_SQUARE;
+            shadowOAM[i + 50].attr1 = (COLMASK & customers[i].screenCol) | ATTR1_MEDIUM;
             shadowOAM[i + 50].attr2 = ATTR2_TILEID(customers[i].aniState * 4, customers[i].curFrame * 4);
         }
         if (customers[i].active == 0 || vOff > customers[i].worldRow || hOff > customers[i].worldCol || hOff + SCREENWIDTH < customers[i].worldCol || vOff + SCREENHEIGHT < customers[i].worldRow)
@@ -164,9 +170,19 @@ void drawCustomer()
 }
 void updateCustomer()
 {
+    speed = 2;
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
-        if (collision(player.worldCol, player.worldRow, player.width, player.height, customers[i].worldCol, customers[i].worldRow,
+        dx = player.worldCol - customers[i].worldCol;
+        dy = player.worldRow - customers[i].worldRow;
+        distance = sqrt(dx * dx + dy * dy);
+        if (customers[i].follow && timer % 3 == 0)
+        {
+            customers[i].worldCol += speed * (dx / distance);
+            customers[i].worldRow += speed * (dy / distance);
+        }
+
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, customers[i].screenCol, customers[i].screenRow,
                       customers[i].width, customers[i].height) &&
             customers[i].active)
         {
@@ -175,7 +191,12 @@ void updateCustomer()
         if (BUTTON_PRESSED(BUTTON_A) && collision(player.worldCol - 25, player.worldRow - 25, player.width + 50, player.height + 50, customers[i].worldCol, customers[i].worldRow, customers[i].width, customers[i].height) &&
             customers[i].active)
         {
-            customers[i].active = 0;
+            customers[i].livesRemaining--;
+            customers[i].follow = 1;
+            if (customers[i].livesRemaining == 0)
+            {
+                customers[i].active = 0;
+            }
         }
         customers[i].screenRow = customers[i].worldRow - vOff;
         customers[i].screenCol = customers[i].worldCol - hOff;
@@ -185,7 +206,7 @@ void initGame()
 {
     vOff = 116;
     hOff = 9;
-    playerHoff = 0;
+    playerHoff = 9;
     screenBlock = 28;
 
     initPlayer();
@@ -195,30 +216,41 @@ void initGame()
     TPCollected = 0;
     won = 0;
     lost = 0;
-    playerTimer = 0;
+    timer = 0;
 }
 void updateGame()
 {
+    timer++;
     if (hOff > 256 && screenBlock < 31)
     {
         screenBlock++;
 
-                hOff -= 256;
+        hOff -= 256;
+
+        for (int i = 0; i < TOTALCUSTOMER; i++)
+        {
+            customers[i].worldCol -= 256;
+        }
+        for (int i = 0; i < TOTALPAPER; i++)
+        {
+            paper[i].worldCol -= 256;
+        }
         REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
     }
     if (hOff < 0 && screenBlock > 28)
     {
         screenBlock--;
         hOff += 256;
+
+        for (int i = 0; i < TOTALCUSTOMER; i++)
+        {
+            customers[i].worldCol += 256;
+        }
+        for (int i = 0; i < TOTALPAPER; i++)
+        {
+            paper[i].worldCol += 256;
+        }
         REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
-    }
-    if (playerHoff > 512)
-    {
-        playerHoff -= 512;
-    }
-    if (playerHoff < 0 && screenBlock < 30)
-    {
-        playerHoff += 512;
     }
     updatePaper();
     updatePlayer();

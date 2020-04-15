@@ -35,7 +35,9 @@ initPlayer:
 	str	lr, [r3, #44]
 	str	lr, [r3, #36]
 	str	r1, [r3, #8]
+	str	r1, [r3]
 	str	r2, [r3, #12]
+	str	r2, [r3, #4]
 	str	ip, [r3, #20]
 	str	ip, [r3, #16]
 	str	r0, [r3, #28]
@@ -61,18 +63,20 @@ drawPlayer:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	ldr	r1, .L7
-	ldr	r2, [r1, #4]
-	mvn	r2, r2, lsl #17
-	mvn	r2, r2, lsr #17
+	ldr	r3, [r1, #4]
+	lsl	r3, r3, #23
+	lsr	r3, r3, #23
+	mvn	r3, r3, lsl #17
+	mvn	r3, r3, lsr #17
 	ldr	ip, [r1, #36]
-	ldr	r3, [r1, #44]
+	ldr	r2, [r1, #44]
 	ldr	r0, .L7+4
-	ldr	r1, [r1]
-	add	r3, r3, ip, lsl #5
-	lsl	r3, r3, #2
-	strh	r2, [r0, #2]	@ movhi
+	ldrb	r1, [r1]	@ zero_extendqisi2
+	add	r2, r2, ip, lsl #5
+	lsl	r2, r2, #2
+	strh	r3, [r0, #2]	@ movhi
 	strh	r1, [r0]	@ movhi
-	strh	r3, [r0, #4]	@ movhi
+	strh	r2, [r0, #4]	@ movhi
 	bx	lr
 .L8:
 	.align	2
@@ -90,23 +94,19 @@ updatePlayer:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	ldr	r2, .L22
-	ldr	r3, [r2]
-	add	r3, r3, #1
-	push	{r4, r5, lr}
-	str	r3, [r2]
-	ldr	r3, .L22+4
+	ldr	r3, .L22
 	ldrh	r2, [r3, #48]
-	ldr	r1, .L22+8
-	ldr	r3, .L22+12
+	ldr	r1, .L22+4
+	ldr	r3, .L22+8
 	tst	r2, #32
-	ldr	ip, [r1]
+	push	{r4, r5, lr}
 	ldr	r2, [r3, #12]
+	ldr	ip, [r1]
 	bne	.L10
 	ldr	r0, [r3, #4]
 	cmp	r0, #0
 	ble	.L10
-	ldr	r4, .L22+16
+	ldr	r4, .L22+12
 	ldr	lr, [r4]
 	mvn	r5, lr
 	cmp	r0, #119
@@ -121,7 +121,7 @@ updatePlayer:
 	strne	lr, [r4]
 	strne	ip, [r1]
 .L10:
-	ldr	r0, .L22+4
+	ldr	r0, .L22
 	ldrh	r0, [r0, #48]
 	tst	r0, #16
 	bne	.L11
@@ -130,9 +130,9 @@ updatePlayer:
 	cmp	r0, #1024
 	blt	.L21
 .L11:
-	ldr	r1, .L22+4
+	ldr	r1, .L22
 	ldrh	r1, [r1, #48]
-	ldr	lr, .L22+20
+	ldr	lr, .L22+16
 	tst	r1, #64
 	ldr	r0, [lr]
 	ldr	r1, [r3, #8]
@@ -151,7 +151,7 @@ updatePlayer:
 	str	r1, [r3, #8]
 	strne	r0, [lr]
 .L12:
-	ldr	r4, .L22+4
+	ldr	r4, .L22
 	ldrh	r4, [r4, #48]
 	tst	r4, #128
 	bne	.L13
@@ -175,25 +175,26 @@ updatePlayer:
 	pop	{r4, r5, lr}
 	bx	lr
 .L21:
-	ldr	lr, .L22+16
-	ldr	r5, .L22+24
-	ldr	r0, [lr]
-	ldr	r4, [r3, #20]
-	cmp	r0, r5
-	add	r2, r2, r4
+	ldr	lr, [r3, #20]
+	ldr	r0, .L22+20
+	add	r2, r2, lr
+	cmp	ip, r0
 	str	r2, [r3, #12]
 	bgt	.L11
-	ldr	r4, [r3, #4]
-	cmp	r4, #120
-	addgt	r0, r0, #1
+	ldr	r4, .L22+12
+	ldr	lr, [r4]
+	cmp	lr, r0
+	bgt	.L11
+	ldr	r0, [r3, #4]
+	cmp	r0, #120
+	addgt	lr, lr, #1
 	addgt	ip, ip, #1
-	strgt	r0, [lr]
+	strgt	lr, [r4]
 	strgt	ip, [r1]
 	b	.L11
 .L23:
 	.align	2
 .L22:
-	.word	playerTimer
 	.word	67109120
 	.word	playerHoff
 	.word	player
@@ -269,47 +270,49 @@ drawPaper:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, r7, r8, r9, r10, lr}
-	mov	lr, #512
+	mov	ip, #512
 	ldr	r2, .L37
 	ldr	r3, .L37+4
-	ldr	r4, [r2]
+	push	{r4, r5, r6, r7, r8, r9, r10, lr}
+	ldr	lr, [r2]
 	ldr	r6, [r3]
 	ldr	r3, .L37+8
 	ldr	r2, .L37+12
 	ldr	r5, .L37+16
-	add	r7, r4, #160
+	ldr	r4, .L37+20
+	add	r7, lr, #160
 	add	r8, r6, #240
-	add	ip, r3, #360
+	add	r0, r3, #360
 .L34:
 	ldr	r1, [r3, #32]
 	cmp	r1, #0
 	beq	.L33
+	ldr	r9, [r3, #4]
 	ldr	r10, [r3, #24]
 	ldr	r1, [r3, #28]
-	ldr	r0, [r3, #4]
-	ldr	r9, [r3, #12]
+	and	r9, r9, r5
 	add	r1, r1, r10, lsl #5
-	ldr	r10, [r3]
+	orr	r9, r9, r4
+	ldr	r10, [r3, #12]
+	strh	r9, [r2, #10]	@ movhi
+	ldrb	r9, [r3]	@ zero_extendqisi2
 	lsl	r1, r1, #2
-	orr	r0, r0, r5
-	cmp	r9, r4
+	cmp	r10, lr
 	strh	r1, [r2, #12]	@ movhi
-	strh	r0, [r2, #10]	@ movhi
-	strh	r10, [r2, #8]	@ movhi
+	strh	r9, [r2, #8]	@ movhi
 	blt	.L33
 	ldr	r1, [r3, #8]
 	cmp	r1, r6
 	blt	.L33
-	cmp	r9, r7
+	cmp	r10, r7
 	bgt	.L33
-	cmp	r9, r8
+	cmp	r10, r8
 	ble	.L32
 .L33:
-	strh	lr, [r2, #8]	@ movhi
+	strh	ip, [r2, #8]	@ movhi
 .L32:
 	add	r3, r3, #36
-	cmp	r3, ip
+	cmp	r3, r0
 	add	r2, r2, #8
 	bne	.L34
 	pop	{r4, r5, r6, r7, r8, r9, r10, lr}
@@ -321,6 +324,7 @@ drawPaper:
 	.word	hOff
 	.word	paper
 	.word	shadowOAM
+	.word	511
 	.word	-32768
 	.size	drawPaper, .-drawPaper
 	.align	2
@@ -416,7 +420,7 @@ initCustomer:
 	ldr	r5, .L57+4
 	ldr	r8, .L57+8
 	ldr	r7, .L57+12
-	add	r6, r4, #108
+	add	r6, r4, #132
 .L54:
 	mov	lr, pc
 	bx	r5
@@ -430,22 +434,25 @@ initCustomer:
 	str	r0, [r4, #8]
 	mov	lr, pc
 	bx	r5
-	mov	r2, #32
+	mov	ip, #3
 	mov	r1, #0
-	smull	r3, ip, r7, r0
+	mov	r2, #32
+	smull	r3, lr, r7, r0
 	asr	r3, r0, #31
-	rsb	r3, r3, ip, asr #3
-	rsb	ip, r3, r3, lsl #3
-	rsb	r3, r3, ip, lsl #3
+	rsb	r3, r3, lr, asr ip
+	rsb	lr, r3, r3, lsl ip
+	rsb	r3, r3, lr, lsl ip
 	sub	r0, r0, r3, lsl #2
 	add	r0, r0, #10
-	str	r9, [r4, #28]
 	str	r9, [r4, #32]
+	str	r9, [r4, #36]
 	str	r0, [r4, #12]
-	str	r1, [r4, #24]
+	str	r1, [r4, #28]
+	str	r1, [r4, #40]
 	str	r2, [r4, #20]
 	str	r2, [r4, #16]
-	add	r4, r4, #36
+	str	ip, [r4, #24]
+	add	r4, r4, #44
 	cmp	r4, r6
 	bne	.L54
 	pop	{r4, r5, r6, r7, r8, r9, r10, lr}
@@ -468,7 +475,7 @@ drawCustomer:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, r7, r8, r9, lr}
+	push	{r4, r5, r6, r7, r8, r9, r10, lr}
 	mov	lr, #512
 	ldr	r2, .L67
 	ldr	r3, .L67+4
@@ -476,26 +483,28 @@ drawCustomer:
 	ldr	r5, [r3]
 	ldr	r3, .L67+8
 	ldr	r2, .L67+12
-	ldr	r6, .L67+16
-	add	r8, r4, #160
-	add	r7, r5, #240
-	add	ip, r3, #108
+	ldr	r7, .L67+16
+	ldr	r6, .L67+20
+	add	r9, r4, #160
+	add	r8, r5, #240
+	add	ip, r3, #132
 .L63:
-	ldr	r1, [r3, #32]
+	ldr	r1, [r3, #36]
 	cmp	r1, #0
 	beq	.L62
-	ldr	r9, [r3, #24]
-	ldr	r1, [r3, #28]
-	add	r1, r1, r9, lsl #5
-	lsl	r1, r1, #2
 	ldr	r0, [r3, #4]
-	ldr	r9, [r3, #12]
-	strh	r1, [r2, #4]	@ movhi
-	ldr	r1, [r3]
+	ldr	r10, [r3, #28]
+	ldr	r1, [r3, #32]
+	and	r0, r0, r7
+	add	r1, r1, r10, lsl #5
 	orr	r0, r0, r6
-	cmp	r9, r4
+	ldr	r10, [r3, #12]
 	strh	r0, [r2, #2]	@ movhi
-	strh	r1, [r2]	@ movhi
+	ldrb	r0, [r3]	@ zero_extendqisi2
+	lsl	r1, r1, #2
+	cmp	r10, r4
+	strh	r1, [r2, #4]	@ movhi
+	strh	r0, [r2]	@ movhi
 	blt	.L62
 	ldr	r1, [r3, #8]
 	cmp	r1, r5
@@ -503,16 +512,16 @@ drawCustomer:
 .L62:
 	strh	lr, [r2]	@ movhi
 .L61:
-	add	r3, r3, #36
+	add	r3, r3, #44
 	cmp	r3, ip
 	add	r2, r2, #8
 	bne	.L63
-	pop	{r4, r5, r6, r7, r8, r9, lr}
+	pop	{r4, r5, r6, r7, r8, r9, r10, lr}
 	bx	lr
 .L66:
-	cmp	r1, r7
+	cmp	r1, r8
 	bgt	.L62
-	cmp	r9, r8
+	cmp	r10, r9
 	bgt	.L62
 	b	.L61
 .L68:
@@ -522,8 +531,12 @@ drawCustomer:
 	.word	hOff
 	.word	customers
 	.word	shadowOAM+400
+	.word	511
 	.word	-32768
 	.size	drawCustomer, .-drawCustomer
+	.global	__aeabi_i2d
+	.global	__aeabi_d2iz
+	.global	__aeabi_idiv
 	.align	2
 	.global	updateCustomer
 	.syntax unified
@@ -532,64 +545,122 @@ drawCustomer:
 	.type	updateCustomer, %function
 updateCustomer:
 	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
+	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
+	mov	r3, #2
 	push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
-	ldr	r4, .L88
-	ldr	r5, .L88+4
-	ldr	r7, .L88+8
-	ldr	fp, .L88+12
-	ldr	r10, .L88+16
-	ldr	r9, .L88+20
-	sub	sp, sp, #20
-	add	r8, r4, #108
-.L74:
+	ldr	r2, .L93
+	ldr	r4, .L93+4
+	str	r3, [r2]
+	ldr	r5, .L93+8
+	ldr	r7, .L93+12
+	ldr	r6, .L93+16
+	ldr	r8, .L93+20
+	ldr	fp, .L93+24
+	ldr	r10, .L93+28
+	sub	sp, sp, #28
+	add	r9, r4, #132
+.L76:
+	ldr	r3, [r4, #12]
+	ldr	r2, [r5, #8]
+	sub	r2, r2, r3
+	mul	r0, r2, r2
+	ldr	r1, [r4, #8]
+	ldr	r3, [r5, #12]
+	sub	r3, r3, r1
+	str	r2, [r6]
+	mla	r0, r3, r3, r0
+	str	r3, [r7]
+	ldr	r3, .L93+32
+	mov	lr, pc
+	bx	r3
+	ldr	r3, .L93+36
+	mov	lr, pc
+	bx	r3
+	ldr	r3, .L93+40
+	mov	lr, pc
+	bx	r3
+	ldr	r3, [r4, #40]
+	cmp	r3, #0
+	ldr	r3, .L93+44
+	mov	r1, r0
+	str	r0, [r3]
+	beq	.L70
+	ldr	r3, .L93+48
+	ldr	r2, [r3]
+	ldr	r3, .L93+52
+	smull	r0, r3, r2, r3
+	sub	r3, r3, r2, asr #31
+	add	r3, r3, r3, lsl #1
+	cmp	r2, r3
+	bne	.L70
+	str	r1, [sp, #20]
+	ldr	r3, .L93+56
+	ldr	r0, [r7]
+	mov	lr, pc
+	bx	r3
+	ldr	r2, .L93
+	ldr	r3, [r2]
+	ldr	r2, [r4, #8]
+	mla	r0, r3, r0, r2
+	str	r3, [sp, #16]
+	str	r0, [r4, #8]
+	ldr	r3, .L93+56
+	ldr	r1, [sp, #20]
+	ldr	r0, [r6]
+	mov	lr, pc
+	bx	r3
+	ldr	r2, [r4, #12]
+	ldr	r3, [sp, #16]
+	mla	r0, r3, r0, r2
+	str	r0, [r4, #12]
+.L70:
 	add	r0, r4, #16
 	ldm	r0, {r0, r1}
-	ldr	r2, [r4, #12]
-	ldr	r3, [r4, #8]
+	ldm	r4, {r2, r3}
 	str	r0, [sp, #12]
 	str	r1, [sp, #8]
 	str	r2, [sp, #4]
 	str	r3, [sp]
 	add	r2, r5, #24
 	ldm	r2, {r2, r3}
-	ldr	r1, [r5, #8]
-	ldr	r0, [r5, #12]
+	ldr	r1, [r5]
+	ldr	r0, [r5, #4]
 	mov	lr, pc
-	bx	r7
+	bx	r8
 	cmp	r0, #0
-	beq	.L70
-	ldr	r3, [r4, #32]
+	beq	.L71
+	ldr	r3, [r4, #36]
 	cmp	r3, #0
 	movne	r2, #1
-	ldrne	r3, .L88+24
+	ldrne	r3, .L93+60
 	strne	r2, [r3]
-.L70:
-	ldrh	r3, [fp]
+.L71:
+	ldr	r3, .L93+64
+	ldrh	r3, [r3]
 	tst	r3, #1
 	ldr	ip, [r4, #12]
-	beq	.L71
-	ldr	r3, .L88+28
-	ldrh	r6, [r3]
-	ands	r6, r6, #1
-	beq	.L87
-.L71:
-	ldr	r2, [r10]
+	beq	.L72
+	ldr	r3, .L93+68
+	ldrh	r3, [r3]
+	tst	r3, #1
+	beq	.L92
+.L72:
+	ldr	r2, [fp]
 	ldr	r3, [r4, #8]
 	sub	ip, ip, r2
-	ldr	r2, [r9]
+	ldr	r2, [r10]
 	sub	r3, r3, r2
 	str	ip, [r4]
 	str	r3, [r4, #4]
-	add	r4, r4, #36
-	cmp	r4, r8
-	bne	.L74
-	add	sp, sp, #20
+	add	r4, r4, #44
+	cmp	r4, r9
+	bne	.L76
+	add	sp, sp, #28
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
 	bx	lr
-.L87:
+.L92:
 	ldr	lr, [r4, #16]
 	add	r2, r5, #24
 	ldm	r2, {r2, r3}
@@ -606,25 +677,42 @@ updateCustomer:
 	sub	r1, r1, #25
 	sub	r0, r0, #25
 	mov	lr, pc
-	bx	r7
+	bx	r8
 	cmp	r0, #0
-	beq	.L86
-	ldr	r3, [r4, #32]
+	beq	.L91
+	ldr	r3, [r4, #36]
 	cmp	r3, #0
-	strne	r6, [r4, #32]
-.L86:
+	beq	.L91
+	mov	r2, #1
+	ldr	r3, [r4, #24]
+	sub	r3, r3, #1
+	cmp	r3, #0
+	str	r2, [r4, #40]
+	str	r3, [r4, #24]
+	streq	r3, [r4, #36]
+.L91:
 	ldr	ip, [r4, #12]
-	b	.L71
-.L89:
+	b	.L72
+.L94:
 	.align	2
-.L88:
+.L93:
+	.word	speed
 	.word	customers
 	.word	player
+	.word	dx
+	.word	dy
 	.word	collision
-	.word	oldButtons
 	.word	vOff
 	.word	hOff
+	.word	__aeabi_i2d
+	.word	sqrt
+	.word	__aeabi_d2iz
+	.word	distance
+	.word	timer
+	.word	1431655766
+	.word	__aeabi_idiv
 	.word	lost
+	.word	oldButtons
 	.word	buttons
 	.size	updateCustomer, .-updateCustomer
 	.align	2
@@ -639,54 +727,56 @@ initGame:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}
 	mov	r6, #116
-	mov	r5, #9
+	mov	r3, #9
+	mov	lr, #28
 	mov	r4, #0
-	mov	r0, #113
-	mov	r1, #1
-	mov	r2, #32
-	mov	lr, #180
-	mov	ip, #28
-	ldr	r3, .L92
-	str	r6, [r3]
-	ldr	r3, .L92+4
-	str	r5, [r3]
-	ldr	r3, .L92+8
-	str	r4, [r3]
-	ldr	r3, .L92+12
-	str	r0, [r3, #12]
-	ldr	r0, .L92+16
+	mov	r0, #32
+	mov	r1, #180
+	mov	r2, #113
+	mov	ip, #1
+	ldr	r5, .L97
+	str	r6, [r5]
+	ldr	r5, .L97+4
+	str	r3, [r5]
+	ldr	r5, .L97+8
+	str	r3, [r5]
+	ldr	r3, .L97+12
+	str	lr, [r3]
+	ldr	r3, .L97+16
 	str	r4, [r3, #44]
 	str	r4, [r3, #36]
-	str	lr, [r3, #8]
-	str	r1, [r3, #20]
-	str	r1, [r3, #16]
-	str	r2, [r3, #28]
-	str	r2, [r3, #24]
-	str	ip, [r0]
+	str	r0, [r3, #28]
+	str	r0, [r3, #24]
+	str	r1, [r3, #8]
+	str	r1, [r3]
+	str	r2, [r3, #12]
+	str	r2, [r3, #4]
+	str	ip, [r3, #20]
+	str	ip, [r3, #16]
 	bl	initPaper
 	bl	initCustomer
-	ldr	r0, .L92+20
-	ldr	r1, .L92+24
-	ldr	r2, .L92+28
-	ldr	r3, .L92+32
+	ldr	r0, .L97+20
+	ldr	r1, .L97+24
+	ldr	r2, .L97+28
+	ldr	r3, .L97+32
 	str	r4, [r0]
 	str	r4, [r1]
 	str	r4, [r2]
 	str	r4, [r3]
 	pop	{r4, r5, r6, lr}
 	bx	lr
-.L93:
+.L98:
 	.align	2
-.L92:
+.L97:
 	.word	vOff
 	.word	hOff
 	.word	playerHoff
-	.word	player
 	.word	screenBlock
+	.word	player
 	.word	TPCollected
 	.word	won
 	.word	lost
-	.word	playerTimer
+	.word	timer
 	.size	initGame, .-initGame
 	.align	2
 	.global	updateGame
@@ -698,68 +788,92 @@ updateGame:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	ldr	r2, .L102
-	ldr	r3, [r2]
-	cmp	r3, #256
-	push	{r4, lr}
-	ble	.L95
-	ldr	ip, .L102+4
-	ldr	r1, [ip]
-	cmp	r1, #30
-	ble	.L101
-.L99:
-	ldr	r2, .L102+8
-	ldr	r3, [r2]
-	cmp	r3, #512
-	subgt	r3, r3, #512
-	strgt	r3, [r2]
-	bgt	.L98
-	cmp	r3, #0
-	bge	.L98
-	ldr	r1, .L102+4
-	ldr	r1, [r1]
-	cmp	r1, #29
-	addle	r3, r3, #512
-	strle	r3, [r2]
-.L98:
+	push	{r4, r5, r6, lr}
+	ldr	r1, .L109
+	ldr	lr, .L109+4
+	ldr	r3, [r1]
+	ldr	r2, [lr]
+	add	r3, r3, #1
+	cmp	r2, #256
+	str	r3, [r1]
+	ble	.L100
+	ldr	r0, .L109+8
+	ldr	r3, [r0]
+	cmp	r3, #30
+	bgt	.L104
+	ldr	r1, .L109+12
+	add	ip, r3, #1
+	ldr	r5, [r1, #8]
+	ldr	r4, [r1, #52]
+	str	ip, [r0]
+	ldr	r0, [r1, #96]
+	ldr	r3, .L109+16
+	sub	r2, r2, #256
+	sub	r5, r5, #256
+	sub	r4, r4, #256
+	sub	r0, r0, #256
+	str	r2, [lr]
+	str	r5, [r1, #8]
+	str	r4, [r1, #52]
+	str	r0, [r1, #96]
+	add	r1, r3, #360
+.L102:
+	ldr	r2, [r3, #8]
+	sub	r2, r2, #256
+	str	r2, [r3, #8]
+	add	r3, r3, #36
+	cmp	r3, r1
+	bne	.L102
+.L108:
+	mov	r2, #67108864
+	lsl	r3, ip, #24
+	orr	r3, r3, #1073741824
+	lsr	r3, r3, #16
+	strh	r3, [r2, #8]	@ movhi
+.L104:
 	bl	updatePaper
 	bl	updatePlayer
-	pop	{r4, lr}
+	pop	{r4, r5, r6, lr}
 	b	updateCustomer
-.L101:
-	mov	lr, #67108864
-	add	r1, r1, #1
-	lsl	r0, r1, #24
-	orr	r0, r0, #1073741824
-	lsr	r0, r0, #16
-	sub	r3, r3, #256
-	str	r1, [ip]
-	str	r3, [r2]
-	strh	r0, [lr, #8]	@ movhi
-	b	.L99
-.L95:
-	cmp	r3, #0
-	bge	.L99
-	ldr	ip, .L102+4
-	ldr	r1, [ip]
-	cmp	r1, #28
-	ble	.L99
-	mov	lr, #67108864
-	sub	r1, r1, #1
-	lsl	r0, r1, #24
-	orr	r0, r0, #1073741824
-	lsr	r0, r0, #16
-	add	r3, r3, #256
-	str	r1, [ip]
-	str	r3, [r2]
-	strh	r0, [lr, #8]	@ movhi
-	b	.L99
+.L100:
+	cmp	r2, #0
+	bge	.L104
+	ldr	r0, .L109+8
+	ldr	r3, [r0]
+	cmp	r3, #28
+	ble	.L104
+	ldr	r1, .L109+12
+	sub	ip, r3, #1
+	ldr	r5, [r1, #8]
+	ldr	r4, [r1, #52]
+	str	ip, [r0]
+	ldr	r0, [r1, #96]
+	ldr	r3, .L109+16
+	add	r2, r2, #256
+	add	r5, r5, #256
+	add	r4, r4, #256
+	add	r0, r0, #256
+	str	r2, [lr]
+	str	r5, [r1, #8]
+	str	r4, [r1, #52]
+	str	r0, [r1, #96]
+	add	r1, r3, #360
 .L103:
+	ldr	r2, [r3, #8]
+	add	r2, r2, #256
+	str	r2, [r3, #8]
+	add	r3, r3, #36
+	cmp	r3, r1
+	bne	.L103
+	b	.L108
+.L110:
 	.align	2
-.L102:
+.L109:
+	.word	timer
 	.word	hOff
 	.word	screenBlock
-	.word	playerHoff
+	.word	customers
+	.word	paper
 	.size	updateGame, .-updateGame
 	.align	2
 	.global	drawGame
@@ -771,41 +885,47 @@ drawGame:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	ldr	r1, .L106
-	ldr	r2, [r1, #4]
-	mvn	r2, r2, lsl #17
-	mvn	r2, r2, lsr #17
+	ldr	r1, .L113
+	ldr	r3, [r1, #4]
+	lsl	r3, r3, #23
+	lsr	r3, r3, #23
+	mvn	r3, r3, lsl #17
+	mvn	r3, r3, lsr #17
 	ldr	ip, [r1, #36]
-	ldr	r3, [r1, #44]
-	ldr	r0, .L106+4
-	ldr	r1, [r1]
-	add	r3, r3, ip, lsl #5
-	lsl	r3, r3, #2
+	ldr	r2, [r1, #44]
+	ldr	r0, .L113+4
+	ldrb	r1, [r1]	@ zero_extendqisi2
+	add	r2, r2, ip, lsl #5
+	lsl	r2, r2, #2
 	push	{r4, lr}
-	strh	r2, [r0, #2]	@ movhi
+	strh	r3, [r0, #2]	@ movhi
 	strh	r1, [r0]	@ movhi
-	strh	r3, [r0, #4]	@ movhi
+	strh	r2, [r0, #4]	@ movhi
 	bl	drawPaper
 	bl	drawCustomer
 	mov	r3, #67108864
-	ldr	r2, .L106+8
+	ldr	r2, .L113+8
 	ldrh	r1, [r2]
-	ldr	r2, .L106+12
+	ldr	r2, .L113+12
 	ldrh	r2, [r2]
 	strh	r1, [r3, #16]	@ movhi
 	pop	{r4, lr}
 	strh	r2, [r3, #18]	@ movhi
 	bx	lr
-.L107:
+.L114:
 	.align	2
-.L106:
+.L113:
 	.word	player
 	.word	shadowOAM
 	.word	hOff
 	.word	vOff
 	.size	drawGame, .-drawGame
-	.comm	playerTimer,4,4
-	.comm	customers,108,4
+	.comm	distance,4,4
+	.comm	dy,4,4
+	.comm	dx,4,4
+	.comm	speed,4,4
+	.comm	timer,4,4
+	.comm	customers,132,4
 	.comm	player,56,4
 	.comm	paper,360,4
 	.comm	shadowOAM,1024,4

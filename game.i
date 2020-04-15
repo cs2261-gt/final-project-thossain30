@@ -14,13 +14,15 @@ typedef unsigned int u32;
 # 64 "myLib.h"
 extern unsigned short *videoBuffer;
 # 85 "myLib.h"
-typedef struct {
- u16 tileimg[8192];
+typedef struct
+{
+    u16 tileimg[8192];
 } charblock;
 
 
-typedef struct {
- u16 tilemap[1024];
+typedef struct
+{
+    u16 tilemap[1024];
 } screenblock;
 
 
@@ -45,8 +47,8 @@ void flipPage();
 
 
 
-
-typedef struct {
+typedef struct
+{
     unsigned short attr0;
     unsigned short attr1;
     unsigned short attr2;
@@ -56,7 +58,7 @@ typedef struct {
 
 
 extern OBJ_ATTR shadowOAM[];
-# 157 "myLib.h"
+# 159 "myLib.h"
 void hideSprites();
 
 
@@ -64,7 +66,8 @@ void hideSprites();
 
 
 
-typedef struct {
+typedef struct
+{
     int screenRow;
     int screenCol;
     int worldRow;
@@ -80,11 +83,12 @@ typedef struct {
     int numFrames;
     int hide;
 } ANISPRITE;
-# 200 "myLib.h"
+# 202 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 211 "myLib.h"
-typedef volatile struct {
+# 212 "myLib.h"
+typedef volatile struct
+{
     volatile const void *src;
     volatile void *dst;
     volatile unsigned int cnt;
@@ -92,11 +96,12 @@ typedef volatile struct {
 
 
 extern DMA *dma;
-# 251 "myLib.h"
+# 253 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 342 "myLib.h"
-typedef struct{
-    const unsigned char* data;
+# 343 "myLib.h"
+typedef struct
+{
+    const unsigned char *data;
     int length;
     int frequency;
     int isPlaying;
@@ -150,7 +155,21 @@ typedef struct pool
     int curFrame;
     int aniState;
     int active;
-} TOILETPAPER, CUSTOMER;
+} TOILETPAPER;
+typedef struct
+{
+    int screenRow;
+    int screenCol;
+    int worldCol;
+    int worldRow;
+    int height;
+    int width;
+    int livesRemaining;
+    int curFrame;
+    int aniState;
+    int active;
+    int follow;
+} CUSTOMER;
 
 extern TOILETPAPER paper[10];
 extern CUSTOMER customers[3];
@@ -973,9 +992,255 @@ extern long double strtold (const char *restrict, char **restrict);
 # 336 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 3
 
 # 5 "game.c" 2
+# 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 1 3
 
 
-# 6 "game.c"
+
+
+
+
+# 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\machine\\ieeefp.h" 1 3
+# 8 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 2 3
+
+
+
+# 86 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
+extern double atan (double);
+extern double cos (double);
+extern double sin (double);
+extern double tan (double);
+extern double tanh (double);
+extern double frexp (double, int *);
+extern double modf (double, double *);
+extern double ceil (double);
+extern double fabs (double);
+extern double floor (double);
+
+
+
+
+
+
+extern double acos (double);
+extern double asin (double);
+extern double atan2 (double, double);
+extern double cosh (double);
+extern double sinh (double);
+extern double exp (double);
+extern double ldexp (double, int);
+extern double log (double);
+extern double log10 (double);
+extern double pow (double, double);
+extern double sqrt (double);
+extern double fmod (double, double);
+# 150 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
+    typedef float float_t;
+    typedef double double_t;
+# 194 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
+extern int __isinff (float x);
+extern int __isinfd (double x);
+extern int __isnanf (float x);
+extern int __isnand (double x);
+extern int __fpclassifyf (float x);
+extern int __fpclassifyd (double x);
+extern int __signbitf (float x);
+extern int __signbitd (double x);
+# 290 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
+extern double infinity (void);
+extern double nan (const char *);
+extern double copysign (double, double);
+extern double logb (double);
+extern int ilogb (double);
+
+extern double asinh (double);
+extern double cbrt (double);
+extern double nextafter (double, double);
+extern double rint (double);
+extern double scalbn (double, int);
+
+extern double exp2 (double);
+extern double scalbln (double, long int);
+extern double tgamma (double);
+extern double nearbyint (double);
+extern long int lrint (double);
+extern long long int llrint (double);
+extern double round (double);
+extern long int lround (double);
+extern long long int llround (double);
+extern double trunc (double);
+extern double remquo (double, double, int *);
+extern double fdim (double, double);
+extern double fmax (double, double);
+extern double fmin (double, double);
+extern double fma (double, double, double);
+
+
+extern double log1p (double);
+extern double expm1 (double);
+
+
+
+extern double acosh (double);
+extern double atanh (double);
+extern double remainder (double, double);
+extern double gamma (double);
+extern double lgamma (double);
+extern double erf (double);
+extern double erfc (double);
+extern double log2 (double);
+
+
+
+
+
+extern double hypot (double, double);
+
+
+
+
+
+
+extern float atanf (float);
+extern float cosf (float);
+extern float sinf (float);
+extern float tanf (float);
+extern float tanhf (float);
+extern float frexpf (float, int *);
+extern float modff (float, float *);
+extern float ceilf (float);
+extern float fabsf (float);
+extern float floorf (float);
+
+
+extern float acosf (float);
+extern float asinf (float);
+extern float atan2f (float, float);
+extern float coshf (float);
+extern float sinhf (float);
+extern float expf (float);
+extern float ldexpf (float, int);
+extern float logf (float);
+extern float log10f (float);
+extern float powf (float, float);
+extern float sqrtf (float);
+extern float fmodf (float, float);
+
+
+
+
+extern float exp2f (float);
+extern float scalblnf (float, long int);
+extern float tgammaf (float);
+extern float nearbyintf (float);
+extern long int lrintf (float);
+extern long long int llrintf (float);
+extern float roundf (float);
+extern long int lroundf (float);
+extern long long int llroundf (float);
+extern float truncf (float);
+extern float remquof (float, float, int *);
+extern float fdimf (float, float);
+extern float fmaxf (float, float);
+extern float fminf (float, float);
+extern float fmaf (float, float, float);
+
+extern float infinityf (void);
+extern float nanf (const char *);
+extern float copysignf (float, float);
+extern float logbf (float);
+extern int ilogbf (float);
+
+extern float asinhf (float);
+extern float cbrtf (float);
+extern float nextafterf (float, float);
+extern float rintf (float);
+extern float scalbnf (float, int);
+extern float log1pf (float);
+extern float expm1f (float);
+
+
+extern float acoshf (float);
+extern float atanhf (float);
+extern float remainderf (float, float);
+extern float gammaf (float);
+extern float lgammaf (float);
+extern float erff (float);
+extern float erfcf (float);
+extern float log2f (float);
+extern float hypotf (float, float);
+# 422 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
+extern long double atanl (long double);
+extern long double cosl (long double);
+extern long double sinl (long double);
+extern long double tanl (long double);
+extern long double tanhl (long double);
+extern long double frexpl (long double, int *);
+extern long double modfl (long double, long double *);
+extern long double ceill (long double);
+extern long double fabsl (long double);
+extern long double floorl (long double);
+extern long double log1pl (long double);
+extern long double expm1l (long double);
+
+
+
+
+extern long double acosl (long double);
+extern long double asinl (long double);
+extern long double atan2l (long double, long double);
+extern long double coshl (long double);
+extern long double sinhl (long double);
+extern long double expl (long double);
+extern long double ldexpl (long double, int);
+extern long double logl (long double);
+extern long double log10l (long double);
+extern long double powl (long double, long double);
+extern long double sqrtl (long double);
+extern long double fmodl (long double, long double);
+extern long double hypotl (long double, long double);
+
+
+extern long double copysignl (long double, long double);
+extern long double nanl (const char *);
+extern int ilogbl (long double);
+extern long double asinhl (long double);
+extern long double cbrtl (long double);
+extern long double nextafterl (long double, long double);
+extern float nexttowardf (float, long double);
+extern double nexttoward (double, long double);
+extern long double nexttowardl (long double, long double);
+extern long double logbl (long double);
+extern long double log2l (long double);
+extern long double rintl (long double);
+extern long double scalbnl (long double, int);
+extern long double exp2l (long double);
+extern long double scalblnl (long double, long);
+extern long double tgammal (long double);
+extern long double nearbyintl (long double);
+extern long int lrintl (long double);
+extern long long int llrintl (long double);
+extern long double roundl (long double);
+extern long lroundl (long double);
+extern long long int llroundl (long double);
+extern long double truncl (long double);
+extern long double remquol (long double, long double, int *);
+extern long double fdiml (long double, long double);
+extern long double fmaxl (long double, long double);
+extern long double fminl (long double, long double);
+extern long double fmal (long double, long double, long double);
+
+extern long double acoshl (long double);
+extern long double atanhl (long double);
+extern long double remainderl (long double, long double);
+extern long double lgammal (long double);
+extern long double erfl (long double);
+extern long double erfcl (long double);
+# 662 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
+
+# 6 "game.c" 2
+
+
+# 7 "game.c"
 int hOff;
 int vOff;
 OBJ_ATTR shadowOAM[128];
@@ -985,7 +1250,8 @@ extern int TPCollected;
 TOILETPAPER paper[10];
 ANISPRITE player;
 CUSTOMER customers[3];
-int playerTimer;
+int timer;
+int speed, dx, dy, distance;
 
 void initPlayer()
 {
@@ -997,17 +1263,18 @@ void initPlayer()
     player.width = 32;
     player.worldRow = 160 / 2 - player.width / 2 + vOff;
     player.worldCol = 240 / 2 - player.height / 2 + hOff;
+    player.screenRow = player.worldRow;
+    player.screenCol = player.worldCol;
 }
 void drawPlayer()
 {
-    shadowOAM[0].attr0 = player.screenRow | (0<<14);
-    shadowOAM[0].attr1 = player.screenCol | (2<<14);
-    shadowOAM[0].attr2 = ((player.aniState * 4)*32+(player.curFrame * 4)) | ((0)<<12);
+    shadowOAM[0].attr0 = (0xFF & player.screenRow) | (0 << 14);
+    shadowOAM[0].attr1 = (0x1FF & player.screenCol) | (2 << 14);
+    shadowOAM[0].attr2 = ((player.aniState * 4)*32 + (player.curFrame * 4)) | ((0) << 12);
 }
 void updatePlayer()
 {
-    playerTimer++;
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<5))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 5))))
     {
         if (player.screenCol > 0)
         {
@@ -1019,19 +1286,19 @@ void updatePlayer()
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<4))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4))))
     {
         if (player.worldCol + player.width - 1 < 1024 - 1)
         {
             player.worldCol += player.cdel;
-            if (hOff < 1024 - 240 - 1 && player.screenCol > 240 / 2)
+            if (playerHoff < 1024 - 240 - 1 && hOff < 1024 - 240 - 1 && player.screenCol > 240 / 2)
             {
                 hOff++;
                 playerHoff++;
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<6))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 6))))
     {
         if (player.screenRow > 0)
         {
@@ -1042,7 +1309,7 @@ void updatePlayer()
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<7))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))))
     {
         if (player.worldRow + player.height - 1 < 256 - 1)
         {
@@ -1053,6 +1320,7 @@ void updatePlayer()
             }
         }
     }
+
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
@@ -1075,13 +1343,13 @@ void drawPaper()
     {
         if (paper[i].active)
         {
-            shadowOAM[i + 1].attr0 = paper[i].screenRow | (0<<14);
-            shadowOAM[i + 1].attr1 = paper[i].screenCol | (2<<14);
-            shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32+(paper[i].aniState * 4));
+            shadowOAM[i + 1].attr0 = (0xFF & paper[i].screenRow) | (0 << 14);
+            shadowOAM[i + 1].attr1 = (0x1FF & paper[i].screenCol) | (2 << 14);
+            shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32 + (paper[i].aniState * 4));
         }
         if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + 160 < paper[i].worldRow || hOff + 240 < paper[i].worldRow)
         {
-            shadowOAM[i + 1].attr0 = (2<<8);
+            shadowOAM[i + 1].attr0 = (2 << 8);
         }
     }
 }
@@ -1117,6 +1385,8 @@ void initCustomer()
         customers[i].width = 32;
         customers[i].height = 32;
         customers[i].active = 1;
+        customers[i].livesRemaining = 3;
+        customers[i].follow = 0;
     }
 }
 void drawCustomer()
@@ -1125,30 +1395,45 @@ void drawCustomer()
     {
         if (customers[i].active)
         {
-            shadowOAM[i + 50].attr0 = customers[i].screenRow | (0<<14);
-            shadowOAM[i + 50].attr1 = customers[i].screenCol | (2<<14);
-            shadowOAM[i + 50].attr2 = ((customers[i].curFrame * 4)*32+(customers[i].aniState * 4));
+            shadowOAM[i + 50].attr0 = (0xFF & customers[i].screenRow) | (0 << 14);
+            shadowOAM[i + 50].attr1 = (0x1FF & customers[i].screenCol) | (2 << 14);
+            shadowOAM[i + 50].attr2 = ((customers[i].curFrame * 4)*32 + (customers[i].aniState * 4));
         }
         if (customers[i].active == 0 || vOff > customers[i].worldRow || hOff > customers[i].worldCol || hOff + 240 < customers[i].worldCol || vOff + 160 < customers[i].worldRow)
         {
-            shadowOAM[i + 50].attr0 = (2<<8);
+            shadowOAM[i + 50].attr0 = (2 << 8);
         }
     }
 }
 void updateCustomer()
 {
+    speed = 2;
     for (int i = 0; i < 3; i++)
     {
-        if (collision(player.worldCol, player.worldRow, player.width, player.height, customers[i].worldCol, customers[i].worldRow,
+        dx = player.worldCol - customers[i].worldCol;
+        dy = player.worldRow - customers[i].worldRow;
+        distance = sqrt(dx * dx + dy * dy);
+        if (customers[i].follow && timer % 3 == 0)
+        {
+            customers[i].worldCol += speed * (dx / distance);
+            customers[i].worldRow += speed * (dy / distance);
+        }
+
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, customers[i].screenCol, customers[i].screenRow,
                       customers[i].width, customers[i].height) &&
             customers[i].active)
         {
             lost = 1;
         }
-        if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))) && collision(player.worldCol - 25, player.worldRow - 25, player.width + 50, player.height + 50, customers[i].worldCol, customers[i].worldRow, customers[i].width, customers[i].height) &&
+        if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && collision(player.worldCol - 25, player.worldRow - 25, player.width + 50, player.height + 50, customers[i].worldCol, customers[i].worldRow, customers[i].width, customers[i].height) &&
             customers[i].active)
         {
-            customers[i].active = 0;
+            customers[i].livesRemaining--;
+            customers[i].follow = 1;
+            if (customers[i].livesRemaining == 0)
+            {
+                customers[i].active = 0;
+            }
         }
         customers[i].screenRow = customers[i].worldRow - vOff;
         customers[i].screenCol = customers[i].worldCol - hOff;
@@ -1158,7 +1443,7 @@ void initGame()
 {
     vOff = 116;
     hOff = 9;
-    playerHoff = 0;
+    playerHoff = 9;
     screenBlock = 28;
 
     initPlayer();
@@ -1168,30 +1453,41 @@ void initGame()
     TPCollected = 0;
     won = 0;
     lost = 0;
-    playerTimer = 0;
+    timer = 0;
 }
 void updateGame()
 {
+    timer++;
     if (hOff > 256 && screenBlock < 31)
     {
         screenBlock++;
 
         hOff -= 256;
-        (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((screenBlock)<<8) | (1<<14);
+
+        for (int i = 0; i < 3; i++)
+        {
+            customers[i].worldCol -= 256;
+        }
+        for (int i = 0; i < 10; i++)
+        {
+            paper[i].worldCol -= 256;
+        }
+        (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((screenBlock) << 8) | (1 << 14);
     }
     if (hOff < 0 && screenBlock > 28)
     {
         screenBlock--;
         hOff += 256;
-        (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((screenBlock)<<8) | (1<<14);
-    }
-    if (playerHoff > 512)
-    {
-        playerHoff -= 512;
-    }
-    if (playerHoff < 0 && screenBlock < 30)
-    {
-        playerHoff += 512;
+
+        for (int i = 0; i < 3; i++)
+        {
+            customers[i].worldCol += 256;
+        }
+        for (int i = 0; i < 10; i++)
+        {
+            paper[i].worldCol += 256;
+        }
+        (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((screenBlock) << 8) | (1 << 14);
     }
     updatePaper();
     updatePlayer();

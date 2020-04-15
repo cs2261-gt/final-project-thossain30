@@ -116,8 +116,8 @@ void menu()
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
     {
-        goToGame();
         initGame();
+        goToGame();
     }
     if (BUTTON_PRESSED(BUTTON_A))
     {

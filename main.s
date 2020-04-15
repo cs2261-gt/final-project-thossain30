@@ -557,10 +557,10 @@ menu:
 	pop	{r4, lr}
 	b	goToInstructions
 .L50:
-	bl	goToGame
 	ldr	r3, .L52+16
 	mov	lr, pc
 	bx	r3
+	bl	goToGame
 	ldrh	r3, [r4]
 	b	.L41
 .L53:

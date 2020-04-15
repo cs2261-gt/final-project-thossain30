@@ -38,7 +38,21 @@ typedef struct pool
     int curFrame;
     int aniState;
     int active;
-} TOILETPAPER, CUSTOMER;
+} TOILETPAPER;
+typedef struct
+{
+    int screenRow;
+    int screenCol;
+    int worldCol;
+    int worldRow;
+    int height;
+    int width;
+    int livesRemaining;
+    int curFrame;
+    int aniState;
+    int active;
+    int follow;
+} CUSTOMER;
 
 extern TOILETPAPER paper[TOTALPAPER];
 extern CUSTOMER customers[TOTALCUSTOMER];
