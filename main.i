@@ -278,6 +278,7 @@ unsigned short oldButtons;
 
 int seed;
 int TPCollected;
+int playerHealth;
 int lost;
 int won;
 
@@ -317,6 +318,7 @@ int main()
 void initialize()
 {
     TPCollected = 0;
+    playerHealth = 3;
     vOff = 0;
     hOff = 0;
     playerHoff = 0;

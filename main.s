@@ -21,44 +21,47 @@ initialize:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	mov	r1, #0
+	mov	r2, #0
 	push	{r4, r5, r6, lr}
+	mov	r5, #3
 	mov	r4, #67108864
-	ldr	r3, .L4
-	ldr	lr, .L4+4
-	str	r1, [r3]
-	ldr	ip, .L4+8
-	ldr	r0, .L4+12
-	ldr	r2, .L4+16
-	ldr	r3, .L4+20
-	str	r1, [lr]
-	str	r1, [ip]
-	str	r1, [r0]
-	str	r1, [r2]
-	str	r1, [r3]
-	ldr	r5, .L4+24
-	strh	r1, [r4, #16]	@ movhi
+	ldr	r1, .L4
+	ldr	r3, .L4+4
+	str	r2, [r1]
+	str	r2, [r3]
+	ldr	lr, .L4+8
+	ldr	ip, .L4+12
+	ldr	r0, .L4+16
+	ldr	r1, .L4+20
+	ldr	r3, .L4+24
+	str	r2, [lr]
+	str	r2, [ip]
+	str	r2, [r0]
+	str	r2, [r1]
+	str	r5, [r3]
+	ldr	r6, .L4+28
+	strh	r2, [r4, #16]	@ movhi
+	mov	r0, r5
+	strh	r2, [r4, #18]	@ movhi
 	mov	r3, #256
-	strh	r1, [r4, #18]	@ movhi
 	mov	r2, #83886080
-	mov	r0, #3
-	ldr	r1, .L4+28
-	mov	lr, pc
-	bx	r5
-	mov	r3, #11072
-	mov	r2, #100663296
-	mov	r0, #3
 	ldr	r1, .L4+32
 	mov	lr, pc
-	bx	r5
-	mov	r3, #1024
-	ldr	r2, .L4+36
-	mov	r0, #3
-	ldr	r1, .L4+40
+	bx	r6
+	mov	r0, r5
+	mov	r3, #11072
+	mov	r2, #100663296
+	ldr	r1, .L4+36
 	mov	lr, pc
-	bx	r5
+	bx	r6
+	mov	r0, r5
+	mov	r3, #1024
+	ldr	r2, .L4+40
+	ldr	r1, .L4+44
+	mov	lr, pc
+	bx	r6
 	mov	r2, #4352
-	ldr	r3, .L4+44
+	ldr	r3, .L4+48
 	strh	r2, [r4]	@ movhi
 	strh	r3, [r4, #8]	@ movhi
 	pop	{r4, r5, r6, lr}
@@ -72,6 +75,7 @@ initialize:
 	.word	playerHoff
 	.word	lost
 	.word	won
+	.word	playerHealth
 	.word	DMANow
 	.word	MenuBackgroundPal
 	.word	MenuBackgroundTiles
@@ -824,6 +828,7 @@ main:
 	.size	main, .-main
 	.comm	won,4,4
 	.comm	lost,4,4
+	.comm	playerHealth,4,4
 	.comm	TPCollected,4,4
 	.comm	seed,4,4
 	.comm	oldButtons,2,2

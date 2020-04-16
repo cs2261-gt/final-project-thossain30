@@ -1252,6 +1252,8 @@ ANISPRITE player;
 CUSTOMER customers[3];
 int timer;
 int speed;
+int playerHealth;
+int hitflag;
 double dx, dy, distance;
 
 void initPlayer()
@@ -1266,6 +1268,8 @@ void initPlayer()
     player.worldCol = 175;
     player.screenRow = player.worldRow;
     player.screenCol = player.worldCol;
+    playerHealth = 3;
+    hitflag = 0;
 }
 void drawPlayer()
 {
@@ -1426,7 +1430,16 @@ void updateCustomer()
                       customers[i].width, customers[i].height) &&
             customers[i].active)
         {
-            lost = 1;
+            hitflag = 1;
+            if (hitflag == 1)
+            {
+                playerHealth--;
+                hitflag = 0;
+            }
+            if (playerHealth == 0)
+            {
+                lost = 1;
+            }
         }
         if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && collision(player.worldCol - 25, player.worldRow - 25, player.width + 50, player.height + 50, customers[i].worldCol, customers[i].worldRow, customers[i].width, customers[i].height) &&
             customers[i].active)
