@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "pausebackground.h": "c",
-        "amp_math.h": "c"
+        "amp_math.h": "c",
+        "collisionbitmap.h": "c"
     }
 }

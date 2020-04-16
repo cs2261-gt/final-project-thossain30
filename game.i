@@ -131,6 +131,7 @@ int screenBlock;
 
 
 
+
 void initGame();
 void drawGame();
 void updateGame();
@@ -143,6 +144,11 @@ void updatePaper();
 void initCustomer();
 void drawCustomer();
 void updateCustomer();
+void initSanitizer();
+void drawSanitizer();
+void updateSanitizer();
+void initHeart();
+void drawHeart();
 
 typedef struct pool
 {
@@ -170,9 +176,16 @@ typedef struct
     int active;
     int follow;
 } CUSTOMER;
+typedef struct
+{
+    int screenRow;
+    int screenCol;
+    int height;
+    int width;
+} HEART;
 
 extern TOILETPAPER paper[10];
-extern CUSTOMER customers[3];
+extern CUSTOMER customers[5];
 extern ANISPRITE player;
 # 2 "game.c" 2
 
@@ -1249,12 +1262,14 @@ extern int won;
 extern int TPCollected;
 TOILETPAPER paper[10];
 ANISPRITE player;
-CUSTOMER customers[3];
+CUSTOMER customers[5];
+ANISPRITE sanitizer[5];
 int timer;
 int speed;
 int playerHealth;
 int hitflag;
 double dx, dy, distance;
+int heartCount;
 
 void initPlayer()
 {
@@ -1264,8 +1279,8 @@ void initPlayer()
     player.rdel = 1;
     player.height = 32;
     player.width = 32;
-    player.worldRow = 170;
-    player.worldCol = 175;
+    player.worldRow = 155;
+    player.worldCol = 200;
     player.screenRow = player.worldRow;
     player.screenCol = player.worldCol;
     playerHealth = 3;
@@ -1333,12 +1348,12 @@ void initPaper()
 {
     for (int i = 0; i < 10; i++)
     {
-        paper[i].worldCol = (rand() % 479) + 5;
-        paper[i].worldRow = (rand() % 220) + 5;
+        paper[i].worldCol = 64 + 128 * i;
+        paper[i].worldRow = 64 + 128 * i;
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
-        paper[i].curFrame = 1;
+        paper[i].curFrame = 5;
         paper[i].active = 1;
     }
 }
@@ -1381,11 +1396,11 @@ void updatePaper()
 }
 void initCustomer()
 {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         customers[i].worldCol = 64 + 128 * i;
-        customers[i].worldRow = 32 + 64 * i;
-        customers[i].aniState = 1;
+        customers[i].worldRow = 32 + 32 * i;
+        customers[i].aniState = 4;
         customers[i].curFrame = 0;
         customers[i].width = 32;
         customers[i].height = 32;
@@ -1398,7 +1413,7 @@ void initCustomer()
 }
 void drawCustomer()
 {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         if (customers[i].active)
         {
@@ -1414,20 +1429,20 @@ void drawCustomer()
 }
 void updateCustomer()
 {
-    speed = 3;
-    for (int i = 0; i < 3; i++)
+    speed = 2;
+    for (int i = 0; i < 5; i++)
     {
         dx = player.worldCol - customers[i].worldCol;
         dy = player.worldRow - customers[i].worldRow;
         distance = sqrt(dx * dx + dy * dy);
-        if (customers[i].follow && timer % 3 == 0)
+        if (customers[i].follow && timer % 2 == 0)
         {
             customers[i].worldCol += speed * (dx / distance);
             customers[i].worldRow += speed * (dy / distance);
         }
 
-        if (collision(player.screenCol, player.screenRow, player.width, player.height, customers[i].screenCol, customers[i].screenRow,
-                      customers[i].width, customers[i].height) &&
+        if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height, customers[i].screenCol + (customers[i].width / 4), customers[i].screenRow,
+                      customers[i].width / 2, customers[i].height) &&
             customers[i].active)
         {
             hitflag = 1;
@@ -1441,7 +1456,7 @@ void updateCustomer()
                 lost = 1;
             }
         }
-        if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && collision(player.worldCol - 25, player.worldRow - 25, player.width + 50, player.height + 50, customers[i].worldCol, customers[i].worldRow, customers[i].width, customers[i].height) &&
+        if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && collision(player.screenCol - 25, player.screenRow - 25, player.width + 50, player.height + 50, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
             customers[i].active)
         {
             customers[i].livesRemaining--;
@@ -1455,14 +1470,17 @@ void updateCustomer()
         customers[i].screenCol = customers[i].worldCol - hOff;
     }
 }
+void initSanitizer()
+{
+}
 void initGame()
 {
     initCustomer();
     initPlayer();
     initPaper();
-    vOff = 116;
-    hOff = 9;
-    playerHoff = 9;
+    vOff = player.worldRow / 2;
+    hOff = player.worldCol / 2;
+    playerHoff = player.worldCol / 2;
     screenBlock = 28;
     TPCollected = 0;
     won = 0;
@@ -1478,7 +1496,7 @@ void updateGame()
 
         hOff -= 256;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             customers[i].worldCol -= 256;
         }
@@ -1493,7 +1511,7 @@ void updateGame()
         screenBlock--;
         hOff += 256;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             customers[i].worldCol += 256;
         }

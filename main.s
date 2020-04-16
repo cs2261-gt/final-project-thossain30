@@ -459,52 +459,52 @@ goToGame:
 	ldr	r1, .L38+4
 	mov	lr, pc
 	bx	r4
-	mov	r3, #4672
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L38+8
+	ldr	r3, .L38+8
+	ldr	r1, .L38+12
 	mov	lr, pc
 	bx	r4
 	mov	r3, #4096
 	mov	r0, #3
-	ldr	r2, .L38+12
-	ldr	r1, .L38+16
+	ldr	r2, .L38+16
+	ldr	r1, .L38+20
 	mov	lr, pc
 	bx	r4
 	mov	r2, #67108864
 	mov	r3, #4352
 	mov	r1, #23552
 	strh	r3, [r2]	@ movhi
-	ldr	r3, .L38+20
+	ldr	r3, .L38+24
 	strh	r1, [r2, #8]	@ movhi
 	ldrh	r1, [r3]
-	ldr	r3, .L38+24
+	ldr	r3, .L38+28
 	strh	r1, [r2, #18]	@ movhi
 	ldrh	r1, [r3]
 	mov	r0, #3
 	strh	r1, [r2, #16]	@ movhi
 	mov	r3, #256
-	ldr	r2, .L38+28
-	ldr	r1, .L38+32
+	ldr	r2, .L38+32
+	ldr	r1, .L38+36
 	mov	lr, pc
 	bx	r4
 	mov	r0, #3
-	ldr	r2, .L38+36
-	ldr	r1, .L38+40
+	ldr	r2, .L38+40
+	ldr	r1, .L38+44
 	mov	r3, #16384
 	mov	lr, pc
 	bx	r4
-	ldr	r3, .L38+44
+	ldr	r3, .L38+48
 	mov	lr, pc
 	bx	r3
 	mov	r3, #512
 	mov	r2, #117440512
 	mov	r0, #3
-	ldr	r1, .L38+48
+	ldr	r1, .L38+52
 	mov	lr, pc
 	bx	r4
 	mov	r2, #2
-	ldr	r3, .L38+52
+	ldr	r3, .L38+56
 	pop	{r4, lr}
 	str	r2, [r3]
 	bx	lr
@@ -513,6 +513,7 @@ goToGame:
 .L38:
 	.word	DMANow
 	.word	gameBackgroundPal
+	.word	7184
 	.word	gameBackgroundTiles
 	.word	100720640
 	.word	gameBackgroundMap
