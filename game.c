@@ -45,7 +45,7 @@ void drawPlayer()
 }
 void updatePlayer()
 {
-    if (BUTTON_HELD(BUTTON_LEFT))
+    if (BUTTON_HELD(BUTTON_LEFT) && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
     {
         if (player.screenCol > 0)
         {
@@ -57,7 +57,7 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_RIGHT))
+    if (BUTTON_HELD(BUTTON_RIGHT) && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
     {
         if (player.worldCol + player.width - 1 < MAPWIDTH - 1)
         {
@@ -69,7 +69,7 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_UP))
+    if (BUTTON_HELD(BUTTON_UP) && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow - player.rdel, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow - player.rdel, MAPWIDTH)] != BLACK)
     {
         if (player.screenRow > 0)
         {
@@ -80,7 +80,7 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_DOWN))
+    if (BUTTON_HELD(BUTTON_DOWN) && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow + player.height + player.rdel - 1, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow + player.height + player.rdel - 1, MAPWIDTH)] != BLACK)
     {
         if (player.worldRow + player.height - 1 < MAPHEIGHT - 1)
         {
@@ -207,7 +207,7 @@ void updateCustomer()
                 lost = 1;
             }
         }
-        if (BUTTON_PRESSED(BUTTON_A) && collision(player.screenCol - 25, player.screenRow - 25, player.width + 50, player.height + 50, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
+        if (BUTTON_PRESSED(BUTTON_A) && collision(player.screenCol - 15, player.screenRow - 15, player.width + 30, player.height + 30, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
             customers[i].active)
         {
             customers[i].livesRemaining--;

@@ -196,6 +196,10 @@ extern const unsigned short spritesheetTiles[16384];
 
 extern const unsigned short spritesheetPal[256];
 # 4 "game.c" 2
+# 1 "collisionBitmap.h" 1
+# 20 "collisionBitmap.h"
+extern const unsigned short collisionBitmapBitmap[262144];
+# 5 "game.c" 2
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 1 3
 # 10 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 3
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\machine\\ieeefp.h" 1 3
@@ -1004,7 +1008,7 @@ extern long double _strtold_r (struct _reent *, const char *restrict, char **res
 extern long double strtold (const char *restrict, char **restrict);
 # 336 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 3
 
-# 5 "game.c" 2
+# 6 "game.c" 2
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 1 3
 
 
@@ -1250,10 +1254,10 @@ extern long double erfl (long double);
 extern long double erfcl (long double);
 # 662 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
 
-# 6 "game.c" 2
+# 7 "game.c" 2
 
 
-# 7 "game.c"
+# 8 "game.c"
 int hOff;
 int vOff;
 OBJ_ATTR shadowOAM[128];
@@ -1294,7 +1298,7 @@ void drawPlayer()
 }
 void updatePlayer()
 {
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 5))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 5))) && collisionBitmapBitmap[((player.worldRow) * (1024) + (player.worldCol - player.cdel))] != ((0) | (0) << 5 | (0) << 10) && collisionBitmapBitmap[((player.worldRow + player.height - 1) * (1024) + (player.worldCol - player.cdel))] != ((0) | (0) << 5 | (0) << 10))
     {
         if (player.screenCol > 0)
         {
@@ -1306,7 +1310,7 @@ void updatePlayer()
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4))) && collisionBitmapBitmap[((player.worldRow) * (1024) + (player.worldCol + player.width + player.cdel - 1))] != ((0) | (0) << 5 | (0) << 10) && collisionBitmapBitmap[((player.worldRow + player.height - 1) * (1024) + (player.worldCol + player.width + player.cdel - 1))] != ((0) | (0) << 5 | (0) << 10))
     {
         if (player.worldCol + player.width - 1 < 1024 - 1)
         {
@@ -1318,7 +1322,7 @@ void updatePlayer()
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 6))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 6))) && collisionBitmapBitmap[((player.worldRow - player.rdel) * (1024) + (player.worldCol))] != ((0) | (0) << 5 | (0) << 10) && collisionBitmapBitmap[((player.worldRow - player.rdel) * (1024) + (player.worldCol + player.width - 1))] != ((0) | (0) << 5 | (0) << 10))
     {
         if (player.screenRow > 0)
         {
@@ -1329,7 +1333,7 @@ void updatePlayer()
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))))
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))) && collisionBitmapBitmap[((player.worldRow + player.height + player.rdel - 1) * (1024) + (player.worldCol + player.width - 1))] != ((0) | (0) << 5 | (0) << 10) && collisionBitmapBitmap[((player.worldRow + player.height + player.rdel - 1) * (1024) + (player.worldCol))] != ((0) | (0) << 5 | (0) << 10))
     {
         if (player.worldRow + player.height - 1 < 256 - 1)
         {
