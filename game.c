@@ -14,7 +14,8 @@ TOILETPAPER paper[TOTALPAPER];
 ANISPRITE player;
 CUSTOMER customers[TOTALCUSTOMER];
 int timer;
-int speed, dx, dy, distance;
+int speed;
+double dx, dy, distance;
 
 void initPlayer()
 {
@@ -24,8 +25,8 @@ void initPlayer()
     player.rdel = 1;
     player.height = 32;
     player.width = 32;
-    player.worldRow = SCREENHEIGHT / 2 - player.width / 2 + vOff;
-    player.worldCol = SCREENWIDTH / 2 - player.height / 2 + hOff;
+    player.worldRow = 170;
+    player.worldCol = 175;
     player.screenRow = player.worldRow;
     player.screenCol = player.worldCol;
 }
@@ -141,8 +142,8 @@ void initCustomer()
 {
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
-        customers[i].worldCol = (rand() % 479) + 10;
-        customers[i].worldRow = (rand() % 220) + 10;
+        customers[i].worldCol = 64 + 128 * i;
+        customers[i].worldRow = 32 + 64 * i;
         customers[i].aniState = 1;
         customers[i].curFrame = 0;
         customers[i].width = 32;
@@ -150,6 +151,8 @@ void initCustomer()
         customers[i].active = 1;
         customers[i].livesRemaining = 3;
         customers[i].follow = 0;
+        customers[i].screenCol = customers[i].worldCol;
+        customers[i].screenRow = customers[i].worldRow;
     }
 }
 void drawCustomer()
@@ -170,7 +173,7 @@ void drawCustomer()
 }
 void updateCustomer()
 {
-    speed = 2;
+    speed = 3;
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
         dx = player.worldCol - customers[i].worldCol;
@@ -204,15 +207,13 @@ void updateCustomer()
 }
 void initGame()
 {
+    initCustomer();
+    initPlayer();
+    initPaper();
     vOff = 116;
     hOff = 9;
     playerHoff = 9;
     screenBlock = 28;
-
-    initPlayer();
-    initPaper();
-    initCustomer();
-
     TPCollected = 0;
     won = 0;
     lost = 0;

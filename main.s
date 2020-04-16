@@ -21,40 +21,44 @@ initialize:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, lr}
 	mov	r1, #0
+	push	{r4, r5, r6, lr}
 	mov	r4, #67108864
-	ldr	ip, .L4
-	ldr	r0, .L4+4
-	ldr	r2, .L4+8
-	ldr	r3, .L4+12
+	ldr	r3, .L4
+	ldr	lr, .L4+4
+	str	r1, [r3]
+	ldr	ip, .L4+8
+	ldr	r0, .L4+12
+	ldr	r2, .L4+16
+	ldr	r3, .L4+20
+	str	r1, [lr]
 	str	r1, [ip]
 	str	r1, [r0]
 	str	r1, [r2]
 	str	r1, [r3]
-	ldr	r5, .L4+16
+	ldr	r5, .L4+24
 	strh	r1, [r4, #16]	@ movhi
 	mov	r3, #256
 	strh	r1, [r4, #18]	@ movhi
 	mov	r2, #83886080
 	mov	r0, #3
-	ldr	r1, .L4+20
+	ldr	r1, .L4+28
 	mov	lr, pc
 	bx	r5
 	mov	r3, #11072
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L4+24
-	mov	lr, pc
-	bx	r5
-	mov	r3, #1024
-	ldr	r2, .L4+28
-	mov	r0, #3
 	ldr	r1, .L4+32
 	mov	lr, pc
 	bx	r5
+	mov	r3, #1024
+	ldr	r2, .L4+36
+	mov	r0, #3
+	ldr	r1, .L4+40
+	mov	lr, pc
+	bx	r5
 	mov	r2, #4352
-	ldr	r3, .L4+36
+	ldr	r3, .L4+44
 	strh	r2, [r4]	@ movhi
 	strh	r3, [r4, #8]	@ movhi
 	pop	{r4, r5, r6, lr}
@@ -66,6 +70,8 @@ initialize:
 	.word	vOff
 	.word	hOff
 	.word	playerHoff
+	.word	lost
+	.word	won
 	.word	DMANow
 	.word	MenuBackgroundPal
 	.word	MenuBackgroundTiles
@@ -610,12 +616,11 @@ instructions:
 	ldr	r0, [r2]
 	mov	lr, pc
 	bx	r3
-	bl	goToGame
 	ldr	r3, .L66+20
 	mov	lr, pc
 	bx	r3
 	pop	{r4, lr}
-	bx	lr
+	b	goToGame
 .L64:
 	bl	goToMenu
 	ldrh	r3, [r4]

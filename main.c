@@ -84,6 +84,8 @@ void initialize()
     vOff = 0;
     hOff = 0;
     playerHoff = 0;
+    lost = 0;
+    won = 0;
 
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
@@ -148,8 +150,8 @@ void instructions()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         srand(seed);
-        goToGame();
         initGame();
+        goToGame();
     }
 }
 

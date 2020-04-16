@@ -320,6 +320,8 @@ void initialize()
     vOff = 0;
     hOff = 0;
     playerHoff = 0;
+    lost = 0;
+    won = 0;
 
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
@@ -384,8 +386,8 @@ void instructions()
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
         srand(seed);
-        goToGame();
         initGame();
+        goToGame();
     }
 }
 
