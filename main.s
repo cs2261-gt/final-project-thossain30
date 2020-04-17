@@ -835,6 +835,7 @@ main:
 	.comm	oldButtons,2,2
 	.comm	buttons,2,2
 	.comm	state,4,4
+	.comm	totalPaper,4,4
 	.comm	screenBlock,4,4
 	.comm	playerHoff,4,4
 	.comm	vOff,4,4

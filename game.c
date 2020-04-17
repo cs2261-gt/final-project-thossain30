@@ -4,6 +4,20 @@
 #include "collisionBitmap.h"
 #include <stdlib.h>
 #include <math.h>
+/*completed
+Finished Spritesheet
+implemented Collision bitmap
+Added sanitizer
+*/
+
+/* To Do
+Add Sound
+Add in sprites for health
+Add in number score
+Figure out how to not die from one hit...
+Add in animation for all sprites
+Work on art for other background states
+*/
 
 int hOff;
 int vOff;
@@ -14,7 +28,7 @@ extern int TPCollected;
 TOILETPAPER paper[TOTALPAPER];
 ANISPRITE player;
 CUSTOMER customers[TOTALCUSTOMER];
-ANISPRITE sanitizer[TOTALSAN];
+SANITIZER sanitizer[TOTALSAN];
 int timer;
 int speed;
 int playerHealth;
@@ -45,7 +59,7 @@ void drawPlayer()
 }
 void updatePlayer()
 {
-    if (BUTTON_HELD(BUTTON_LEFT) && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
+    if (BUTTON_HELD(BUTTON_LEFT) && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + (player.height / 4), MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
     {
         if (player.screenCol > 0)
         {
@@ -57,7 +71,7 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_RIGHT) && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
+    if (BUTTON_HELD(BUTTON_RIGHT) && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + (player.height / 4), MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
     {
         if (player.worldCol + player.width - 1 < MAPWIDTH - 1)
         {
@@ -69,7 +83,7 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_UP) && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow - player.rdel, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow - player.rdel, MAPWIDTH)] != BLACK)
+    if (BUTTON_HELD(BUTTON_UP) && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow - player.rdel + (player.height / 4), MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow - player.rdel + (player.height / 4), MAPWIDTH)] != BLACK)
     {
         if (player.screenRow > 0)
         {
@@ -137,7 +151,7 @@ void updatePaper()
             paper[i].active = 0;
             TPCollected++;
         }
-        if (TPCollected == TOTALPAPER)
+        if (TPCollected == totalPaper)
         {
             won = 1;
         }
@@ -150,7 +164,7 @@ void initCustomer()
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
         customers[i].worldCol = 64 + 128 * i;
-        customers[i].worldRow = 32 + 32 * i;
+        customers[i].worldRow = 32 + 16 * i;
         customers[i].aniState = 4;
         customers[i].curFrame = 0;
         customers[i].width = 32;
@@ -183,8 +197,8 @@ void updateCustomer()
     speed = 2;
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
-        dx = player.worldCol - customers[i].worldCol;
-        dy = player.worldRow - customers[i].worldRow;
+        dx = player.screenCol - customers[i].screenCol;
+        dy = player.screenRow - customers[i].screenRow;
         distance = sqrt(dx * dx + dy * dy);
         if (customers[i].follow && timer % 2 == 0)
         {
@@ -223,17 +237,58 @@ void updateCustomer()
 }
 void initSanitizer()
 {
+    for (int i = 0; i < TOTALSAN; i++)
+    {
+        sanitizer[i].worldCol = 64 + 128 * i;
+        sanitizer[i].worldRow = 16 * i;
+        sanitizer[i].height = 16;
+        sanitizer[i].width = 16;
+        sanitizer[i].curFrame = 12;
+        sanitizer[i].aniState = 0;
+        sanitizer[i].active = 1;
+    }
+}
+void drawSanitizer()
+{
+    for (int i = 0; i < TOTALSAN; i++)
+    {
+        if (sanitizer[i].active)
+        {
+            shadowOAM[i + 100].attr0 = (ROWMASK & sanitizer[i].screenRow) | ATTR0_SQUARE;
+            shadowOAM[i + 100].attr1 = (COLMASK & sanitizer[i].screenCol) | ATTR1_SMALL;
+            shadowOAM[i + 100].attr2 = ATTR2_TILEID(sanitizer[i].aniState * 2, sanitizer[i].curFrame * 2);
+        }
+        if (sanitizer[i].active == 0 || vOff > sanitizer[i].worldRow || hOff > sanitizer[i].worldCol || vOff + SCREENHEIGHT < sanitizer[i].worldRow || hOff + SCREENWIDTH < sanitizer[i].worldRow)
+        {
+            shadowOAM[i + 100].attr0 = ATTR0_HIDE;
+        }
+    }
+}
+void updateSanitizer()
+{
+    for (int i = 0; i < TOTALSAN; i++)
+    {
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 4)
+        {
+            sanitizer[i].active = 0;
+            playerHealth++;
+        }
+        sanitizer[i].screenCol = sanitizer[i].worldCol - hOff;
+        sanitizer[i].screenRow = sanitizer[i].worldRow - vOff;
+    }
 }
 void initGame()
 {
     initCustomer();
     initPlayer();
     initPaper();
+    initSanitizer();
     vOff = player.worldRow / 2;
     hOff = player.worldCol / 2;
     playerHoff = player.worldCol / 2;
     screenBlock = 28;
     TPCollected = 0;
+    totalPaper = 10;
     won = 0;
     lost = 0;
     timer = 0;
@@ -251,7 +306,7 @@ void updateGame()
         {
             customers[i].worldCol -= 256;
         }
-        for (int i = 0; i < TOTALPAPER; i++)
+        for (int i = 0; i < totalPaper; i++)
         {
             paper[i].worldCol -= 256;
         }
@@ -266,7 +321,7 @@ void updateGame()
         {
             customers[i].worldCol += 256;
         }
-        for (int i = 0; i < TOTALPAPER; i++)
+        for (int i = 0; i < totalPaper; i++)
         {
             paper[i].worldCol += 256;
         }
@@ -275,12 +330,14 @@ void updateGame()
     updatePaper();
     updatePlayer();
     updateCustomer();
+    updateSanitizer();
 }
 void drawGame()
 {
     drawPlayer();
     drawPaper();
     drawCustomer();
+    drawSanitizer();
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
 }

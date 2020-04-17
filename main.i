@@ -128,6 +128,7 @@ int hOff;
 int vOff;
 int playerHoff;
 int screenBlock;
+int totalPaper;
 
 
 
@@ -162,7 +163,7 @@ typedef struct pool
     int curFrame;
     int aniState;
     int active;
-} TOILETPAPER;
+} TOILETPAPER, SANITIZER;
 typedef struct
 {
     int screenRow;
@@ -185,9 +186,10 @@ typedef struct
     int width;
 } HEART;
 
-extern TOILETPAPER paper[10];
-extern CUSTOMER customers[5];
+extern TOILETPAPER paper[30];
+extern CUSTOMER customers[10];
 extern ANISPRITE player;
+extern SANITIZER sanitizer[5];
 # 3 "main.c" 2
 # 1 "gameBackground.h" 1
 # 22 "gameBackground.h"

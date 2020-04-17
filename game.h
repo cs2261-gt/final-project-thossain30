@@ -10,9 +10,10 @@ int hOff;
 int vOff;
 int playerHoff;
 int screenBlock;
+int totalPaper;
 
-#define TOTALPAPER 10
-#define TOTALCUSTOMER 5
+#define TOTALCUSTOMER 10
+#define TOTALPAPER 30
 #define TOTALSAN 5
 
 void initGame();
@@ -44,7 +45,7 @@ typedef struct pool
     int curFrame;
     int aniState;
     int active;
-} TOILETPAPER;
+} TOILETPAPER, SANITIZER;
 typedef struct
 {
     int screenRow;
@@ -70,3 +71,4 @@ typedef struct
 extern TOILETPAPER paper[TOTALPAPER];
 extern CUSTOMER customers[TOTALCUSTOMER];
 extern ANISPRITE player;
+extern SANITIZER sanitizer[TOTALSAN];
