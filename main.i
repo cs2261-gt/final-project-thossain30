@@ -187,7 +187,7 @@ typedef struct
 } HEART;
 
 extern TOILETPAPER paper[30];
-extern CUSTOMER customers[10];
+extern CUSTOMER customers[6];
 extern ANISPRITE player;
 extern SANITIZER sanitizer[5];
 # 3 "main.c" 2
@@ -258,6 +258,55 @@ extern const unsigned short spritesheetTiles[16384];
 
 extern const unsigned short spritesheetPal[256];
 # 10 "main.c" 2
+# 1 "sound.h" 1
+SOUND soundA;
+SOUND soundB;
+
+
+
+void setupSounds();
+void playSoundA(const signed char *sound, int length, int loops);
+void playSoundB(const signed char *sound, int length, int loops);
+
+void setupInterrupts();
+void interruptHandler();
+
+void pauseSound();
+void unpauseSound();
+void stopSound();
+# 11 "main.c" 2
+# 1 "menuSong.h" 1
+# 20 "menuSong.h"
+extern const unsigned char menuSong[317934];
+# 12 "main.c" 2
+# 1 "loseSong.h" 1
+# 20 "loseSong.h"
+extern const unsigned char loseSong[374131];
+# 13 "main.c" 2
+# 1 "winSong.h" 1
+# 20 "winSong.h"
+extern const unsigned char winSong[318006];
+# 14 "main.c" 2
+# 1 "gameSong.h" 1
+# 20 "gameSong.h"
+extern const unsigned char gameSong[1100494];
+# 15 "main.c" 2
+# 1 "pauseNoise.h" 1
+# 20 "pauseNoise.h"
+extern const unsigned char pauseNoise[84562];
+# 16 "main.c" 2
+# 1 "owSound.h" 1
+# 20 "owSound.h"
+extern const unsigned char owSound[3516];
+# 17 "main.c" 2
+# 1 "punchSound.h" 1
+# 20 "punchSound.h"
+extern const unsigned char punchSound[4206];
+# 18 "main.c" 2
+# 1 "collectSound.h" 1
+# 20 "collectSound.h"
+extern const unsigned char collectSound[12384];
+# 19 "main.c" 2
 
 
 void initialize();
@@ -342,6 +391,8 @@ void initialize()
 
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
+    setupInterrupts();
+    setupSounds();
 
 
     DMANow(3, MenuBackgroundPal, ((unsigned short *)0x5000000), 256);
@@ -350,10 +401,11 @@ void initialize()
     (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((24) << 8) | (1 << 7) | (1 << 14);
 
     (*(unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
+    stopSound();
+    playSoundA(menuSong, 317934, 1);
 }
 void goToMenu()
 {
-
 
     hideSprites();
     waitForVBlank();
@@ -371,6 +423,8 @@ void menu()
     waitForVBlank();
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
+        stopSound();
+        playSoundA(gameSong, 1100494, 1);
         initGame();
         goToGame();
     }
@@ -405,6 +459,8 @@ void instructions()
         srand(seed);
         initGame();
         goToGame();
+        stopSound();
+        playSoundA(gameSong, 1100494, 1);
     }
 }
 
@@ -426,9 +482,16 @@ void pause()
 {
     waitForVBlank();
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
+    {
+        unpauseSound();
         goToGame();
+    }
     else if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2)))))
+    {
+        stopSound();
+        playSoundA(menuSong, 317934, 1);
         goToMenu();
+    }
 }
 void goToLose()
 {
@@ -450,6 +513,8 @@ void lose()
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
         goToMenu();
+        stopSound();
+        playSoundA(menuSong, 317934, 1);
     }
 }
 void goToWin()
@@ -471,6 +536,8 @@ void win()
     waitForVBlank();
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
+        stopSound();
+        playSoundA(menuSong, 317934, 1);
         goToMenu();
     }
 }
@@ -502,13 +569,18 @@ void game()
     if (won)
     {
         goToWin();
+        stopSound();
+        playSoundA(winSong, 318006, 1);
     }
     if (lost)
     {
         goToLose();
+        stopSound();
+        playSoundA(loseSong, 374131, 1);
     }
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
+        pauseSound();
         gotoPause();
     }
 }

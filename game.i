@@ -186,7 +186,7 @@ typedef struct
 } HEART;
 
 extern TOILETPAPER paper[30];
-extern CUSTOMER customers[10];
+extern CUSTOMER customers[6];
 extern ANISPRITE player;
 extern SANITIZER sanitizer[5];
 # 2 "game.c" 2
@@ -202,6 +202,55 @@ extern const unsigned short spritesheetPal[256];
 # 20 "collisionBitmap.h"
 extern const unsigned short collisionBitmapBitmap[262144];
 # 5 "game.c" 2
+# 1 "sound.h" 1
+SOUND soundA;
+SOUND soundB;
+
+
+
+void setupSounds();
+void playSoundA(const signed char *sound, int length, int loops);
+void playSoundB(const signed char *sound, int length, int loops);
+
+void setupInterrupts();
+void interruptHandler();
+
+void pauseSound();
+void unpauseSound();
+void stopSound();
+# 6 "game.c" 2
+# 1 "menuSong.h" 1
+# 20 "menuSong.h"
+extern const unsigned char menuSong[317934];
+# 7 "game.c" 2
+# 1 "loseSong.h" 1
+# 20 "loseSong.h"
+extern const unsigned char loseSong[374131];
+# 8 "game.c" 2
+# 1 "winSong.h" 1
+# 20 "winSong.h"
+extern const unsigned char winSong[318006];
+# 9 "game.c" 2
+# 1 "gameSong.h" 1
+# 20 "gameSong.h"
+extern const unsigned char gameSong[1100494];
+# 10 "game.c" 2
+# 1 "pauseNoise.h" 1
+# 20 "pauseNoise.h"
+extern const unsigned char pauseNoise[84562];
+# 11 "game.c" 2
+# 1 "owSound.h" 1
+# 20 "owSound.h"
+extern const unsigned char owSound[3516];
+# 12 "game.c" 2
+# 1 "punchSound.h" 1
+# 20 "punchSound.h"
+extern const unsigned char punchSound[4206];
+# 13 "game.c" 2
+# 1 "collectSound.h" 1
+# 20 "collectSound.h"
+extern const unsigned char collectSound[12384];
+# 14 "game.c" 2
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 1 3
 # 10 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 3
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\machine\\ieeefp.h" 1 3
@@ -1010,7 +1059,7 @@ extern long double _strtold_r (struct _reent *, const char *restrict, char **res
 extern long double strtold (const char *restrict, char **restrict);
 # 336 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 3
 
-# 6 "game.c" 2
+# 15 "game.c" 2
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 1 3
 
 
@@ -1256,10 +1305,10 @@ extern long double erfl (long double);
 extern long double erfcl (long double);
 # 662 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
 
-# 7 "game.c" 2
+# 16 "game.c" 2
+# 31 "game.c"
 
-
-# 8 "game.c"
+# 31 "game.c"
 int hOff;
 int vOff;
 OBJ_ATTR shadowOAM[128];
@@ -1268,7 +1317,7 @@ extern int won;
 extern int TPCollected;
 TOILETPAPER paper[30];
 ANISPRITE player;
-CUSTOMER customers[10];
+CUSTOMER customers[6];
 SANITIZER sanitizer[5];
 int timer;
 int speed;
@@ -1355,12 +1404,25 @@ void initPaper()
     for (int i = 0; i < 30; i++)
     {
         paper[i].worldCol = 64 + 128 * i;
-        paper[i].worldRow = 64 + 128 * i;
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
         paper[i].curFrame = 5;
         paper[i].active = 1;
+        if (i < 8)
+        {
+            paper[i].worldRow = 64;
+        }
+        else if (i < 16)
+        {
+            paper[i].worldRow = 128;
+        }
+        else if (i < 24)
+        {
+            paper[i].worldRow = 192;
+        }
+        paper[i].screenRow = paper[i].worldRow;
+        paper[i].screenCol = paper[i].worldCol;
     }
 }
 void drawPaper()
@@ -1389,6 +1451,7 @@ void updatePaper()
                       paper[i].screenCol, paper[i].screenRow, paper[i].width, paper[i].height) &&
             paper[i].active)
         {
+            playSoundB(collectSound, 12384, 0);
             paper[i].active = 0;
             TPCollected++;
         }
@@ -1402,7 +1465,7 @@ void updatePaper()
 }
 void initCustomer()
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 6; i++)
     {
         customers[i].worldCol = 64 + 128 * i;
         customers[i].worldRow = 32 + 16 * i;
@@ -1419,7 +1482,7 @@ void initCustomer()
 }
 void drawCustomer()
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 6; i++)
     {
         if (customers[i].active)
         {
@@ -1436,7 +1499,7 @@ void drawCustomer()
 void updateCustomer()
 {
     speed = 2;
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 6; i++)
     {
         dx = player.screenCol - customers[i].screenCol;
         dy = player.screenRow - customers[i].screenRow;
@@ -1446,17 +1509,20 @@ void updateCustomer()
             customers[i].worldCol += speed * (dx / distance);
             customers[i].worldRow += speed * (dy / distance);
         }
+        if (hitflag == 1)
+        {
+            playerHealth--;
+            hitflag = 0;
+        }
 
         if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height, customers[i].screenCol + (customers[i].width / 4), customers[i].screenRow,
                       customers[i].width / 2, customers[i].height) &&
             customers[i].active)
         {
+            playSoundB(owSound, 3516, 0);
+            player.worldRow += dy;
+            player.worldCol += dx;
             hitflag = 1;
-            if (hitflag == 1)
-            {
-                playerHealth--;
-                hitflag = 0;
-            }
             if (playerHealth == 0)
             {
                 lost = 1;
@@ -1465,11 +1531,19 @@ void updateCustomer()
         if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && collision(player.screenCol - 15, player.screenRow - 15, player.width + 30, player.height + 30, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
             customers[i].active)
         {
+            playSoundB(punchSound, 4206, 0);
             customers[i].livesRemaining--;
             customers[i].follow = 1;
             if (customers[i].livesRemaining == 0)
             {
                 customers[i].active = 0;
+                for (int j = 24; j < 30; j++)
+                {
+                    paper[j].worldCol = customers[i].worldCol;
+                    paper[j].worldRow = customers[i].worldRow;
+                    paper[j].active = 1;
+                    break;
+                }
             }
         }
         customers[i].screenRow = customers[i].worldRow - vOff;
@@ -1481,7 +1555,7 @@ void initSanitizer()
     for (int i = 0; i < 5; i++)
     {
         sanitizer[i].worldCol = 64 + 128 * i;
-        sanitizer[i].worldRow = 16 * i;
+        sanitizer[i].worldRow = 16;
         sanitizer[i].height = 16;
         sanitizer[i].width = 16;
         sanitizer[i].curFrame = 12;
@@ -1509,10 +1583,10 @@ void updateSanitizer()
 {
     for (int i = 0; i < 5; i++)
     {
-        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 4)
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 3)
         {
-            sanitizer[i].active = 0;
             playerHealth++;
+            sanitizer[i].active = 0;
         }
         sanitizer[i].screenCol = sanitizer[i].worldCol - hOff;
         sanitizer[i].screenRow = sanitizer[i].worldRow - vOff;
@@ -1529,7 +1603,7 @@ void initGame()
     playerHoff = player.worldCol / 2;
     screenBlock = 28;
     TPCollected = 0;
-    totalPaper = 10;
+    totalPaper = 30;
     won = 0;
     lost = 0;
     timer = 0;
@@ -1543,7 +1617,7 @@ void updateGame()
 
         hOff -= 256;
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 6; i++)
         {
             customers[i].worldCol -= 256;
         }
@@ -1558,7 +1632,7 @@ void updateGame()
         screenBlock--;
         hOff += 256;
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 6; i++)
         {
             customers[i].worldCol += 256;
         }
@@ -1568,9 +1642,9 @@ void updateGame()
         }
         (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((screenBlock) << 8) | (1 << 14);
     }
-    updatePaper();
     updatePlayer();
     updateCustomer();
+    updatePaper();
     updateSanitizer();
 }
 void drawGame()

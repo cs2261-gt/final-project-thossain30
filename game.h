@@ -12,7 +12,7 @@ int playerHoff;
 int screenBlock;
 int totalPaper;
 
-#define TOTALCUSTOMER 10
+#define TOTALCUSTOMER 6
 #define TOTALPAPER 30
 #define TOTALSAN 5
 

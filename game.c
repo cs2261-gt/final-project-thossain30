@@ -2,6 +2,15 @@
 #include "myLib.h"
 #include "spritesheet.h"
 #include "collisionBitmap.h"
+#include "sound.h"
+#include "menuSong.h"
+#include "loseSong.h"
+#include "winSong.h"
+#include "gameSong.h"
+#include "pauseNoise.h"
+#include "owSound.h"
+#include "punchSound.h"
+#include "collectSound.h"
 #include <stdlib.h>
 #include <math.h>
 /*completed
@@ -114,12 +123,25 @@ void initPaper()
     for (int i = 0; i < TOTALPAPER; i++)
     {
         paper[i].worldCol = 64 + 128 * i;
-        paper[i].worldRow = 64 + 128 * i;
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
         paper[i].curFrame = 5;
         paper[i].active = 1;
+        if (i < 8)
+        {
+            paper[i].worldRow = 64;
+        }
+        else if (i < 16)
+        {
+            paper[i].worldRow = 128;
+        }
+        else if (i < 24)
+        {
+            paper[i].worldRow = 192;
+        }
+        paper[i].screenRow = paper[i].worldRow;
+        paper[i].screenCol = paper[i].worldCol;
     }
 }
 void drawPaper()
@@ -148,6 +170,7 @@ void updatePaper()
                       paper[i].screenCol, paper[i].screenRow, paper[i].width, paper[i].height) &&
             paper[i].active)
         {
+            playSoundB(collectSound, COLLECTSOUNDLEN, 0);
             paper[i].active = 0;
             TPCollected++;
         }
@@ -205,17 +228,20 @@ void updateCustomer()
             customers[i].worldCol += speed * (dx / distance);
             customers[i].worldRow += speed * (dy / distance);
         }
+        if (hitflag == 1)
+        {
+            playerHealth--;
+            hitflag = 0;
+        }
 
         if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height, customers[i].screenCol + (customers[i].width / 4), customers[i].screenRow,
                       customers[i].width / 2, customers[i].height) &&
             customers[i].active)
         {
+            playSoundB(owSound, OWSOUNDLEN, 0);
+            player.worldRow += dy;
+            player.worldCol += dx;
             hitflag = 1;
-            if (hitflag == 1)
-            {
-                playerHealth--;
-                hitflag = 0;
-            }
             if (playerHealth == 0)
             {
                 lost = 1;
@@ -224,11 +250,19 @@ void updateCustomer()
         if (BUTTON_PRESSED(BUTTON_A) && collision(player.screenCol - 15, player.screenRow - 15, player.width + 30, player.height + 30, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
             customers[i].active)
         {
+            playSoundB(punchSound, PUNCHSOUNDLEN, 0);
             customers[i].livesRemaining--;
             customers[i].follow = 1;
             if (customers[i].livesRemaining == 0)
             {
                 customers[i].active = 0;
+                for (int j = 24; j < TOTALPAPER; j++)
+                {
+                    paper[j].worldCol = customers[i].worldCol;
+                    paper[j].worldRow = customers[i].worldRow;
+                    paper[j].active = 1;
+                    break;
+                }
             }
         }
         customers[i].screenRow = customers[i].worldRow - vOff;
@@ -240,7 +274,7 @@ void initSanitizer()
     for (int i = 0; i < TOTALSAN; i++)
     {
         sanitizer[i].worldCol = 64 + 128 * i;
-        sanitizer[i].worldRow = 16 * i;
+        sanitizer[i].worldRow = 16;
         sanitizer[i].height = 16;
         sanitizer[i].width = 16;
         sanitizer[i].curFrame = 12;
@@ -268,10 +302,10 @@ void updateSanitizer()
 {
     for (int i = 0; i < TOTALSAN; i++)
     {
-        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 4)
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 3)
         {
-            sanitizer[i].active = 0;
             playerHealth++;
+            sanitizer[i].active = 0;
         }
         sanitizer[i].screenCol = sanitizer[i].worldCol - hOff;
         sanitizer[i].screenRow = sanitizer[i].worldRow - vOff;
@@ -288,7 +322,7 @@ void initGame()
     playerHoff = player.worldCol / 2;
     screenBlock = 28;
     TPCollected = 0;
-    totalPaper = 10;
+    totalPaper = 30;
     won = 0;
     lost = 0;
     timer = 0;
@@ -327,9 +361,9 @@ void updateGame()
         }
         REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
     }
-    updatePaper();
     updatePlayer();
     updateCustomer();
+    updatePaper();
     updateSanitizer();
 }
 void drawGame()

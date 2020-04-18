@@ -7,6 +7,15 @@
 #include "pauseBackground.h"
 #include "instructionBackground.h"
 #include "spritesheet.h"
+#include "sound.h"
+#include "menuSong.h"
+#include "loseSong.h"
+#include "winSong.h"
+#include "gameSong.h"
+#include "pauseNoise.h"
+#include "owSound.h"
+#include "punchSound.h"
+#include "collectSound.h"
 
 // Prototypes
 void initialize();
@@ -91,6 +100,8 @@ void initialize()
 
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
+    setupInterrupts();
+    setupSounds();
 
     // Load the background's palette and tiles into a desired space in memory
     DMANow(3, MenuBackgroundPal, PALETTE, 256);
@@ -99,10 +110,10 @@ void initialize()
     REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(24) | BG_8BPP | BG_SIZE_WIDE;
 
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
+    playSoundA(menuSong, MENUSONGLEN, 1);
 }
 void goToMenu()
 {
-
     // hide sprites in goTo methods
     hideSprites();
     waitForVBlank();
@@ -120,6 +131,8 @@ void menu()
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
     {
+        stopSound();
+        playSoundA(gameSong, GAMESONGLEN, 1);
         initGame();
         goToGame();
     }
@@ -154,6 +167,8 @@ void instructions()
         srand(seed);
         initGame();
         goToGame();
+        stopSound();
+        playSoundA(gameSong, GAMESONGLEN, 1);
     }
 }
 
@@ -175,9 +190,16 @@ void pause()
 {
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
+    {
+        unpauseSound();
         goToGame();
+    }
     else if (BUTTON_PRESSED(BUTTON_SELECT))
+    {
+        stopSound();
+        playSoundA(menuSong, MENUSONGLEN, 1);
         goToMenu();
+    }
 }
 void goToLose()
 {
@@ -199,6 +221,8 @@ void lose()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         goToMenu();
+        stopSound();
+        playSoundA(menuSong, MENUSONGLEN, 1);
     }
 }
 void goToWin()
@@ -220,6 +244,8 @@ void win()
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
     {
+        stopSound();
+        playSoundA(menuSong, MENUSONGLEN, 1);
         goToMenu();
     }
 }
@@ -251,13 +277,18 @@ void game()
     if (won)
     {
         goToWin();
+        stopSound();
+        playSoundA(winSong, WINSONGLEN, 1);
     }
     if (lost)
     {
         goToLose();
+        stopSound();
+        playSoundA(loseSong, LOSESONGLEN, 1);
     }
     if (BUTTON_PRESSED(BUTTON_START))
     {
+        pauseSound();
         gotoPause();
     }
 }

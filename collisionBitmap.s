@@ -32784,70 +32784,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -32863,8 +32799,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -32896,7 +32830,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -32912,70 +32845,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -32991,7 +32860,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33024,7 +32892,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33040,70 +32907,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -33119,7 +32922,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33152,7 +32954,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33168,70 +32969,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -33247,7 +32984,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33255,6 +32991,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33280,7 +33017,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33288,6 +33024,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33296,70 +33033,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -33375,7 +33048,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33408,7 +33080,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33424,70 +33095,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -33503,7 +33110,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33513,6 +33119,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33536,7 +33143,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33546,76 +33152,13 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -33631,7 +33174,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33664,7 +33206,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33680,70 +33221,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -33759,7 +33236,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33771,6 +33247,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33803,75 +33280,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -33886,8 +33300,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33920,8 +33332,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -33936,70 +33346,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -34014,8 +33360,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34031,6 +33375,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34048,8 +33393,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34064,71 +33407,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34142,8 +33422,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34176,8 +33454,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34192,70 +33468,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -34270,8 +33482,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34293,6 +33503,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34304,8 +33515,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34320,70 +33529,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -34391,6 +33536,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34398,8 +33544,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34432,8 +33576,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34448,70 +33590,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -34526,8 +33604,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34560,8 +33636,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34576,70 +33650,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -34655,8 +33665,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	1023
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -34685,11 +33693,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34704,70 +33707,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -34782,8 +33721,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34832,70 +33769,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -34909,9 +33782,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34944,9 +33814,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -34960,70 +33827,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35037,9 +33840,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35072,9 +33872,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35088,70 +33885,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35165,9 +33898,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35200,9 +33930,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35216,70 +33943,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35293,9 +33956,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35328,9 +33988,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35344,70 +34001,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35422,7 +34015,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -35457,7 +34049,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -35472,70 +34063,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35549,9 +34076,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35584,9 +34108,11 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -35600,70 +34126,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35677,8 +34139,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -35713,7 +34177,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -35728,70 +34191,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35805,9 +34204,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -35856,70 +34252,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -35932,9 +34264,13 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -35969,8 +34305,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -35984,70 +34318,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -36060,10 +34330,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36096,10 +34362,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36112,70 +34374,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -36188,10 +34386,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36204,6 +34398,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36224,10 +34420,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36240,70 +34432,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
+	.short	1023
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36316,10 +34446,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36352,10 +34478,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36368,70 +34490,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -36444,10 +34502,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36472,6 +34526,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36480,10 +34536,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36496,70 +34548,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -36573,8 +34561,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -36608,10 +34594,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36624,70 +34606,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -36700,10 +34618,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36736,10 +34650,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36752,70 +34662,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -36828,10 +34674,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36846,6 +34688,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36880,70 +34724,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -36955,11 +34735,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -36992,11 +34767,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37008,70 +34778,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37083,11 +34789,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37120,11 +34821,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37136,70 +34832,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37211,11 +34843,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37248,11 +34875,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37264,70 +34886,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37339,11 +34897,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37376,11 +34929,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37392,70 +34940,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37467,11 +34951,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37504,11 +34983,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37520,70 +34994,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37595,11 +35005,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37633,11 +35038,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -37648,70 +35050,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37723,11 +35061,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37739,6 +35072,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37760,11 +35096,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37776,70 +35107,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37851,11 +35118,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -37903,71 +35165,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	1023
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -37978,12 +35179,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38005,6 +35200,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38016,12 +35214,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38032,70 +35224,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -38106,12 +35234,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38144,12 +35266,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -38160,70 +35279,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -38234,11 +35289,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -38273,13 +35329,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
-	.short	511
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -38288,70 +35339,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -38362,12 +35349,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38400,12 +35381,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38416,70 +35391,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -38490,12 +35401,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38516,6 +35421,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38528,12 +35436,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38544,70 +35446,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -38619,10 +35457,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -38656,12 +35491,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38672,70 +35501,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -38746,12 +35511,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -38784,13 +35545,13 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -38800,70 +35561,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -38874,12 +35571,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38893,7 +35584,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	511
+	.short	1023
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -38928,70 +35621,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39001,13 +35630,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39040,13 +35662,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39056,70 +35671,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39129,13 +35680,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39169,11 +35713,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -39184,70 +35724,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39257,13 +35733,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39296,13 +35765,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39312,70 +35774,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39385,13 +35783,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39424,13 +35815,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39440,70 +35824,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39513,13 +35833,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39552,13 +35865,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39568,70 +35874,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39641,13 +35883,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39680,13 +35915,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39696,70 +35924,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39769,13 +35933,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39808,13 +35965,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39824,70 +35974,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -39897,13 +35983,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -39952,70 +36031,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40024,14 +36039,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40053,6 +36060,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40064,14 +36075,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -40080,70 +36087,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40152,13 +36095,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -40192,14 +36132,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40208,70 +36140,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40280,14 +36148,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -40320,11 +36183,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	1023
@@ -40336,70 +36200,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40408,14 +36208,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40432,6 +36224,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40448,14 +36244,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40464,70 +36252,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40536,14 +36260,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40576,14 +36292,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -40592,70 +36304,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40664,11 +36312,11 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	1023
@@ -40707,10 +36355,6 @@ collisionBitmapBitmap:
 	.short	1023
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -40720,70 +36364,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40792,14 +36372,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40832,14 +36404,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40848,70 +36412,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -40920,14 +36420,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40951,6 +36443,11 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -40976,70 +36473,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41048,16 +36481,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
-	.short	511
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -41086,17 +36512,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	511
-	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41104,70 +36519,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41175,15 +36526,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41216,15 +36558,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41232,70 +36565,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41304,13 +36573,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -41345,13 +36609,8 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -41360,70 +36619,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41431,15 +36626,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41472,15 +36658,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41488,70 +36665,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41559,15 +36672,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41600,15 +36704,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41616,70 +36711,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41687,15 +36718,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41714,6 +36736,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41728,15 +36754,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41744,70 +36761,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41815,15 +36768,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41856,15 +36800,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -41872,70 +36807,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -41943,15 +36814,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -42000,86 +36862,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -42112,102 +36900,18 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -42240,105 +36944,18 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	511
-	.short	511
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -42366,104 +36983,18 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	511
-	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -42496,102 +37027,18 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -42624,86 +37071,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
@@ -42711,14 +37084,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -42753,14 +37121,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -42768,86 +37131,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -42880,102 +37169,22 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -42997,6 +37206,16 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -43024,82 +37243,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
@@ -43136,102 +37285,16 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -43264,101 +37327,22 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -43393,101 +37377,20 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -43520,102 +37423,16 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -43648,13 +37465,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
@@ -43664,86 +37477,11 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -43766,6 +37504,11 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -43776,102 +37519,16 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -43904,102 +37561,17 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -44020,6 +37592,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -44048,85 +37628,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -44160,102 +37669,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -44288,102 +37709,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -44416,101 +37749,21 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -44544,102 +37797,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -44672,102 +37837,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -44800,102 +37877,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -44928,102 +37917,14 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -45072,86 +37973,9 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -45184,102 +38008,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -45312,102 +38046,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -45440,101 +38084,33 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -45569,101 +38145,17 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -45696,102 +38188,12 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -45824,105 +38226,20 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
+	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
-	.short	511
-	.short	511
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -45949,106 +38266,18 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -46096,86 +38325,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
-	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -46208,101 +38358,15 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -46337,101 +38401,15 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -46464,102 +38442,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -46592,101 +38478,23 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
+	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -46721,14 +38529,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
@@ -46736,73 +38536,9472 @@ collisionBitmapBitmap:
 	.short	1023
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	1023
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	17407
+	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
+	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
@@ -46816,6 +48015,193 @@ collisionBitmapBitmap:
 	.short	17407
 	.short	17407
 	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -46848,102 +48234,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -46976,102 +48270,10 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -47120,73 +48322,23 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
-	.short	1023
-	.short	17407
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	17407
 	.short	17407
 	.short	17407
@@ -47246,88 +48398,10 @@ collisionBitmapBitmap:
 	.short	17407
 	.short	17407
 	.short	17407
+	.short	17407
 	.short	1023
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -47360,88 +48434,38 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	17407
 	.short	17407
 	.short	17407
 	.short	17407
@@ -47502,88 +48526,10 @@ collisionBitmapBitmap:
 	.short	17407
 	.short	17407
 	.short	17407
+	.short	17407
 	.short	1023
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -47616,88 +48562,38 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	17407
 	.short	17407
 	.short	17407
@@ -47758,88 +48654,10 @@ collisionBitmapBitmap:
 	.short	17407
 	.short	17407
 	.short	17407
+	.short	17407
 	.short	1023
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -47872,86 +48690,35 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.short	511
 	.short	1023
 	.short	17407
@@ -47967,6 +48734,7 @@ collisionBitmapBitmap:
 	.short	17407
 	.short	17407
 	.short	17407
+	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -48001,87 +48769,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	511
-	.short	1023
 	.short	17407
 	.short	17407
 	.short	17407
@@ -48096,13 +48784,6 @@ collisionBitmapBitmap:
 	.short	17407
 	.short	17407
 	.short	1023
-	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	511
 	.short	511
 	.short	511
 	.short	511
@@ -48137,93 +48818,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	511
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -48256,87 +48850,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1023
 	.short	17407
 	.short	17407
 	.short	17407
@@ -48350,7 +48863,6 @@ collisionBitmapBitmap:
 	.short	17407
 	.short	17407
 	.short	17407
-	.short	17407
 	.short	1023
 	.short	511
 	.short	511
@@ -48384,87 +48896,7 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
 	.short	1023
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1023
 	.short	17407
 	.short	17407
 	.short	17407
@@ -48512,102 +48944,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -48640,102 +48976,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -48768,86 +49008,22 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	1023
 	.short	17407
 	.short	17407
@@ -48896,102 +49072,6 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
 	.short	511
 	.short	511
 	.short	511
@@ -49024,102 +49104,22 @@ collisionBitmapBitmap:
 	.short	511
 	.short	511
 	.short	511
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1023
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	17407
-	.short	1023
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
+	.short	511
 	.short	511
 	.short	511
 	.short	511
