@@ -1330,6 +1330,8 @@ void initPlayer()
 {
     player.curFrame = 0;
     player.aniState = 0;
+    player.numFrames = 4;
+    player.aniCounter = 0;
     player.cdel = 1;
     player.rdel = 1;
     player.height = 32;
@@ -1395,7 +1397,7 @@ void updatePlayer()
             }
         }
     }
-
+    animatePlayer();
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
@@ -1655,4 +1657,23 @@ void drawGame()
     drawSanitizer();
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
+}
+void animatePlayer()
+{
+    player.aniState = player.prevAniState;
+    player.aniState = 0;
+    if (player.aniCounter % 20 == 0)
+    {
+        player.curFrame = (player.curFrame + 1) % player.numFrames;
+    }
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 6))))
+        player.aniState = 1;
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))))
+        player.aniState = 0;
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4))))
+        player.aniState = 2;
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 5))))
+        player.aniState = 3;
+
+    player.aniCounter++;
 }

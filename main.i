@@ -401,7 +401,6 @@ void initialize()
     (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((24) << 8) | (1 << 7) | (1 << 14);
 
     (*(unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
-    stopSound();
     playSoundA(menuSong, 317934, 1);
 }
 void goToMenu()

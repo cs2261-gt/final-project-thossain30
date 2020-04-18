@@ -49,6 +49,8 @@ void initPlayer()
 {
     player.curFrame = 0;
     player.aniState = 0;
+    player.numFrames = 4;
+    player.aniCounter = 0;
     player.cdel = 1;
     player.rdel = 1;
     player.height = 32;
@@ -114,7 +116,7 @@ void updatePlayer()
             }
         }
     }
-
+    animatePlayer();
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
@@ -374,4 +376,23 @@ void drawGame()
     drawSanitizer();
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
+}
+void animatePlayer()
+{
+    player.aniState = player.prevAniState;
+    player.aniState = 0;
+    if (player.aniCounter % 20 == 0)
+    {
+        player.curFrame = (player.curFrame + 1) % player.numFrames;
+    }
+    if (BUTTON_HELD(BUTTON_UP))
+        player.aniState = 1;
+    if (BUTTON_HELD(BUTTON_DOWN))
+        player.aniState = 0;
+    if (BUTTON_HELD(BUTTON_RIGHT))
+        player.aniState = 2;
+    if (BUTTON_HELD(BUTTON_LEFT))
+        player.aniState = 3;
+
+    player.aniCounter++;
 }

@@ -61,22 +61,19 @@ initialize:
 	mov	lr, pc
 	bx	r6
 	mov	r0, r5
-	ldr	r1, .L4+48
 	mov	r3, #1024
-	ldr	r2, .L4+52
+	ldr	r2, .L4+48
+	ldr	r1, .L4+52
 	mov	lr, pc
 	bx	r6
 	mov	r2, #4352
 	ldr	r3, .L4+56
 	strh	r2, [r4]	@ movhi
 	strh	r3, [r4, #8]	@ movhi
-	ldr	r3, .L4+60
-	mov	lr, pc
-	bx	r3
 	mov	r2, #1
-	ldr	r1, .L4+64
-	ldr	r0, .L4+68
-	ldr	r3, .L4+72
+	ldr	r1, .L4+60
+	ldr	r0, .L4+64
+	ldr	r3, .L4+68
 	mov	lr, pc
 	bx	r3
 	pop	{r4, r5, r6, lr}
@@ -96,10 +93,9 @@ initialize:
 	.word	DMANow
 	.word	MenuBackgroundPal
 	.word	MenuBackgroundTiles
-	.word	MenuBackgroundMap
 	.word	100712448
+	.word	MenuBackgroundMap
 	.word	22656
-	.word	stopSound
 	.word	317934
 	.word	menuSong
 	.word	playSoundA
