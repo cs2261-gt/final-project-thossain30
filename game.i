@@ -215,9 +215,13 @@ void playSoundB(const signed char *sound, int length, int loops);
 void setupInterrupts();
 void interruptHandler();
 
-void pauseSound();
-void unpauseSound();
+void pauseSoundA();
+void pauseSoundB();
+void unpauseSoundA();
+void unpauseSoundB();
 void stopSound();
+void stopSoundA();
+void stopSoundB();
 # 6 "game.c" 2
 # 1 "menuSong.h" 1
 # 20 "menuSong.h"

@@ -57,7 +57,7 @@ int won;
 
 int main()
 {
-
+    initialize();
     while (1)
     {
         oldButtons = buttons;
@@ -92,16 +92,20 @@ void initialize()
 {
     TPCollected = 0;
     playerHealth = 3;
-    vOff = 0;
-    hOff = 0;
     playerHoff = 0;
     lost = 0;
     won = 0;
-
-    REG_BG0HOFF = hOff;
-    REG_BG0VOFF = vOff;
     setupInterrupts();
     setupSounds();
+
+    goToMenu();
+}
+void goToMenu()
+{
+    hOff = 0;
+    vOff = 0;
+    REG_BG0HOFF = hOff;
+    REG_BG0VOFF = vOff;
 
     // Load the background's palette and tiles into a desired space in memory
     DMANow(3, MenuBackgroundPal, PALETTE, 256);
@@ -110,14 +114,13 @@ void initialize()
     REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(24) | BG_8BPP | BG_SIZE_WIDE;
 
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
-    playSoundA(menuSong, MENUSONGLEN, 1);
-}
-void goToMenu()
-{
     // hide sprites in goTo methods
     hideSprites();
     waitForVBlank();
     DMANow(3, shadowOAM, OAM, 512);
+
+    stopSound();
+    playSoundA(menuSong, MENUSONGLEN, 1);
 
     state = MENU;
 
@@ -126,7 +129,6 @@ void goToMenu()
 }
 void menu()
 {
-    initialize();
     seed++;
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
@@ -167,13 +169,15 @@ void instructions()
         srand(seed);
         initGame();
         goToGame();
-        stopSound();
+        stopSoundA();
+        stopSoundB();
         playSoundA(gameSong, GAMESONGLEN, 1);
     }
 }
 
 void gotoPause()
 {
+    playSoundB(pauseNoise, PAUSENOISELEN, 1);
     DMANow(3, pauseBackgroundPal, PALETTE, loseBackgroundPalLen / 2);
     DMANow(3, pauseBackgroundTiles, &CHARBLOCK[1], pauseBackgroundTilesLen / 2);
     DMANow(3, pauseBackgroundMap, &SCREENBLOCK[19], pauseBackgroundMapLen / 2);
@@ -191,7 +195,8 @@ void pause()
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
     {
-        unpauseSound();
+        stopSoundB();
+        unpauseSoundA();
         goToGame();
     }
     else if (BUTTON_PRESSED(BUTTON_SELECT))
@@ -220,8 +225,8 @@ void lose()
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
     {
-        goToMenu();
         stopSound();
+        goToMenu();
         playSoundA(menuSong, MENUSONGLEN, 1);
     }
 }
@@ -251,6 +256,7 @@ void win()
 }
 void goToGame()
 {
+    unpauseSoundA();
     DMANow(3, gameBackgroundPal, PALETTE, gameBackgroundPalLen / 2);
     DMANow(3, gameBackgroundTiles, &CHARBLOCK[0], gameBackgroundTilesLen / 2);
     DMANow(3, gameBackgroundMap, &SCREENBLOCK[28], gameBackgroundMapLen / 2);
@@ -288,7 +294,7 @@ void game()
     }
     if (BUTTON_PRESSED(BUTTON_START))
     {
-        pauseSound();
+        pauseSoundA();
         gotoPause();
     }
 }

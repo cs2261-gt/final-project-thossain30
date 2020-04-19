@@ -130,30 +130,62 @@ void interruptHandler()
     REG_IME = 1;
 }
 
-void pauseSound()
+void pauseSoundA()
 {
 
     // TODO 4.1 - Complete the pauseSound function
+    soundA.isPlaying = 0;
+    REG_TM0CNT = TIMER_OFF;
+}
+void pauseSoundB()
+{
+    soundB.isPlaying = 0;
+    REG_TM1CNT = TIMER_OFF;
+}
+void pauseSound()
+{
     soundA.isPlaying = 0;
     REG_TM0CNT = TIMER_OFF;
     soundB.isPlaying = 0;
     REG_TM1CNT = TIMER_OFF;
 }
 
-void unpauseSound()
+void unpauseSoundA()
 {
 
     // TODO 4.2 - Complete the unpauseSound function
+    soundA.isPlaying = 1;
+    REG_TM0CNT = TIMER_ON;
+}
+void unpauseSoundB()
+{
+    soundB.isPlaying = 1;
+    REG_TM1CNT = TIMER_ON;
+}
+void unpauseSound()
+{
     soundA.isPlaying = 1;
     REG_TM0CNT = TIMER_ON;
     soundB.isPlaying = 1;
     REG_TM1CNT = TIMER_ON;
 }
 
-void stopSound()
+void stopSoundA()
 {
 
     // TODO 4.3 - Complete the stopSound function
+    soundA.isPlaying = 0;
+    dma[0].cnt = 0;
+    REG_TM0CNT = TIMER_OFF;
+}
+void stopSoundB()
+{
+    soundB.isPlaying = 0;
+    dma[1].cnt = 0;
+    REG_TM1CNT = TIMER_OFF;
+}
+void stopSound()
+{
     soundA.isPlaying = 0;
     dma[0].cnt = 0;
     REG_TM0CNT = TIMER_OFF;

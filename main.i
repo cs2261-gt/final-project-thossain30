@@ -271,9 +271,13 @@ void playSoundB(const signed char *sound, int length, int loops);
 void setupInterrupts();
 void interruptHandler();
 
-void pauseSound();
-void unpauseSound();
+void pauseSoundA();
+void pauseSoundB();
+void unpauseSoundA();
+void unpauseSoundB();
 void stopSound();
+void stopSoundA();
+void stopSoundB();
 # 11 "main.c" 2
 # 1 "menuSong.h" 1
 # 20 "menuSong.h"
@@ -348,7 +352,7 @@ int won;
 
 int main()
 {
-
+    initialize();
     while (1)
     {
         oldButtons = buttons;
@@ -383,16 +387,20 @@ void initialize()
 {
     TPCollected = 0;
     playerHealth = 3;
-    vOff = 0;
-    hOff = 0;
     playerHoff = 0;
     lost = 0;
     won = 0;
-
-    (*(volatile unsigned short *)0x04000010) = hOff;
-    (*(volatile unsigned short *)0x04000012) = vOff;
     setupInterrupts();
     setupSounds();
+
+    goToMenu();
+}
+void goToMenu()
+{
+    hOff = 0;
+    vOff = 0;
+    (*(volatile unsigned short *)0x04000010) = hOff;
+    (*(volatile unsigned short *)0x04000012) = vOff;
 
 
     DMANow(3, MenuBackgroundPal, ((unsigned short *)0x5000000), 256);
@@ -401,14 +409,13 @@ void initialize()
     (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((24) << 8) | (1 << 7) | (1 << 14);
 
     (*(unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
-    playSoundA(menuSong, 317934, 1);
-}
-void goToMenu()
-{
 
     hideSprites();
     waitForVBlank();
     DMANow(3, shadowOAM, ((OBJ_ATTR *)(0x7000000)), 512);
+
+    stopSound();
+    playSoundA(menuSong, 317934, 1);
 
     state = MENU;
 
@@ -417,7 +424,6 @@ void goToMenu()
 }
 void menu()
 {
-    initialize();
     seed++;
     waitForVBlank();
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
@@ -458,13 +464,15 @@ void instructions()
         srand(seed);
         initGame();
         goToGame();
-        stopSound();
+        stopSoundA();
+        stopSoundB();
         playSoundA(gameSong, 1100494, 1);
     }
 }
 
 void gotoPause()
 {
+    playSoundB(pauseNoise, 84562, 1);
     DMANow(3, pauseBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
     DMANow(3, pauseBackgroundTiles, &((charblock *)0x6000000)[1], 3328 / 2);
     DMANow(3, pauseBackgroundMap, &((screenblock *)0x6000000)[19], 2048 / 2);
@@ -482,7 +490,8 @@ void pause()
     waitForVBlank();
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
-        unpauseSound();
+        stopSoundB();
+        unpauseSoundA();
         goToGame();
     }
     else if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2)))))
@@ -511,8 +520,8 @@ void lose()
     waitForVBlank();
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
-        goToMenu();
         stopSound();
+        goToMenu();
         playSoundA(menuSong, 317934, 1);
     }
 }
@@ -542,6 +551,7 @@ void win()
 }
 void goToGame()
 {
+    unpauseSoundA();
     DMANow(3, gameBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
     DMANow(3, gameBackgroundTiles, &((charblock *)0x6000000)[0], 14368 / 2);
     DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[28], 8192 / 2);
@@ -579,7 +589,7 @@ void game()
     }
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
-        pauseSound();
+        pauseSoundA();
         gotoPause();
     }
 }

@@ -128,9 +128,13 @@ void playSoundB(const signed char *sound, int length, int loops);
 void setupInterrupts();
 void interruptHandler();
 
-void pauseSound();
-void unpauseSound();
+void pauseSoundA();
+void pauseSoundB();
+void unpauseSoundA();
+void unpauseSoundB();
 void stopSound();
+void stopSoundA();
+void stopSoundB();
 # 3 "sound.c" 2
 
 void setupSounds()
@@ -262,30 +266,62 @@ void interruptHandler()
     *(unsigned short *)0x4000208 = 1;
 }
 
-void pauseSound()
+void pauseSoundA()
 {
 
 
+    soundA.isPlaying = 0;
+    *(volatile unsigned short *)0x4000102 = (0 << 7);
+}
+void pauseSoundB()
+{
+    soundB.isPlaying = 0;
+    *(volatile unsigned short *)0x4000106 = (0 << 7);
+}
+void pauseSound()
+{
     soundA.isPlaying = 0;
     *(volatile unsigned short *)0x4000102 = (0 << 7);
     soundB.isPlaying = 0;
     *(volatile unsigned short *)0x4000106 = (0 << 7);
 }
 
-void unpauseSound()
+void unpauseSoundA()
 {
 
 
+    soundA.isPlaying = 1;
+    *(volatile unsigned short *)0x4000102 = (1 << 7);
+}
+void unpauseSoundB()
+{
+    soundB.isPlaying = 1;
+    *(volatile unsigned short *)0x4000106 = (1 << 7);
+}
+void unpauseSound()
+{
     soundA.isPlaying = 1;
     *(volatile unsigned short *)0x4000102 = (1 << 7);
     soundB.isPlaying = 1;
     *(volatile unsigned short *)0x4000106 = (1 << 7);
 }
 
-void stopSound()
+void stopSoundA()
 {
 
 
+    soundA.isPlaying = 0;
+    dma[0].cnt = 0;
+    *(volatile unsigned short *)0x4000102 = (0 << 7);
+}
+void stopSoundB()
+{
+    soundB.isPlaying = 0;
+    dma[1].cnt = 0;
+    *(volatile unsigned short *)0x4000106 = (0 << 7);
+}
+void stopSound()
+{
     soundA.isPlaying = 0;
     dma[0].cnt = 0;
     *(volatile unsigned short *)0x4000102 = (0 << 7);

@@ -308,6 +308,52 @@ setupInterrupts:
 	.word	interruptHandler
 	.size	setupInterrupts, .-setupInterrupts
 	.align	2
+	.global	pauseSoundA
+	.syntax unified
+	.arm
+	.fpu softvfp
+	.type	pauseSoundA, %function
+pauseSoundA:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	mov	r3, #0
+	ldr	r1, .L39
+	ldr	r2, .L39+4
+	str	r3, [r1, #12]
+	strh	r3, [r2, #2]	@ movhi
+	bx	lr
+.L40:
+	.align	2
+.L39:
+	.word	soundA
+	.word	67109120
+	.size	pauseSoundA, .-pauseSoundA
+	.align	2
+	.global	pauseSoundB
+	.syntax unified
+	.arm
+	.fpu softvfp
+	.type	pauseSoundB, %function
+pauseSoundB:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	mov	r3, #0
+	ldr	r1, .L42
+	ldr	r2, .L42+4
+	str	r3, [r1, #12]
+	strh	r3, [r2, #6]	@ movhi
+	bx	lr
+.L43:
+	.align	2
+.L42:
+	.word	soundB
+	.word	67109120
+	.size	pauseSoundB, .-pauseSoundB
+	.align	2
 	.global	pauseSound
 	.syntax unified
 	.arm
@@ -319,21 +365,69 @@ pauseSound:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	mov	r3, #0
-	ldr	r2, .L39
-	ldr	r0, .L39+4
-	ldr	r1, .L39+8
+	ldr	r2, .L45
+	ldr	r0, .L45+4
+	ldr	r1, .L45+8
 	str	r3, [r0, #12]
 	str	r3, [r1, #12]
 	strh	r3, [r2, #2]	@ movhi
 	strh	r3, [r2, #6]	@ movhi
 	bx	lr
-.L40:
+.L46:
 	.align	2
-.L39:
+.L45:
 	.word	67109120
 	.word	soundA
 	.word	soundB
 	.size	pauseSound, .-pauseSound
+	.align	2
+	.global	unpauseSoundA
+	.syntax unified
+	.arm
+	.fpu softvfp
+	.type	unpauseSoundA, %function
+unpauseSoundA:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	mov	r0, #1
+	mov	r2, #128
+	ldr	r1, .L48
+	ldr	r3, .L48+4
+	str	r0, [r1, #12]
+	strh	r2, [r3, #2]	@ movhi
+	bx	lr
+.L49:
+	.align	2
+.L48:
+	.word	soundA
+	.word	67109120
+	.size	unpauseSoundA, .-unpauseSoundA
+	.align	2
+	.global	unpauseSoundB
+	.syntax unified
+	.arm
+	.fpu softvfp
+	.type	unpauseSoundB, %function
+unpauseSoundB:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	mov	r0, #1
+	mov	r2, #128
+	ldr	r1, .L51
+	ldr	r3, .L51+4
+	str	r0, [r1, #12]
+	strh	r2, [r3, #6]	@ movhi
+	bx	lr
+.L52:
+	.align	2
+.L51:
+	.word	soundB
+	.word	67109120
+	.size	unpauseSoundB, .-unpauseSoundB
 	.align	2
 	.global	unpauseSound
 	.syntax unified
@@ -347,21 +441,75 @@ unpauseSound:
 	@ link register save eliminated.
 	mov	r1, #128
 	mov	r3, #1
-	ldr	r2, .L42
-	ldr	ip, .L42+4
-	ldr	r0, .L42+8
+	ldr	r2, .L54
+	ldr	ip, .L54+4
+	ldr	r0, .L54+8
 	strh	r1, [r2, #2]	@ movhi
 	str	r3, [ip, #12]
 	strh	r1, [r2, #6]	@ movhi
 	str	r3, [r0, #12]
 	bx	lr
-.L43:
+.L55:
 	.align	2
-.L42:
+.L54:
 	.word	67109120
 	.word	soundA
 	.word	soundB
 	.size	unpauseSound, .-unpauseSound
+	.align	2
+	.global	stopSoundA
+	.syntax unified
+	.arm
+	.fpu softvfp
+	.type	stopSoundA, %function
+stopSoundA:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	mov	r3, #0
+	ldr	r2, .L57
+	ldr	r0, .L57+4
+	ldr	r1, [r2]
+	ldr	r2, .L57+8
+	str	r3, [r0, #12]
+	str	r3, [r1, #8]
+	strh	r3, [r2, #2]	@ movhi
+	bx	lr
+.L58:
+	.align	2
+.L57:
+	.word	dma
+	.word	soundA
+	.word	67109120
+	.size	stopSoundA, .-stopSoundA
+	.align	2
+	.global	stopSoundB
+	.syntax unified
+	.arm
+	.fpu softvfp
+	.type	stopSoundB, %function
+stopSoundB:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	mov	r3, #0
+	ldr	r2, .L60
+	ldr	r1, .L60+4
+	ldr	r0, [r2]
+	ldr	r2, .L60+8
+	str	r3, [r0, #20]
+	str	r3, [r1, #12]
+	strh	r3, [r2, #6]	@ movhi
+	bx	lr
+.L61:
+	.align	2
+.L60:
+	.word	dma
+	.word	soundB
+	.word	67109120
+	.size	stopSoundB, .-stopSoundB
 	.align	2
 	.global	stopSound
 	.syntax unified
@@ -374,11 +522,11 @@ stopSound:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	mov	r3, #0
-	ldr	r2, .L45
-	ldr	ip, .L45+4
+	ldr	r2, .L63
+	ldr	ip, .L63+4
 	ldr	r1, [r2]
-	ldr	r0, .L45+8
-	ldr	r2, .L45+12
+	ldr	r0, .L63+8
+	ldr	r2, .L63+12
 	str	r3, [ip, #12]
 	str	r3, [r1, #8]
 	str	r3, [r0, #12]
@@ -386,9 +534,9 @@ stopSound:
 	str	r3, [r1, #20]
 	strh	r3, [r2, #6]	@ movhi
 	bx	lr
-.L46:
+.L64:
 	.align	2
-.L45:
+.L63:
 	.word	dma
 	.word	soundA
 	.word	soundB
