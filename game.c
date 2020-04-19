@@ -38,6 +38,7 @@ TOILETPAPER paper[TOTALPAPER];
 ANISPRITE player;
 CUSTOMER customers[TOTALCUSTOMER];
 SANITIZER sanitizer[TOTALSAN];
+HEART hearts[TOTALHEARTS];
 int timer;
 int speed;
 int playerHealth;
@@ -59,7 +60,7 @@ void initPlayer()
     player.worldCol = 200;
     player.screenRow = player.worldRow;
     player.screenCol = player.worldCol;
-    playerHealth = 3;
+    playerHealth = 2;
     hitflag = 0;
 }
 void drawPlayer()
@@ -136,11 +137,11 @@ void initPaper()
         }
         else if (i < 16)
         {
-            paper[i].worldRow = 128;
+            paper[i].worldRow = 116;
         }
         else if (i < 24)
         {
-            paper[i].worldRow = 192;
+            paper[i].worldRow = 148;
         }
         paper[i].screenRow = paper[i].worldRow;
         paper[i].screenCol = paper[i].worldCol;
@@ -168,12 +169,12 @@ void updatePaper()
     for (int i = 0; i < TOTALPAPER; i++)
     {
 
-        if (collision(player.screenCol, player.screenRow, player.width, player.height,
+        if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height,
                       paper[i].screenCol, paper[i].screenRow, paper[i].width, paper[i].height) &&
             paper[i].active)
         {
-            playSoundB(collectSound, COLLECTSOUNDLEN, 0);
             paper[i].active = 0;
+            playSoundB(collectSound, COLLECTSOUNDLEN, 0);
             TPCollected++;
         }
         if (TPCollected == totalPaper)
@@ -232,6 +233,7 @@ void updateCustomer()
         }
         if (hitflag == 1)
         {
+            hearts[playerHealth].active = 0;
             playerHealth--;
             hitflag = 0;
         }
@@ -241,8 +243,11 @@ void updateCustomer()
             customers[i].active)
         {
             playSoundB(owSound, OWSOUNDLEN, 0);
-            player.worldRow += dy;
-            player.worldCol += dx;
+            if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx, player.worldRow + (int)dy, MAPWIDTH)] != BLACK)
+            {
+                player.worldRow += dy;
+                player.worldCol += dx;
+            }
             hitflag = 1;
             if (playerHealth == 0)
             {
@@ -260,9 +265,9 @@ void updateCustomer()
                 customers[i].active = 0;
                 for (int j = 24; j < TOTALPAPER; j++)
                 {
+                    paper[j].active = 1;
                     paper[j].worldCol = customers[i].worldCol;
                     paper[j].worldRow = customers[i].worldRow;
-                    paper[j].active = 1;
                     break;
                 }
             }
@@ -304,19 +309,50 @@ void updateSanitizer()
 {
     for (int i = 0; i < TOTALSAN; i++)
     {
-        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 3)
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 2)
         {
             playerHealth++;
+            hearts[playerHealth].active = 1;
             sanitizer[i].active = 0;
         }
         sanitizer[i].screenCol = sanitizer[i].worldCol - hOff;
         sanitizer[i].screenRow = sanitizer[i].worldRow - vOff;
     }
 }
+void initHeart()
+{
+    for (int i = 0; i < TOTALHEARTS; i++)
+    {
+        hearts[i].screenCol = 5 + 18 * i;
+        hearts[i].screenRow = 10;
+        hearts[i].width = 16;
+        hearts[i].height = 16;
+        hearts[i].curFrame = 12;
+        hearts[i].aniState = 6;
+        hearts[i].active = 1;
+    }
+}
+void drawHeart()
+{
+    for (int i = 0; i < TOTALHEARTS; i++)
+    {
+        if (hearts[i].active)
+        {
+            shadowOAM[i + 60].attr0 = (ROWMASK & hearts[i].screenRow) | ATTR0_SQUARE;
+            shadowOAM[i + 60].attr1 = (COLMASK & hearts[i].screenCol) | ATTR1_SMALL;
+            shadowOAM[i + 60].attr2 = ATTR2_TILEID(hearts[i].aniState * 2, hearts[i].curFrame * 2);
+        }
+        else
+        {
+            shadowOAM[i + 60].attr0 = ATTR0_HIDE;
+        }
+    }
+}
 void initGame()
 {
     initCustomer();
     initPlayer();
+    initHeart();
     initPaper();
     initSanitizer();
     vOff = player.worldRow / 2;
@@ -371,6 +407,7 @@ void updateGame()
 void drawGame()
 {
     drawPlayer();
+    drawHeart();
     drawPaper();
     drawCustomer();
     drawSanitizer();

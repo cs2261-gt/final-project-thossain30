@@ -92,7 +92,6 @@ void initialize()
 {
     TPCollected = 0;
     playerHealth = 3;
-    playerHoff = 0;
     lost = 0;
     won = 0;
     setupInterrupts();
@@ -103,6 +102,7 @@ void initialize()
 void goToMenu()
 {
     hOff = 0;
+    playerHoff = 0;
     vOff = 0;
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;

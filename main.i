@@ -134,6 +134,7 @@ int totalPaper;
 
 
 
+
 void initGame();
 void drawGame();
 void updateGame();
@@ -163,6 +164,7 @@ typedef struct pool
     int curFrame;
     int aniState;
     int active;
+    int numFrames;
 } TOILETPAPER, SANITIZER;
 typedef struct
 {
@@ -177,6 +179,7 @@ typedef struct
     int aniState;
     int active;
     int follow;
+    int numFrames;
 } CUSTOMER;
 typedef struct
 {
@@ -184,12 +187,16 @@ typedef struct
     int screenCol;
     int height;
     int width;
+    int active;
+    int curFrame;
+    int aniState;
 } HEART;
 
 extern TOILETPAPER paper[30];
 extern CUSTOMER customers[6];
 extern ANISPRITE player;
 extern SANITIZER sanitizer[5];
+extern HEART hearts[3];
 # 3 "main.c" 2
 # 1 "gameBackground.h" 1
 # 22 "gameBackground.h"
@@ -387,7 +394,6 @@ void initialize()
 {
     TPCollected = 0;
     playerHealth = 3;
-    playerHoff = 0;
     lost = 0;
     won = 0;
     setupInterrupts();
@@ -398,6 +404,7 @@ void initialize()
 void goToMenu()
 {
     hOff = 0;
+    playerHoff = 0;
     vOff = 0;
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
