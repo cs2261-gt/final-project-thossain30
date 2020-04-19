@@ -13,20 +13,6 @@
 #include "collectSound.h"
 #include <stdlib.h>
 #include <math.h>
-/*completed
-Finished Spritesheet
-implemented Collision bitmap
-Added sanitizer
-*/
-
-/* To Do
-Add Sound
-Add in sprites for health
-Add in number score
-Figure out how to not die from one hit...
-Add in animation for all sprites
-Work on art for other background states
-*/
 
 int hOff;
 int vOff;

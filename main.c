@@ -16,7 +16,21 @@
 #include "owSound.h"
 #include "punchSound.h"
 #include "collectSound.h"
+/*completed
+Finished Spritesheet
+implemented Collision bitmap
+Added sanitizer
+Added in sprites for health (hearts)
+*/
 
+/* To Do
+Complete all sound stuff
+Figure out why collision is iffy
+Figure out how to prevent enemies from pushing player into 'black' parts of collision map
+Add in number score
+Fix animation (idle?)
+Work on art for other background states
+*/
 // Prototypes
 void initialize();
 void goToMenu();
