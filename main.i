@@ -195,7 +195,7 @@ typedef struct
     int aniState;
 } HEART;
 
-extern TOILETPAPER paper[30];
+extern TOILETPAPER paper[22];
 extern CUSTOMER customers[6];
 extern ANISPRITE player;
 extern SANITIZER sanitizer[6];
@@ -261,13 +261,23 @@ extern const unsigned short instructionBackgroundMap[1024];
 
 extern const unsigned short instructionBackgroundPal[256];
 # 9 "main.c" 2
+# 1 "diffBackground.h" 1
+# 22 "diffBackground.h"
+extern const unsigned short diffBackgroundTiles[1120];
+
+
+extern const unsigned short diffBackgroundMap[1024];
+
+
+extern const unsigned short diffBackgroundPal[256];
+# 10 "main.c" 2
 # 1 "spritesheet.h" 1
 # 21 "spritesheet.h"
 extern const unsigned short spritesheetTiles[16384];
 
 
 extern const unsigned short spritesheetPal[256];
-# 10 "main.c" 2
+# 11 "main.c" 2
 # 1 "sound.h" 1
 SOUND soundA;
 SOUND soundB;
@@ -288,44 +298,44 @@ void unpauseSoundB();
 void stopSound();
 void stopSoundA();
 void stopSoundB();
-# 11 "main.c" 2
+# 12 "main.c" 2
 # 1 "menuSong.h" 1
 # 20 "menuSong.h"
 extern const unsigned char menuSong[317934];
-# 12 "main.c" 2
+# 13 "main.c" 2
 # 1 "loseSong.h" 1
 # 20 "loseSong.h"
 extern const unsigned char loseSong[374131];
-# 13 "main.c" 2
+# 14 "main.c" 2
 # 1 "winSong.h" 1
 # 20 "winSong.h"
 extern const unsigned char winSong[318006];
-# 14 "main.c" 2
+# 15 "main.c" 2
 # 1 "gameSong.h" 1
 # 20 "gameSong.h"
 extern const unsigned char gameSong[1100494];
-# 15 "main.c" 2
+# 16 "main.c" 2
 # 1 "pauseNoise.h" 1
 # 20 "pauseNoise.h"
 extern const unsigned char pauseNoise[84562];
-# 16 "main.c" 2
+# 17 "main.c" 2
 # 1 "owSound.h" 1
 # 20 "owSound.h"
 extern const unsigned char owSound[3516];
-# 17 "main.c" 2
+# 18 "main.c" 2
 # 1 "punchSound.h" 1
 # 20 "punchSound.h"
 extern const unsigned char punchSound[4206];
-# 18 "main.c" 2
+# 19 "main.c" 2
 # 1 "collectSound.h" 1
 # 20 "collectSound.h"
 extern const unsigned char collectSound[12384];
-# 19 "main.c" 2
+# 20 "main.c" 2
 # 1 "sanSound.h" 1
 # 20 "sanSound.h"
 extern const unsigned char sanSound[13967];
-# 20 "main.c" 2
-# 38 "main.c"
+# 21 "main.c" 2
+# 40 "main.c"
 void initialize();
 void goToMenu();
 void menu();
@@ -339,6 +349,8 @@ void goToLose();
 void lose();
 void goToWin();
 void win();
+void goToDifficulty();
+void difficulty();
 
 void srand();
 void rand();
@@ -347,6 +359,7 @@ enum
 {
     MENU,
     INSTRUCTIONS,
+    DIFFICULTY,
     GAME,
     PAUSE,
     LOSE,
@@ -360,6 +373,7 @@ unsigned short oldButtons;
 int seed;
 int TPCollected;
 int playerHealth;
+int totalPaper;
 int lost;
 int won;
 
@@ -378,6 +392,9 @@ int main()
             break;
         case INSTRUCTIONS:
             instructions();
+            break;
+        case DIFFICULTY:
+            difficulty();
             break;
         case GAME:
             game();
@@ -441,14 +458,54 @@ void menu()
     waitForVBlank();
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
+        goToDifficulty();
+
+
+
+
+    }
+    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))))
+    {
+        goToInstructions();
+    }
+}
+
+void goToDifficulty()
+{
+    DMANow(3, diffBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
+    DMANow(3, diffBackgroundTiles, &((charblock *)0x6000000)[1], 2240 / 2);
+    DMANow(3, diffBackgroundMap, &((screenblock *)0x6000000)[23], 2048 / 2);
+    (*(volatile unsigned short *)0x400000A) = ((1) << 2) | ((23) << 8) | (0 << 14) | (0 << 7);
+    (*(unsigned short *)0x4000000) = 0 | (1 << 9);
+
+    hideSprites();
+    waitForVBlank();
+    DMANow(3, shadowOAM, ((OBJ_ATTR *)(0x7000000)), 512);
+
+    state = DIFFICULTY;
+}
+void difficulty()
+{
+    waitForVBlank();
+
+    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))))
+    {
+        totalPaper = 10;
+        srand(seed);
         stopSound();
         playSoundA(gameSong, 1100494, 1);
         initGame();
         goToGame();
     }
-    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))))
+
+    if ((!(~(oldButtons) & ((1 << 1))) && (~buttons & ((1 << 1)))))
     {
-        goToInstructions();
+        totalPaper = 22;
+        srand(seed);
+        stopSound();
+        playSoundA(gameSong, 1100494, 1);
+        initGame();
+        goToGame();
     }
 }
 void goToInstructions()
@@ -474,12 +531,7 @@ void instructions()
     }
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
-        srand(seed);
-        initGame();
-        goToGame();
-        stopSoundA();
-        stopSoundB();
-        playSoundA(gameSong, 1100494, 1);
+        goToDifficulty();
     }
 }
 
@@ -504,7 +556,6 @@ void pause()
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
         stopSoundB();
-        unpauseSoundA();
         goToGame();
     }
     else if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2)))))

@@ -5,6 +5,7 @@
         "collisionbitmap.h": "c",
         "pausenoise.h": "c",
         "gamesong.h": "c",
-        "owsound.h": "c"
+        "owsound.h": "c",
+        "punchsound.h": "c"
     }
 }

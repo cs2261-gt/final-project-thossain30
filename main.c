@@ -6,6 +6,7 @@
 #include "loseBackground.h"
 #include "pauseBackground.h"
 #include "instructionBackground.h"
+#include "diffBackground.h"
 #include "spritesheet.h"
 #include "sound.h"
 #include "menuSong.h"
@@ -49,6 +50,8 @@ void goToLose();
 void lose();
 void goToWin();
 void win();
+void goToDifficulty();
+void difficulty();
 
 void srand();
 void rand();
@@ -57,6 +60,7 @@ enum
 {
     MENU,
     INSTRUCTIONS,
+    DIFFICULTY,
     GAME,
     PAUSE,
     LOSE,
@@ -70,6 +74,7 @@ unsigned short oldButtons;
 int seed;
 int TPCollected;
 int playerHealth;
+int totalPaper;
 int lost;
 int won;
 
@@ -88,6 +93,9 @@ int main()
             break;
         case INSTRUCTIONS:
             instructions();
+            break;
+        case DIFFICULTY:
+            difficulty();
             break;
         case GAME:
             game();
@@ -151,14 +159,54 @@ void menu()
     waitForVBlank();
     if (BUTTON_PRESSED(BUTTON_START))
     {
+        goToDifficulty();
+        // stopSound();
+        // playSoundA(gameSong, GAMESONGLEN, 1);
+        // initGame();
+        // goToGame();
+    }
+    if (BUTTON_PRESSED(BUTTON_A))
+    {
+        goToInstructions();
+    }
+}
+
+void goToDifficulty()
+{
+    DMANow(3, diffBackgroundPal, PALETTE, diffBackgroundPalLen / 2);
+    DMANow(3, diffBackgroundTiles, &CHARBLOCK[1], diffBackgroundTilesLen / 2);
+    DMANow(3, diffBackgroundMap, &SCREENBLOCK[23], diffBackgroundMapLen / 2);
+    REG_BG1CNT = BG_CHARBLOCK(1) | BG_SCREENBLOCK(23) | BG_SIZE_SMALL | BG_4BPP;
+    REG_DISPCTL = MODE0 | BG1_ENABLE;
+
+    hideSprites();
+    waitForVBlank();
+    DMANow(3, shadowOAM, OAM, 512);
+
+    state = DIFFICULTY;
+}
+void difficulty()
+{
+    waitForVBlank();
+    //Easy mode (cheat)
+    if (BUTTON_PRESSED(BUTTON_A))
+    {
+        totalPaper = 10;
+        srand(seed);
         stopSound();
         playSoundA(gameSong, GAMESONGLEN, 1);
         initGame();
         goToGame();
     }
-    if (BUTTON_PRESSED(BUTTON_A))
+    //Hard mode (not cheat)
+    if (BUTTON_PRESSED(BUTTON_B))
     {
-        goToInstructions();
+        totalPaper = 22;
+        srand(seed);
+        stopSound();
+        playSoundA(gameSong, GAMESONGLEN, 1);
+        initGame();
+        goToGame();
     }
 }
 void goToInstructions()
@@ -184,12 +232,7 @@ void instructions()
     }
     if (BUTTON_PRESSED(BUTTON_START))
     {
-        srand(seed);
-        initGame();
-        goToGame();
-        stopSoundA();
-        stopSoundB();
-        playSoundA(gameSong, GAMESONGLEN, 1);
+        goToDifficulty();
     }
 }
 
@@ -214,7 +257,6 @@ void pause()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         stopSoundB();
-        unpauseSoundA();
         goToGame();
     }
     else if (BUTTON_PRESSED(BUTTON_SELECT))

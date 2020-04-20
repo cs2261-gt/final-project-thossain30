@@ -127,10 +127,6 @@ void initPaper()
         {
             paper[i].worldRow = 116;
         }
-        else if (i < 24)
-        {
-            paper[i].worldRow = 148;
-        }
         paper[i].screenRow = paper[i].worldRow;
         paper[i].screenCol = paper[i].worldCol;
     }
@@ -161,9 +157,9 @@ void updatePaper()
                       paper[i].screenCol, paper[i].screenRow, paper[i].width, paper[i].height) &&
             paper[i].active)
         {
-            paper[i].active = 0;
             playSoundB(collectSound, COLLECTSOUNDLEN, 0);
             TPCollected++;
+            paper[i].active = 0;
         }
         if (TPCollected == totalPaper)
         {
@@ -311,7 +307,7 @@ void updateCustomer()
             if (customers[i].livesRemaining == 0)
             {
                 customers[i].active = 0;
-                for (int j = 24; j < TOTALPAPER; j++)
+                for (int j = 16; j < TOTALPAPER; j++)
                 {
                     paper[j].active = 1;
                     paper[j].worldCol = customers[i].worldCol;
@@ -410,7 +406,6 @@ void initGame()
     playerHoff = player.worldCol / 2;
     screenBlock = 28;
     TPCollected = 0;
-    totalPaper = 30;
     won = 0;
     lost = 0;
     timer = 0;
@@ -450,9 +445,9 @@ void updateGame()
         REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
     }
     updatePlayer();
-    updateCustomer();
     updatePaper();
     updateSanitizer();
+    updateCustomer();
 }
 void drawGame()
 {

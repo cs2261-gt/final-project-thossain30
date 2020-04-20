@@ -13,7 +13,7 @@ int screenBlock;
 int totalPaper;
 
 #define TOTALCUSTOMER 6
-#define TOTALPAPER 30
+#define TOTALPAPER 22
 #define TOTALSAN 6
 #define TOTALHEARTS 3
 

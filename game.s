@@ -98,52 +98,47 @@ initPaper:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	mov	r1, #64
-	mov	r2, #0
+	mov	r2, #64
+	mov	r1, #0
 	push	{r4, r5, r6, r7, r8, lr}
 	mov	r0, #32
-	mov	r8, r1
-	mov	r5, r2
-	mov	r4, #5
-	mov	r7, #148
-	mov	r6, #116
+	mov	r8, r2
+	mov	r6, r1
+	mov	r5, #5
+	mov	r4, #4
+	mov	lr, #1
+	mov	r7, #116
 	ldr	r3, .L18
-	b	.L15
+	b	.L14
+.L17:
+	mov	ip, #116
+	str	r7, [r3, #12]
 .L11:
 	str	ip, [r3]
-	str	r1, [r3, #4]
-.L16:
-	add	r2, r2, #1
-	add	r1, r1, #128
-	add	r3, r3, #44
+	str	r2, [r3, #4]
 .L15:
-	mov	ip, #1
-	mov	lr, #4
-	cmp	r2, #7
-	str	ip, [r3, #32]
-	str	r1, [r3, #8]
+	add	r1, r1, #1
+	add	r2, r2, #128
+	add	r3, r3, #44
+.L14:
+	cmp	r1, #7
 	movls	ip, #64
+	str	r2, [r3, #8]
 	str	r0, [r3, #20]
 	str	r0, [r3, #16]
-	str	r5, [r3, #28]
-	str	r4, [r3, #24]
-	str	lr, [r3, #40]
+	str	r6, [r3, #28]
+	str	r5, [r3, #24]
+	str	r4, [r3, #40]
+	str	lr, [r3, #32]
 	strls	r8, [r3, #12]
 	bls	.L11
-	cmp	r2, #15
-	movle	ip, #116
-	strle	r6, [r3, #12]
-	ble	.L11
-	cmp	r2, #23
-	movle	ip, #148
-	strle	r7, [r3, #12]
-	ble	.L11
-.L13:
+	cmp	r1, #15
+	ble	.L17
 	ldr	ip, [r3, #12]
-	cmp	r2, #29
-	str	r1, [r3, #4]
+	cmp	r1, #21
+	str	r2, [r3, #4]
 	str	ip, [r3]
-	bne	.L16
+	bne	.L15
 	pop	{r4, r5, r6, r7, r8, lr}
 	bx	lr
 .L19:
@@ -162,41 +157,40 @@ drawPaper:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	ldr	r2, .L28
-	ldr	r1, .L28+4
-	ldr	r3, .L28+8
+	ldr	r3, .L28+4
 	push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
-	ldr	r8, [r2]
-	ldr	r5, [r1]
-	add	lr, r3, #1312
+	ldr	r6, [r2]
+	ldr	r9, [r3]
+	ldr	r3, .L28+8
 	mov	r4, #512
 	ldr	r2, .L28+12
-	ldr	r7, .L28+16
-	ldr	r6, .L28+20
-	add	r9, r5, #160
-	add	r10, r8, #240
-	add	lr, lr, #8
+	ldr	r8, .L28+16
+	ldr	r7, .L28+20
+	add	r10, r6, #160
+	add	fp, r9, #240
+	add	lr, r3, #968
 	b	.L24
 .L21:
-	ldr	fp, [r3, #24]
+	ldr	r5, [r3, #24]
 	ldr	r0, [r3, #4]
 	ldr	r1, [r3, #28]
 	ldr	ip, [r3, #12]
-	add	r1, r1, fp, lsl #5
-	and	r0, r0, r7
-	ldrb	fp, [r3]	@ zero_extendqisi2
-	orr	r0, r0, r6
+	add	r1, r1, r5, lsl #5
+	and	r0, r0, r8
+	ldrb	r5, [r3]	@ zero_extendqisi2
+	orr	r0, r0, r7
 	lsl	r1, r1, #2
-	cmp	ip, r5
+	cmp	ip, r6
 	strh	r0, [r2, #10]	@ movhi
 	strh	r1, [r2, #12]	@ movhi
-	strh	fp, [r2, #8]	@ movhi
+	strh	r5, [r2, #8]	@ movhi
 	blt	.L23
 	ldr	r1, [r3, #8]
-	cmp	r1, r8
+	cmp	r1, r9
 	blt	.L23
-	cmp	ip, r9
-	bgt	.L23
 	cmp	ip, r10
+	bgt	.L23
+	cmp	ip, fp
 	bgt	.L23
 	add	r3, r3, #44
 	cmp	r3, lr
@@ -218,8 +212,8 @@ drawPaper:
 .L29:
 	.align	2
 .L28:
-	.word	hOff
 	.word	vOff
+	.word	hOff
 	.word	paper
 	.word	shadowOAM
 	.word	511
@@ -237,7 +231,6 @@ updatePaper:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
 	ldr	r4, .L42
-	add	r7, r4, #1312
 	ldr	r5, .L42+4
 	ldr	fp, .L42+8
 	ldr	r6, .L42+12
@@ -245,7 +238,7 @@ updatePaper:
 	ldr	r9, .L42+20
 	ldr	r8, .L42+24
 	sub	sp, sp, #20
-	add	r7, r7, #8
+	add	r7, r4, #968
 	b	.L35
 .L33:
 	ldr	r1, [r6]
@@ -290,16 +283,17 @@ updatePaper:
 	ldr	r3, [r4, #32]
 	cmp	r3, #0
 	beq	.L33
-	mov	r2, #0
 	ldr	r1, .L42+32
-	ldr	r0, .L42+36
-	str	r2, [r4, #32]
-	ldr	r3, .L42+40
+	ldr	r3, .L42+36
+	mov	r2, #0
+	ldr	r0, .L42+40
 	mov	lr, pc
 	bx	r3
+	mov	r3, #0
 	ldr	r1, [r6]
 	add	r1, r1, #1
 	str	r1, [r6]
+	str	r3, [r4, #32]
 	b	.L32
 .L41:
 	add	sp, sp, #20
@@ -318,8 +312,8 @@ updatePaper:
 	.word	hOff
 	.word	won
 	.word	12384
-	.word	collectSound
 	.word	playSoundB
+	.word	collectSound
 	.size	updatePaper, .-updatePaper
 	.align	2
 	.global	initCustomer
@@ -511,9 +505,9 @@ updateCustomer:
 	ldr	r3, [fp, #8]
 	str	r2, [fp, #40]
 	ldr	r2, [fp, #12]
-	str	r0, [r1, #1088]
-	str	r3, [r1, #1064]
-	str	r2, [r1, #1068]
+	str	r0, [r1, #736]
+	str	r3, [r1, #712]
+	str	r2, [r1, #716]
 .L92:
 	ldr	r1, .L148+28
 	ldr	r0, [r1]
@@ -1411,28 +1405,25 @@ initGame:
 	str	ip, [r3, #32]
 	add	r3, r3, #44
 	bne	.L196
-	mov	r1, #28
-	mov	lr, #30
+	mov	r5, #28
 	add	r2, r4, #8
 	ldm	r2, {r2, r3}
 	ldr	ip, .L200+20
 	add	r2, r2, r2, lsr #31
 	asr	r2, r2, #1
 	str	r2, [ip]
+	ldr	r1, .L200+24
+	ldr	r2, .L200+28
 	add	r3, r3, r3, lsr #31
-	ldr	r2, .L200+24
-	ldr	ip, .L200+28
 	asr	r3, r3, #1
+	str	r3, [r1]
 	str	r3, [r2]
-	str	r3, [ip]
-	ldr	r2, .L200+32
+	ldr	lr, .L200+32
 	ldr	r3, .L200+36
-	str	r1, [r2]
-	str	lr, [r3]
 	ldr	ip, .L200+40
-	ldr	r3, .L200+44
-	ldr	r1, .L200+48
-	ldr	r2, .L200+52
+	ldr	r1, .L200+44
+	ldr	r2, .L200+48
+	str	r5, [lr]
 	str	r0, [r3]
 	str	r0, [ip]
 	str	r0, [r1]
@@ -1451,9 +1442,8 @@ initGame:
 	.word	hOff
 	.word	playerHoff
 	.word	screenBlock
-	.word	totalPaper
-	.word	TPCollected
 	.word	timer
+	.word	TPCollected
 	.word	won
 	.word	lost
 	.size	initGame, .-initGame
@@ -1594,9 +1584,8 @@ animateSprites:
 	bne	.L219
 	ldr	r5, .L237+20
 	ldr	r8, .L237+4
-	add	r7, r5, #1312
 	ldr	r6, .L237+8
-	add	r7, r7, #8
+	add	r7, r5, #968
 .L221:
 	ldr	r4, [r5, #36]
 	smull	r3, r2, r8, r4
@@ -1954,10 +1943,10 @@ updateGame:
 	strh	r0, [r3, #8]	@ movhi
 .L303:
 	bl	updatePlayer
-	bl	updateCustomer
 	bl	updatePaper
+	bl	updateSanitizer
 	pop	{r4, lr}
-	b	updateSanitizer
+	b	updateCustomer
 .L295:
 	cmp	r2, #0
 	bge	.L303
@@ -2016,7 +2005,7 @@ updateGame:
 	.comm	sanitizer,264,4
 	.comm	customers,336,4
 	.comm	player,56,4
-	.comm	paper,1320,4
+	.comm	paper,968,4
 	.comm	shadowOAM,1024,4
 	.comm	soundB,32,4
 	.comm	soundA,32,4
