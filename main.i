@@ -164,6 +164,7 @@ typedef struct pool
     int curFrame;
     int aniState;
     int active;
+    int aniCounter;
     int numFrames;
 } TOILETPAPER, SANITIZER;
 typedef struct
@@ -177,9 +178,11 @@ typedef struct
     int livesRemaining;
     int curFrame;
     int aniState;
+    int prevAniState;
     int active;
     int follow;
     int numFrames;
+    int aniCounter;
 } CUSTOMER;
 typedef struct
 {
@@ -195,7 +198,7 @@ typedef struct
 extern TOILETPAPER paper[30];
 extern CUSTOMER customers[6];
 extern ANISPRITE player;
-extern SANITIZER sanitizer[5];
+extern SANITIZER sanitizer[6];
 extern HEART hearts[3];
 # 3 "main.c" 2
 # 1 "gameBackground.h" 1
@@ -210,7 +213,7 @@ extern const unsigned short gameBackgroundPal[256];
 # 4 "main.c" 2
 # 1 "winBackground.h" 1
 # 22 "winBackground.h"
-extern const unsigned short winBackgroundTiles[720];
+extern const unsigned short winBackgroundTiles[5424];
 
 
 extern const unsigned short winBackgroundMap[1024];
@@ -230,7 +233,7 @@ extern const unsigned short MenuBackgroundPal[256];
 # 6 "main.c" 2
 # 1 "loseBackground.h" 1
 # 22 "loseBackground.h"
-extern const unsigned short loseBackgroundTiles[1104];
+extern const unsigned short loseBackgroundTiles[6512];
 
 
 extern const unsigned short loseBackgroundMap[1024];
@@ -240,7 +243,7 @@ extern const unsigned short loseBackgroundPal[256];
 # 7 "main.c" 2
 # 1 "pauseBackground.h" 1
 # 22 "pauseBackground.h"
-extern const unsigned short pauseBackgroundTiles[1664];
+extern const unsigned short pauseBackgroundTiles[5312];
 
 
 extern const unsigned short pauseBackgroundMap[1024];
@@ -318,8 +321,11 @@ extern const unsigned char punchSound[4206];
 # 20 "collectSound.h"
 extern const unsigned char collectSound[12384];
 # 19 "main.c" 2
-
-
+# 1 "sanSound.h" 1
+# 20 "sanSound.h"
+extern const unsigned char sanSound[13967];
+# 20 "main.c" 2
+# 38 "main.c"
 void initialize();
 void goToMenu();
 void menu();
@@ -481,9 +487,9 @@ void gotoPause()
 {
     playSoundB(pauseNoise, 84562, 1);
     DMANow(3, pauseBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, pauseBackgroundTiles, &((charblock *)0x6000000)[1], 3328 / 2);
+    DMANow(3, pauseBackgroundTiles, &((charblock *)0x6000000)[1], 10624 / 2);
     DMANow(3, pauseBackgroundMap, &((screenblock *)0x6000000)[19], 2048 / 2);
-    (*(volatile unsigned short *)0x400000A) = ((1) << 2) | ((19) << 8) | (0 << 14);
+    (*(volatile unsigned short *)0x400000A) = ((1) << 2) | ((19) << 8) | (0 << 14) | (1 << 7);
     (*(unsigned short *)0x4000000) = 0 | (1 << 9);
 
     hideSprites();
@@ -511,7 +517,7 @@ void pause()
 void goToLose()
 {
     DMANow(3, loseBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, loseBackgroundTiles, &((charblock *)0x6000000)[1], 2208 / 2);
+    DMANow(3, loseBackgroundTiles, &((charblock *)0x6000000)[1], 13024 / 2);
     DMANow(3, loseBackgroundMap, &((screenblock *)0x6000000)[17], 2048 / 2);
     (*(volatile unsigned short *)0x400000A) = ((1) << 2) | ((17) << 8) | (0 << 14);
     (*(unsigned short *)0x4000000) = 0 | (1 << 9);
@@ -535,7 +541,7 @@ void lose()
 void goToWin()
 {
     DMANow(3, winBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, winBackgroundTiles, &((charblock *)0x6000000)[1], 1440 / 2);
+    DMANow(3, winBackgroundTiles, &((charblock *)0x6000000)[1], 10848 / 2);
     DMANow(3, winBackgroundMap, &((screenblock *)0x6000000)[18], 2048 / 2);
     (*(volatile unsigned short *)0x400000A) = ((1) << 2) | ((18) << 8) | (0 << 14);
     (*(unsigned short *)0x4000000) = 0 | (1 << 9);

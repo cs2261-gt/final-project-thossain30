@@ -11,6 +11,7 @@
 #include "owSound.h"
 #include "punchSound.h"
 #include "collectSound.h"
+#include "sanSound.h"
 #include <stdlib.h>
 #include <math.h>
 
@@ -53,7 +54,7 @@ void drawPlayer()
 {
     shadowOAM[0].attr0 = (ROWMASK & player.screenRow) | ATTR0_SQUARE;
     shadowOAM[0].attr1 = (COLMASK & player.screenCol) | ATTR1_MEDIUM;
-    shadowOAM[0].attr2 = ATTR2_TILEID(player.curFrame * 4, player.aniState * 4) | ATTR2_PALROW(0);
+    shadowOAM[0].attr2 = ATTR2_TILEID(player.aniState * 4, player.curFrame * 4) | ATTR2_PALROW(0);
 }
 void updatePlayer()
 {
@@ -103,7 +104,7 @@ void updatePlayer()
             }
         }
     }
-    animatePlayer();
+    animateSprites();
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
@@ -116,6 +117,7 @@ void initPaper()
         paper[i].height = 32;
         paper[i].aniState = 0;
         paper[i].curFrame = 5;
+        paper[i].numFrames = 4;
         paper[i].active = 1;
         if (i < 8)
         {
@@ -178,7 +180,9 @@ void initCustomer()
         customers[i].worldCol = 64 + 128 * i;
         customers[i].worldRow = 32 + 16 * i;
         customers[i].aniState = 4;
-        customers[i].curFrame = 0;
+        customers[i].curFrame = 1;
+        customers[i].numFrames = 5;
+        customers[i].aniCounter = 0;
         customers[i].width = 32;
         customers[i].height = 32;
         customers[i].active = 1;
@@ -212,10 +216,60 @@ void updateCustomer()
         dx = player.screenCol - customers[i].screenCol;
         dy = player.screenRow - customers[i].screenRow;
         distance = sqrt(dx * dx + dy * dy);
+        if (dx > 0 && dy > 0)
+        {
+            if (dx > dy)
+            {
+                customers[i].aniState = 6;
+            }
+            else
+            {
+                customers[i].aniState = 4;
+            }
+        }
+        if (dx < 0 && dy > 0)
+        {
+            if (abs(dx) > dy)
+            {
+                customers[i].aniState = 7;
+            }
+            else
+            {
+                customers[i].aniState = 4;
+            }
+        }
+        if (dx > 0 && dy < 0)
+        {
+            if (abs(dy) > dx)
+            {
+                customers[i].aniState = 5;
+            }
+            else
+            {
+                customers[i].aniState = 6;
+            }
+        }
+        if (dx < 0 && dy < 0)
+        {
+            if (abs(dx) > abs(dy))
+            {
+                customers[i].aniState = 7;
+            }
+            else
+            {
+                customers[i].aniState = 5;
+            }
+        }
         if (customers[i].follow && timer % 2 == 0)
         {
+            // if (collisionBitmapBitmap[OFFSET(customers[i].worldCol += speed * (int)(dx / distance), customers[i].worldRow, MAPWIDTH)] != BLACK)
+            // {
             customers[i].worldCol += speed * (dx / distance);
+            //}
+            // if (collisionBitmapBitmap[OFFSET(customers[i].worldCol, customers[i].worldRow += speed * (int)(dy / distance), MAPWIDTH)] != BLACK)
+            // {
             customers[i].worldRow += speed * (dy / distance);
+            //}
         }
         if (hitflag == 1)
         {
@@ -229,7 +283,7 @@ void updateCustomer()
             customers[i].active)
         {
             playSoundB(owSound, OWSOUNDLEN, 0);
-            if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx, player.worldRow + (int)dy, MAPWIDTH)] != BLACK)
+            if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx, player.worldRow + (int)dy, MAPWIDTH)] != BLACK && player.worldRow + (int)dy > 0 && player.worldCol + (int)dx > 0)
             {
                 player.worldRow += dy;
                 player.worldCol += dx;
@@ -240,12 +294,20 @@ void updateCustomer()
                 lost = 1;
             }
         }
-        if (BUTTON_PRESSED(BUTTON_A) && collision(player.screenCol - 15, player.screenRow - 15, player.width + 30, player.height + 30, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
-            customers[i].active)
+        if (BUTTON_PRESSED(BUTTON_A))
         {
-            playSoundB(punchSound, PUNCHSOUNDLEN, 0);
-            customers[i].livesRemaining--;
-            customers[i].follow = 1;
+            player.curFrame = 4;
+            if (player.aniCounter % 10 == 0)
+            {
+                player.curFrame = 0;
+            }
+            if (collision(player.screenCol - 15, player.screenRow - 15, player.width + 30, player.height + 30, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
+                customers[i].active)
+            {
+                playSoundB(punchSound, PUNCHSOUNDLEN, 0);
+                customers[i].livesRemaining--;
+                customers[i].follow = 1;
+            }
             if (customers[i].livesRemaining == 0)
             {
                 customers[i].active = 0;
@@ -271,6 +333,7 @@ void initSanitizer()
         sanitizer[i].height = 16;
         sanitizer[i].width = 16;
         sanitizer[i].curFrame = 12;
+        sanitizer[i].numFrames = 6;
         sanitizer[i].aniState = 0;
         sanitizer[i].active = 1;
     }
@@ -299,6 +362,7 @@ void updateSanitizer()
         {
             playerHealth++;
             hearts[playerHealth].active = 1;
+            playSoundB(sanSound, SANSOUNDLEN, 0);
             sanitizer[i].active = 0;
         }
         sanitizer[i].screenCol = sanitizer[i].worldCol - hOff;
@@ -400,14 +464,16 @@ void drawGame()
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
 }
-void animatePlayer()
+void animateSprites()
 {
-    player.aniState = player.prevAniState;
-    player.aniState = 0;
+    player.prevAniState = player.aniState;
+    player.aniState = 4;
+
     if (player.aniCounter % 20 == 0)
     {
         player.curFrame = (player.curFrame + 1) % player.numFrames;
     }
+
     if (BUTTON_HELD(BUTTON_UP))
         player.aniState = 1;
     if (BUTTON_HELD(BUTTON_DOWN))
@@ -417,5 +483,43 @@ void animatePlayer()
     if (BUTTON_HELD(BUTTON_LEFT))
         player.aniState = 3;
 
-    player.aniCounter++;
+    if (player.aniState == 4)
+    {
+        player.curFrame = 0;
+        player.aniCounter = 0;
+        player.aniState = player.prevAniState;
+    }
+    else
+    {
+        player.aniCounter++;
+    }
+    for (int i = 0; i < TOTALCUSTOMER; i++)
+    {
+        if (customers[i].follow && customers[i].aniCounter % 20 == 0)
+        {
+            customers[i].curFrame = (customers[i].curFrame + 1) % customers[i].numFrames;
+            if (customers[i].curFrame % customers[i].numFrames == 0)
+            {
+                customers[i].curFrame++;
+            }
+        }
+        customers[i].aniCounter++;
+    }
+
+    for (int i = 0; i < TOTALPAPER; i++)
+    {
+        if (paper[i].aniCounter % 20 == 0 && paper[i].active)
+        {
+            paper[i].aniState = (paper[i].aniState + 1) % paper[i].numFrames;
+        }
+        paper[i].aniCounter++;
+    }
+    for (int i = 0; i < TOTALSAN; i++)
+    {
+        if (sanitizer[i].aniCounter % 12 == 0 && sanitizer[i].active)
+        {
+            sanitizer[i].aniState = (sanitizer[i].aniState + 1) % sanitizer[i].numFrames;
+        }
+        sanitizer[i].aniCounter++;
+    }
 }

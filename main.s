@@ -265,7 +265,7 @@ gotoPause:
 	ldr	r1, .L20+16
 	mov	lr, pc
 	bx	r4
-	mov	r3, #1664
+	mov	r3, #5312
 	mov	r0, #3
 	ldr	r2, .L20+20
 	ldr	r1, .L20+24
@@ -311,7 +311,7 @@ gotoPause:
 	.word	pauseBackgroundTiles
 	.word	pauseBackgroundMap
 	.word	100702208
-	.word	4868
+	.word	4996
 	.word	hideSprites
 	.word	waitForVBlank
 	.word	shadowOAM
@@ -335,37 +335,37 @@ goToLose:
 	ldr	r1, .L24+4
 	mov	lr, pc
 	bx	r4
-	mov	r3, #1104
 	mov	r0, #3
-	ldr	r2, .L24+8
-	ldr	r1, .L24+12
+	ldr	r3, .L24+8
+	ldr	r2, .L24+12
+	ldr	r1, .L24+16
 	mov	lr, pc
 	bx	r4
 	mov	r0, #3
-	ldr	r1, .L24+16
+	ldr	r1, .L24+20
 	mov	r3, #1024
-	ldr	r2, .L24+20
+	ldr	r2, .L24+24
 	mov	lr, pc
 	bx	r4
 	mov	r5, #512
 	mov	r3, #67108864
-	ldr	r2, .L24+24
+	ldr	r2, .L24+28
 	strh	r5, [r3]	@ movhi
 	strh	r2, [r3, #10]	@ movhi
-	ldr	r3, .L24+28
+	ldr	r3, .L24+32
 	mov	lr, pc
 	bx	r3
-	ldr	r3, .L24+32
+	ldr	r3, .L24+36
 	mov	lr, pc
 	bx	r3
 	mov	r3, r5
 	mov	r2, #117440512
 	mov	r0, #3
-	ldr	r1, .L24+36
+	ldr	r1, .L24+40
 	mov	lr, pc
 	bx	r4
 	mov	r2, #4
-	ldr	r3, .L24+40
+	ldr	r3, .L24+44
 	pop	{r4, r5, r6, lr}
 	str	r2, [r3]
 	bx	lr
@@ -374,6 +374,7 @@ goToLose:
 .L24:
 	.word	DMANow
 	.word	loseBackgroundPal
+	.word	6512
 	.word	100679680
 	.word	loseBackgroundTiles
 	.word	loseBackgroundMap
@@ -451,37 +452,37 @@ goToWin:
 	ldr	r1, .L37+4
 	mov	lr, pc
 	bx	r4
-	mov	r3, #720
 	mov	r0, #3
-	ldr	r2, .L37+8
-	ldr	r1, .L37+12
+	ldr	r3, .L37+8
+	ldr	r2, .L37+12
+	ldr	r1, .L37+16
 	mov	lr, pc
 	bx	r4
 	mov	r0, #3
-	ldr	r1, .L37+16
+	ldr	r1, .L37+20
 	mov	r3, #1024
-	ldr	r2, .L37+20
+	ldr	r2, .L37+24
 	mov	lr, pc
 	bx	r4
 	mov	r5, #512
 	mov	r3, #67108864
-	ldr	r2, .L37+24
+	ldr	r2, .L37+28
 	strh	r5, [r3]	@ movhi
 	strh	r2, [r3, #10]	@ movhi
-	ldr	r3, .L37+28
+	ldr	r3, .L37+32
 	mov	lr, pc
 	bx	r3
-	ldr	r3, .L37+32
+	ldr	r3, .L37+36
 	mov	lr, pc
 	bx	r3
 	mov	r3, r5
 	mov	r2, #117440512
 	mov	r0, #3
-	ldr	r1, .L37+36
+	ldr	r1, .L37+40
 	mov	lr, pc
 	bx	r4
 	mov	r2, #5
-	ldr	r3, .L37+40
+	ldr	r3, .L37+44
 	pop	{r4, r5, r6, lr}
 	str	r2, [r3]
 	bx	lr
@@ -490,6 +491,7 @@ goToWin:
 .L37:
 	.word	DMANow
 	.word	winBackgroundPal
+	.word	5424
 	.word	100679680
 	.word	winBackgroundTiles
 	.word	winBackgroundMap

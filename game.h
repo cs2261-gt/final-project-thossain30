@@ -14,7 +14,7 @@ int totalPaper;
 
 #define TOTALCUSTOMER 6
 #define TOTALPAPER 30
-#define TOTALSAN 5
+#define TOTALSAN 6
 #define TOTALHEARTS 3
 
 void initGame();
@@ -46,6 +46,7 @@ typedef struct pool
     int curFrame;
     int aniState;
     int active;
+    int aniCounter;
     int numFrames;
 } TOILETPAPER, SANITIZER;
 typedef struct
@@ -59,9 +60,11 @@ typedef struct
     int livesRemaining;
     int curFrame;
     int aniState;
+    int prevAniState;
     int active;
     int follow;
     int numFrames;
+    int aniCounter;
 } CUSTOMER;
 typedef struct
 {

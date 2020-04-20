@@ -16,20 +16,24 @@
 #include "owSound.h"
 #include "punchSound.h"
 #include "collectSound.h"
+#include "sanSound.h"
+
 /*completed
 Finished Spritesheet
 implemented Collision bitmap
 Added sanitizer
 Added in sprites for health (hearts)
+Finished art for other background states
+Animation for collectables
+Animation for characters (player and enemy)
 */
 
 /* To Do
-Complete all sound stuff
+Complete all sound stuff (resuming game music after going from pause to game)
 Figure out why collision is iffy
 Figure out how to prevent enemies from pushing player into 'black' parts of collision map
+Figure out how to prevent enemy from traversing through 'black' parts of collision map
 Add in number score
-Fix animation (idle?)
-Work on art for other background states
 */
 // Prototypes
 void initialize();
@@ -195,7 +199,7 @@ void gotoPause()
     DMANow(3, pauseBackgroundPal, PALETTE, loseBackgroundPalLen / 2);
     DMANow(3, pauseBackgroundTiles, &CHARBLOCK[1], pauseBackgroundTilesLen / 2);
     DMANow(3, pauseBackgroundMap, &SCREENBLOCK[19], pauseBackgroundMapLen / 2);
-    REG_BG1CNT = BG_CHARBLOCK(1) | BG_SCREENBLOCK(19) | BG_SIZE_SMALL;
+    REG_BG1CNT = BG_CHARBLOCK(1) | BG_SCREENBLOCK(19) | BG_SIZE_SMALL | BG_8BPP;
     REG_DISPCTL = MODE0 | BG1_ENABLE;
 
     hideSprites();
