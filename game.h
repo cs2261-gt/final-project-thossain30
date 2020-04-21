@@ -12,10 +12,10 @@ int playerHoff;
 int screenBlock;
 int totalPaper;
 
-#define TOTALCUSTOMER 6
-#define TOTALPAPER 22
+#define TOTALCUSTOMER 4
+#define TOTALPAPER 20
 #define TOTALSAN 6
-#define TOTALHEARTS 3
+#define TOTALHEARTS 5
 
 void initGame();
 void drawGame();
@@ -34,6 +34,15 @@ void drawSanitizer();
 void updateSanitizer();
 void initHeart();
 void drawHeart();
+void initEScore();
+void drawEScore();
+void initHScore();
+void drawHScore();
+void initTDigit();
+void initODigit();
+void drawTDigit();
+void drawODigit();
+void animateSprites();
 
 typedef struct pool
 {
@@ -66,6 +75,8 @@ typedef struct
     int numFrames;
     int aniCounter;
 } CUSTOMER;
+
+//for hearts/health
 typedef struct
 {
     int screenRow;
@@ -77,8 +88,23 @@ typedef struct
     int aniState;
 } HEART;
 
+//for all score related stuff
+typedef struct score
+{
+    int width;
+    int height;
+    int curFrame;
+    int aniState;
+    int screenRow;
+    int screenCol;
+} ESCORE, HSCORE, TDIGIT, ODIGIT;
+
 extern TOILETPAPER paper[TOTALPAPER];
 extern CUSTOMER customers[TOTALCUSTOMER];
 extern ANISPRITE player;
 extern SANITIZER sanitizer[TOTALSAN];
 extern HEART hearts[TOTALHEARTS];
+extern ESCORE escore;
+extern HSCORE hscore;
+extern TDIGIT tDigit;
+extern ODIGIT oDigit;

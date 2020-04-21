@@ -155,6 +155,15 @@ extern OBJ_ATTR shadowOAM[];
 #define ATTR2_PRIORITY(num) ((num) << 10)
 #define ATTR2_PALROW(row) ((row) << 12)
 
+//Blending Registers
+#define REG_BLDCNT (*(volatile u16 *)0x0400050)
+#define BLD_OBJa (1 << 4)
+#define BLD_WHITE (1 << 7)
+
+//blending alpha stuff
+#define REG_BLDY (*(volatile u16 *)0x04000054)
+#define BLD_EY(num) ((num) << 0)
+
 // Sprite Functions
 void hideSprites();
 

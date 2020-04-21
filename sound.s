@@ -469,11 +469,11 @@ stopSoundA:
 	@ link register save eliminated.
 	mov	r3, #0
 	ldr	r2, .L57
-	ldr	r0, .L57+4
-	ldr	r1, [r2]
+	ldr	r1, .L57+4
+	ldr	r0, [r2]
 	ldr	r2, .L57+8
-	str	r3, [r0, #12]
-	str	r3, [r1, #8]
+	str	r3, [r0, #20]
+	str	r3, [r1, #12]
 	strh	r3, [r2, #2]	@ movhi
 	bx	lr
 .L58:
@@ -499,7 +499,7 @@ stopSoundB:
 	ldr	r1, .L60+4
 	ldr	r0, [r2]
 	ldr	r2, .L60+8
-	str	r3, [r0, #20]
+	str	r3, [r0, #32]
 	str	r3, [r1, #12]
 	strh	r3, [r2, #6]	@ movhi
 	bx	lr

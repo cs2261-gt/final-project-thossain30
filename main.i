@@ -57,7 +57,7 @@ typedef struct
 
 
 extern OBJ_ATTR shadowOAM[];
-# 159 "myLib.h"
+# 168 "myLib.h"
 void hideSprites();
 
 
@@ -82,10 +82,10 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 202 "myLib.h"
+# 211 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 212 "myLib.h"
+# 221 "myLib.h"
 typedef volatile struct
 {
     volatile const void *src;
@@ -95,9 +95,9 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 253 "myLib.h"
+# 262 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 343 "myLib.h"
+# 352 "myLib.h"
 typedef struct
 {
     const unsigned char *data;
@@ -152,6 +152,15 @@ void drawSanitizer();
 void updateSanitizer();
 void initHeart();
 void drawHeart();
+void initEScore();
+void drawEScore();
+void initHScore();
+void drawHScore();
+void initTDigit();
+void initODigit();
+void drawTDigit();
+void drawODigit();
+void animateSprites();
 
 typedef struct pool
 {
@@ -184,6 +193,8 @@ typedef struct
     int numFrames;
     int aniCounter;
 } CUSTOMER;
+
+
 typedef struct
 {
     int screenRow;
@@ -195,11 +206,26 @@ typedef struct
     int aniState;
 } HEART;
 
-extern TOILETPAPER paper[22];
-extern CUSTOMER customers[6];
+
+typedef struct score
+{
+    int width;
+    int height;
+    int curFrame;
+    int aniState;
+    int screenRow;
+    int screenCol;
+} ESCORE, HSCORE, TDIGIT, ODIGIT;
+
+extern TOILETPAPER paper[20];
+extern CUSTOMER customers[4];
 extern ANISPRITE player;
 extern SANITIZER sanitizer[6];
-extern HEART hearts[3];
+extern HEART hearts[5];
+extern ESCORE escore;
+extern HSCORE hscore;
+extern TDIGIT tDigit;
+extern ODIGIT oDigit;
 # 3 "main.c" 2
 # 1 "gameBackground.h" 1
 # 22 "gameBackground.h"
@@ -263,7 +289,7 @@ extern const unsigned short instructionBackgroundPal[256];
 # 9 "main.c" 2
 # 1 "diffBackground.h" 1
 # 22 "diffBackground.h"
-extern const unsigned short diffBackgroundTiles[1120];
+extern const unsigned short diffBackgroundTiles[1456];
 
 
 extern const unsigned short diffBackgroundMap[1024];
@@ -365,7 +391,13 @@ enum
     LOSE,
     WIN
 };
+enum
+{
+    EASY,
+    HARD
+};
 int state;
+extern int diff;
 
 unsigned short buttons;
 unsigned short oldButtons;
@@ -416,7 +448,7 @@ int main()
 void initialize()
 {
     TPCollected = 0;
-    playerHealth = 3;
+    playerHealth = 4;
     lost = 0;
     won = 0;
     setupInterrupts();
@@ -459,10 +491,6 @@ void menu()
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
         goToDifficulty();
-
-
-
-
     }
     if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))))
     {
@@ -473,7 +501,7 @@ void menu()
 void goToDifficulty()
 {
     DMANow(3, diffBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, diffBackgroundTiles, &((charblock *)0x6000000)[1], 2240 / 2);
+    DMANow(3, diffBackgroundTiles, &((charblock *)0x6000000)[1], 2912 / 2);
     DMANow(3, diffBackgroundMap, &((screenblock *)0x6000000)[23], 2048 / 2);
     (*(volatile unsigned short *)0x400000A) = ((1) << 2) | ((23) << 8) | (0 << 14) | (0 << 7);
     (*(unsigned short *)0x4000000) = 0 | (1 << 9);
@@ -491,6 +519,7 @@ void difficulty()
     if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))))
     {
         totalPaper = 10;
+        diff = EASY;
         srand(seed);
         stopSound();
         playSoundA(gameSong, 1100494, 1);
@@ -500,12 +529,17 @@ void difficulty()
 
     if ((!(~(oldButtons) & ((1 << 1))) && (~buttons & ((1 << 1)))))
     {
-        totalPaper = 22;
+        totalPaper = 20;
+        diff = HARD;
         srand(seed);
         stopSound();
         playSoundA(gameSong, 1100494, 1);
         initGame();
         goToGame();
+    }
+    if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2)))))
+    {
+        goToMenu();
     }
 }
 void goToInstructions()
@@ -556,6 +590,7 @@ void pause()
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
         stopSoundB();
+        unpauseSoundA();
         goToGame();
     }
     else if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2)))))
@@ -615,12 +650,12 @@ void win()
 }
 void goToGame()
 {
-    unpauseSoundA();
     DMANow(3, gameBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
     DMANow(3, gameBackgroundTiles, &((charblock *)0x6000000)[0], 14368 / 2);
     DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[28], 8192 / 2);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 14);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 14) | 1;
     (*(unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
+    (*(volatile u16 *)0x0400050) = (1 << 4) | (1 << 7);
 
     (*(volatile unsigned short *)0x04000012) = vOff;
     (*(volatile unsigned short *)0x04000010) = hOff;

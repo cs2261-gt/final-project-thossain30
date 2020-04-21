@@ -2,6 +2,7 @@
 #include "myLib.h"
 #include "spritesheet.h"
 #include "collisionBitmap.h"
+#include "gameBackground.h"
 #include "sound.h"
 #include "menuSong.h"
 #include "loseSong.h"
@@ -16,7 +17,9 @@
 #include <math.h>
 
 int hOff;
+int totalHoff;
 int vOff;
+int diff;
 OBJ_ATTR shadowOAM[128];
 extern int lost;
 extern int won;
@@ -26,35 +29,51 @@ ANISPRITE player;
 CUSTOMER customers[TOTALCUSTOMER];
 SANITIZER sanitizer[TOTALSAN];
 HEART hearts[TOTALHEARTS];
+TOILETPAPER paper[TOTALPAPER];
+CUSTOMER customers[TOTALCUSTOMER];
+ANISPRITE player;
+SANITIZER sanitizer[TOTALSAN];
+HEART hearts[TOTALHEARTS];
+ESCORE escore;
+HSCORE hscore;
+TDIGIT tDigit;
+ODIGIT oDigit;
 int timer;
-int speed;
+double speed;
 int playerHealth;
 int hitflag;
 double dx, dy, distance;
 int heartCount;
+int evy;
+enum
+{
+    EASY,
+    HARD
+};
 
 void initPlayer()
 {
     player.curFrame = 0;
     player.aniState = 0;
-    player.numFrames = 4;
-    player.aniCounter = 0;
+    player.numFrames = 4;  //
+    player.aniCounter = 0; //
     player.cdel = 1;
     player.rdel = 1;
     player.height = 32;
     player.width = 32;
-    player.worldRow = 155;
-    player.worldCol = 200;
-    player.screenRow = player.worldRow;
-    player.screenCol = player.worldCol;
-    playerHealth = 2;
+    player.worldRow = 155 + vOff;
+    player.worldCol = 200 + playerHoff;
+    player.screenRow = player.worldRow - vOff;
+    player.screenCol = player.worldCol - playerHoff;
+    playerHealth = 4;
     hitflag = 0;
+    evy = 0;
 }
 void drawPlayer()
 {
     shadowOAM[0].attr0 = (ROWMASK & player.screenRow) | ATTR0_SQUARE;
     shadowOAM[0].attr1 = (COLMASK & player.screenCol) | ATTR1_MEDIUM;
-    shadowOAM[0].attr2 = ATTR2_TILEID(player.aniState * 4, player.curFrame * 4) | ATTR2_PALROW(0);
+    shadowOAM[0].attr2 = ATTR2_TILEID(player.aniState * 4, player.curFrame * 4) | ATTR2_PALROW(0) | ATTR2_PRIORITY(1);
 }
 void updatePlayer()
 {
@@ -63,10 +82,15 @@ void updatePlayer()
         if (player.screenCol > 0)
         {
             player.worldCol -= player.cdel;
-            if (hOff >= 0 && player.screenCol < SCREENWIDTH / 2)
+            if (totalHoff >= 0 && player.screenCol < SCREENWIDTH / 2)
             {
                 hOff--;
                 playerHoff--;
+                totalHoff--;
+                if (evy > 0)
+                {
+                    evy--;
+                }
             }
         }
     }
@@ -75,10 +99,15 @@ void updatePlayer()
         if (player.worldCol + player.width - 1 < MAPWIDTH - 1)
         {
             player.worldCol += player.cdel;
-            if (playerHoff < MAPWIDTH - SCREENWIDTH - 1 && hOff < MAPWIDTH - SCREENWIDTH - 1 && player.screenCol > SCREENWIDTH / 2)
+            if (totalHoff < MAPWIDTH - SCREENWIDTH - 1 && hOff < MAPWIDTH - SCREENWIDTH - 1 && player.screenCol > SCREENWIDTH / 2)
             {
                 hOff++;
                 playerHoff++;
+                totalHoff++;
+                if (evy < 16)
+                {
+                    evy++;
+                }
             }
         }
     }
@@ -104,6 +133,7 @@ void updatePlayer()
             }
         }
     }
+    REG_BLDY = BLD_EY((evy));
     animateSprites();
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
@@ -112,20 +142,21 @@ void initPaper()
 {
     for (int i = 0; i < TOTALPAPER; i++)
     {
-        paper[i].worldCol = 64 + 128 * i;
+        paper[i].worldCol = 64 + (128 * (i % 8));
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
         paper[i].curFrame = 5;
         paper[i].numFrames = 4;
-        paper[i].active = 1;
         if (i < 8)
         {
             paper[i].worldRow = 64;
+            paper[i].active = 1;
         }
         else if (i < 16)
         {
             paper[i].worldRow = 116;
+            paper[i].active = 1;
         }
         paper[i].screenRow = paper[i].worldRow;
         paper[i].screenCol = paper[i].worldCol;
@@ -139,9 +170,9 @@ void drawPaper()
         {
             shadowOAM[i + 1].attr0 = (ROWMASK & paper[i].screenRow) | ATTR0_SQUARE;
             shadowOAM[i + 1].attr1 = (COLMASK & paper[i].screenCol) | ATTR1_MEDIUM;
-            shadowOAM[i + 1].attr2 = ATTR2_TILEID(paper[i].aniState * 4, paper[i].curFrame * 4);
+            shadowOAM[i + 1].attr2 = ATTR2_TILEID(paper[i].aniState * 4, paper[i].curFrame * 4) | ATTR2_PRIORITY(1);
         }
-        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + SCREENHEIGHT < paper[i].worldRow || hOff + SCREENWIDTH < paper[i].worldRow)
+        if (paper[i].active == 0 || paper[i].screenCol < 0 || paper[i].screenCol > 240 || paper[i].screenRow > 160 || paper[i].screenRow < 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + SCREENHEIGHT < paper[i].worldRow || hOff + SCREENWIDTH < paper[i].worldRow)
         {
             shadowOAM[i + 1].attr0 = ATTR0_HIDE;
         }
@@ -158,22 +189,27 @@ void updatePaper()
             paper[i].active)
         {
             playSoundB(collectSound, COLLECTSOUNDLEN, 0);
-            TPCollected++;
             paper[i].active = 0;
+            TPCollected++;
+            oDigit.aniState = (oDigit.aniState + 1) % 10;
+            if (oDigit.aniState % 10 == 0 && TPCollected > 9)
+            {
+                tDigit.aniState = (tDigit.aniState + 1) % 10;
+            }
         }
         if (TPCollected == totalPaper)
         {
             won = 1;
         }
         paper[i].screenRow = paper[i].worldRow - vOff;
-        paper[i].screenCol = paper[i].worldCol - hOff;
+        paper[i].screenCol = paper[i].worldCol - totalHoff;
     }
 }
 void initCustomer()
 {
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
-        customers[i].worldCol = 64 + 128 * i;
+        customers[i].worldCol = 64 + 256 * i;
         customers[i].worldRow = 32 + 16 * i;
         customers[i].aniState = 4;
         customers[i].curFrame = 1;
@@ -196,9 +232,9 @@ void drawCustomer()
         {
             shadowOAM[i + 50].attr0 = (ROWMASK & customers[i].screenRow) | ATTR0_SQUARE;
             shadowOAM[i + 50].attr1 = (COLMASK & customers[i].screenCol) | ATTR1_MEDIUM;
-            shadowOAM[i + 50].attr2 = ATTR2_TILEID(customers[i].aniState * 4, customers[i].curFrame * 4);
+            shadowOAM[i + 50].attr2 = ATTR2_TILEID(customers[i].aniState * 4, customers[i].curFrame * 4) | ATTR2_PRIORITY(1);
         }
-        if (customers[i].active == 0 || vOff > customers[i].worldRow || hOff > customers[i].worldCol || hOff + SCREENWIDTH < customers[i].worldCol || vOff + SCREENHEIGHT < customers[i].worldRow)
+        if (customers[i].active == 0 || vOff > customers[i].worldRow || totalHoff > customers[i].worldCol || totalHoff + SCREENWIDTH < customers[i].worldCol || vOff + SCREENHEIGHT < customers[i].worldRow)
         {
             shadowOAM[i + 50].attr0 = ATTR0_HIDE;
         }
@@ -206,7 +242,7 @@ void drawCustomer()
 }
 void updateCustomer()
 {
-    speed = 2;
+    speed = 1.5;
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
         dx = player.screenCol - customers[i].screenCol;
@@ -279,21 +315,21 @@ void updateCustomer()
             customers[i].active)
         {
             playSoundB(owSound, OWSOUNDLEN, 0);
-            if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx, player.worldRow + (int)dy, MAPWIDTH)] != BLACK && player.worldRow + (int)dy > 0 && player.worldCol + (int)dx > 0)
+            if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx + 1, player.worldRow + (int)dy + 1, MAPWIDTH)] != BLACK && player.worldRow + (int)dy > 0 && player.worldCol + (int)dx > 0)
             {
                 player.worldRow += dy;
                 player.worldCol += dx;
-            }
-            hitflag = 1;
-            if (playerHealth == 0)
-            {
-                lost = 1;
+                hitflag = 1;
+                if (playerHealth == 0)
+                {
+                    lost = 1;
+                }
             }
         }
         if (BUTTON_PRESSED(BUTTON_A))
         {
             player.curFrame = 4;
-            if (player.aniCounter % 10 == 0)
+            if (player.aniCounter % 20 == 0)
             {
                 player.curFrame = 0;
             }
@@ -304,28 +340,31 @@ void updateCustomer()
                 customers[i].livesRemaining--;
                 customers[i].follow = 1;
             }
-            if (customers[i].livesRemaining == 0)
+            if (customers[i].active && customers[i].livesRemaining == 0)
             {
                 customers[i].active = 0;
                 for (int j = 16; j < TOTALPAPER; j++)
                 {
-                    paper[j].active = 1;
-                    paper[j].worldCol = customers[i].worldCol;
-                    paper[j].worldRow = customers[i].worldRow;
-                    break;
+                    if (paper[j].active == 0)
+                    {
+                        paper[j].worldCol = customers[i].worldCol;
+                        paper[j].worldRow = customers[i].worldRow;
+                        paper[j].active = 1;
+                        break;
+                    }
                 }
             }
         }
         customers[i].screenRow = customers[i].worldRow - vOff;
-        customers[i].screenCol = customers[i].worldCol - hOff;
+        customers[i].screenCol = customers[i].worldCol - totalHoff;
     }
 }
 void initSanitizer()
 {
     for (int i = 0; i < TOTALSAN; i++)
     {
-        sanitizer[i].worldCol = 64 + 128 * i;
-        sanitizer[i].worldRow = 16;
+        sanitizer[i].worldCol = 64 + 128 * i + totalHoff;
+        sanitizer[i].worldRow = 16 + vOff;
         sanitizer[i].height = 16;
         sanitizer[i].width = 16;
         sanitizer[i].curFrame = 12;
@@ -342,9 +381,9 @@ void drawSanitizer()
         {
             shadowOAM[i + 100].attr0 = (ROWMASK & sanitizer[i].screenRow) | ATTR0_SQUARE;
             shadowOAM[i + 100].attr1 = (COLMASK & sanitizer[i].screenCol) | ATTR1_SMALL;
-            shadowOAM[i + 100].attr2 = ATTR2_TILEID(sanitizer[i].aniState * 2, sanitizer[i].curFrame * 2);
+            shadowOAM[i + 100].attr2 = ATTR2_TILEID(sanitizer[i].aniState * 2, sanitizer[i].curFrame * 2) | ATTR2_PRIORITY(1);
         }
-        if (sanitizer[i].active == 0 || vOff > sanitizer[i].worldRow || hOff > sanitizer[i].worldCol || vOff + SCREENHEIGHT < sanitizer[i].worldRow || hOff + SCREENWIDTH < sanitizer[i].worldRow)
+        if (sanitizer[i].active == 0 || sanitizer[i].screenCol < 0 || sanitizer[i].screenCol > 240 || sanitizer[i].screenRow > 160 || sanitizer[i].screenRow < 0 || vOff > sanitizer[i].worldRow || totalHoff > sanitizer[i].worldCol || vOff + SCREENHEIGHT < sanitizer[i].worldRow || totalHoff + SCREENWIDTH < sanitizer[i].worldRow)
         {
             shadowOAM[i + 100].attr0 = ATTR0_HIDE;
         }
@@ -354,14 +393,14 @@ void updateSanitizer()
 {
     for (int i = 0; i < TOTALSAN; i++)
     {
-        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 2)
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 4)
         {
             playerHealth++;
             hearts[playerHealth].active = 1;
             playSoundB(sanSound, SANSOUNDLEN, 0);
             sanitizer[i].active = 0;
         }
-        sanitizer[i].screenCol = sanitizer[i].worldCol - hOff;
+        sanitizer[i].screenCol = sanitizer[i].worldCol - totalHoff;
         sanitizer[i].screenRow = sanitizer[i].worldRow - vOff;
     }
 }
@@ -386,13 +425,73 @@ void drawHeart()
         {
             shadowOAM[i + 60].attr0 = (ROWMASK & hearts[i].screenRow) | ATTR0_SQUARE;
             shadowOAM[i + 60].attr1 = (COLMASK & hearts[i].screenCol) | ATTR1_SMALL;
-            shadowOAM[i + 60].attr2 = ATTR2_TILEID(hearts[i].aniState * 2, hearts[i].curFrame * 2);
+            shadowOAM[i + 60].attr2 = ATTR2_TILEID(hearts[i].aniState * 2, hearts[i].curFrame * 2) | ATTR2_PRIORITY(0);
         }
         else
         {
             shadowOAM[i + 60].attr0 = ATTR0_HIDE;
         }
     }
+}
+void initEScore()
+{
+    escore.width = 32;
+    escore.height = 8;
+    escore.screenCol = 200;
+    escore.screenRow = 150;
+    escore.aniState = 3;
+    escore.curFrame = 26;
+}
+void drawEScore()
+{
+    shadowOAM[89].attr0 = (ROWMASK & escore.screenRow) | ATTR0_WIDE;
+    shadowOAM[89].attr1 = (COLMASK & escore.screenCol) | ATTR1_SMALL;
+    shadowOAM[89].attr2 = ATTR2_TILEID(escore.aniState * 4, escore.curFrame) | ATTR2_PRIORITY(0);
+}
+void initHScore()
+{
+    hscore.width = 32;
+    hscore.height = 8;
+    hscore.screenCol = 200;
+    hscore.screenRow = 150;
+    hscore.aniState = 4;
+    hscore.curFrame = 26;
+}
+void drawHScore()
+{
+    shadowOAM[88].attr0 = (ROWMASK & hscore.screenRow) | ATTR0_WIDE;
+    shadowOAM[88].attr1 = (COLMASK & hscore.screenCol) | ATTR1_SMALL;
+    shadowOAM[88].attr2 = ATTR2_TILEID(hscore.aniState * 4, hscore.curFrame) | ATTR2_PRIORITY(0);
+}
+void initODigit()
+{
+    oDigit.width = 8;
+    oDigit.height = 8;
+    oDigit.screenCol = 192;
+    oDigit.screenRow = 150;
+    oDigit.aniState = 0;
+    oDigit.curFrame = 26;
+}
+void drawODigit()
+{
+    shadowOAM[90].attr0 = (ROWMASK & oDigit.screenRow) | ATTR0_SQUARE;
+    shadowOAM[90].attr1 = (COLMASK & oDigit.screenCol) | ATTR1_TINY;
+    shadowOAM[90].attr2 = ATTR2_TILEID(oDigit.aniState, oDigit.curFrame) | ATTR2_PRIORITY(0);
+}
+void initTDigit()
+{
+    tDigit.width = 8;
+    tDigit.height = 8;
+    tDigit.screenCol = 184;
+    tDigit.screenRow = 150;
+    tDigit.aniState = 0;
+    tDigit.curFrame = 26;
+}
+void drawTDigit()
+{
+    shadowOAM[91].attr0 = (ROWMASK & tDigit.screenRow) | ATTR0_SQUARE;
+    shadowOAM[91].attr1 = (COLMASK & tDigit.screenCol) | ATTR1_TINY;
+    shadowOAM[91].attr2 = ATTR2_TILEID(tDigit.aniState, tDigit.curFrame) | ATTR2_PRIORITY(0);
 }
 void initGame()
 {
@@ -401,9 +500,20 @@ void initGame()
     initHeart();
     initPaper();
     initSanitizer();
+    initODigit();
+    initTDigit();
+    if (diff == EASY)
+    {
+        initEScore();
+    }
+    if (diff == HARD)
+    {
+        initHScore();
+    }
     vOff = player.worldRow / 2;
     hOff = player.worldCol / 2;
     playerHoff = player.worldCol / 2;
+    totalHoff = player.worldCol / 2;
     screenBlock = 28;
     TPCollected = 0;
     won = 0;
@@ -416,33 +526,14 @@ void updateGame()
     if (hOff > 256 && screenBlock < 31)
     {
         screenBlock++;
-
         hOff -= 256;
-
-        for (int i = 0; i < TOTALCUSTOMER; i++)
-        {
-            customers[i].worldCol -= 256;
-        }
-        for (int i = 0; i < totalPaper; i++)
-        {
-            paper[i].worldCol -= 256;
-        }
-        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
+        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE | 1;
     }
     if (hOff < 0 && screenBlock > 28)
     {
         screenBlock--;
         hOff += 256;
-
-        for (int i = 0; i < TOTALCUSTOMER; i++)
-        {
-            customers[i].worldCol += 256;
-        }
-        for (int i = 0; i < totalPaper; i++)
-        {
-            paper[i].worldCol += 256;
-        }
-        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE;
+        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE | 1;
     }
     updatePlayer();
     updatePaper();
@@ -456,6 +547,16 @@ void drawGame()
     drawPaper();
     drawCustomer();
     drawSanitizer();
+    drawTDigit();
+    drawODigit();
+    if (diff == EASY)
+    {
+        drawEScore();
+    }
+    if (diff == HARD)
+    {
+        drawHScore();
+    }
     REG_BG0HOFF = hOff;
     REG_BG0VOFF = vOff;
 }

@@ -66,7 +66,13 @@ enum
     LOSE,
     WIN
 };
+enum
+{
+    EASY,
+    HARD
+};
 int state;
+extern int diff;
 
 unsigned short buttons;
 unsigned short oldButtons;
@@ -117,7 +123,7 @@ int main()
 void initialize()
 {
     TPCollected = 0;
-    playerHealth = 3;
+    playerHealth = 4;
     lost = 0;
     won = 0;
     setupInterrupts();
@@ -160,10 +166,6 @@ void menu()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         goToDifficulty();
-        // stopSound();
-        // playSoundA(gameSong, GAMESONGLEN, 1);
-        // initGame();
-        // goToGame();
     }
     if (BUTTON_PRESSED(BUTTON_A))
     {
@@ -192,6 +194,7 @@ void difficulty()
     if (BUTTON_PRESSED(BUTTON_A))
     {
         totalPaper = 10;
+        diff = EASY;
         srand(seed);
         stopSound();
         playSoundA(gameSong, GAMESONGLEN, 1);
@@ -201,12 +204,17 @@ void difficulty()
     //Hard mode (not cheat)
     if (BUTTON_PRESSED(BUTTON_B))
     {
-        totalPaper = 22;
+        totalPaper = 20;
+        diff = HARD;
         srand(seed);
         stopSound();
         playSoundA(gameSong, GAMESONGLEN, 1);
         initGame();
         goToGame();
+    }
+    if (BUTTON_PRESSED(BUTTON_SELECT))
+    {
+        goToMenu();
     }
 }
 void goToInstructions()
@@ -257,6 +265,7 @@ void pause()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         stopSoundB();
+        unpauseSoundA();
         goToGame();
     }
     else if (BUTTON_PRESSED(BUTTON_SELECT))
@@ -316,12 +325,12 @@ void win()
 }
 void goToGame()
 {
-    unpauseSoundA();
     DMANow(3, gameBackgroundPal, PALETTE, gameBackgroundPalLen / 2);
     DMANow(3, gameBackgroundTiles, &CHARBLOCK[0], gameBackgroundTilesLen / 2);
     DMANow(3, gameBackgroundMap, &SCREENBLOCK[28], gameBackgroundMapLen / 2);
-    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_SIZE_WIDE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_SIZE_WIDE | 1;
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
+    REG_BLDCNT = BLD_OBJa | BLD_WHITE;
 
     REG_BG0VOFF = vOff;
     REG_BG0HOFF = hOff;

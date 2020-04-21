@@ -58,7 +58,7 @@ typedef struct
 
 
 extern OBJ_ATTR shadowOAM[];
-# 159 "myLib.h"
+# 168 "myLib.h"
 void hideSprites();
 
 
@@ -83,10 +83,10 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 202 "myLib.h"
+# 211 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 212 "myLib.h"
+# 221 "myLib.h"
 typedef volatile struct
 {
     volatile const void *src;
@@ -96,9 +96,9 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 253 "myLib.h"
+# 262 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 343 "myLib.h"
+# 352 "myLib.h"
 typedef struct
 {
     const unsigned char *data;
@@ -151,6 +151,15 @@ void drawSanitizer();
 void updateSanitizer();
 void initHeart();
 void drawHeart();
+void initEScore();
+void drawEScore();
+void initHScore();
+void drawHScore();
+void initTDigit();
+void initODigit();
+void drawTDigit();
+void drawODigit();
+void animateSprites();
 
 typedef struct pool
 {
@@ -183,6 +192,8 @@ typedef struct
     int numFrames;
     int aniCounter;
 } CUSTOMER;
+
+
 typedef struct
 {
     int screenRow;
@@ -194,11 +205,26 @@ typedef struct
     int aniState;
 } HEART;
 
-extern TOILETPAPER paper[22];
-extern CUSTOMER customers[6];
+
+typedef struct score
+{
+    int width;
+    int height;
+    int curFrame;
+    int aniState;
+    int screenRow;
+    int screenCol;
+} ESCORE, HSCORE, TDIGIT, ODIGIT;
+
+extern TOILETPAPER paper[20];
+extern CUSTOMER customers[4];
 extern ANISPRITE player;
 extern SANITIZER sanitizer[6];
-extern HEART hearts[3];
+extern HEART hearts[5];
+extern ESCORE escore;
+extern HSCORE hscore;
+extern TDIGIT tDigit;
+extern ODIGIT oDigit;
 # 2 "game.c" 2
 
 # 1 "spritesheet.h" 1
@@ -212,6 +238,16 @@ extern const unsigned short spritesheetPal[256];
 # 20 "collisionBitmap.h"
 extern const unsigned short collisionBitmapBitmap[262144];
 # 5 "game.c" 2
+# 1 "gameBackground.h" 1
+# 22 "gameBackground.h"
+extern const unsigned short gameBackgroundTiles[7184];
+
+
+extern const unsigned short gameBackgroundMap[4096];
+
+
+extern const unsigned short gameBackgroundPal[256];
+# 6 "game.c" 2
 # 1 "sound.h" 1
 SOUND soundA;
 SOUND soundB;
@@ -232,43 +268,43 @@ void unpauseSoundB();
 void stopSound();
 void stopSoundA();
 void stopSoundB();
-# 6 "game.c" 2
+# 7 "game.c" 2
 # 1 "menuSong.h" 1
 # 20 "menuSong.h"
 extern const unsigned char menuSong[317934];
-# 7 "game.c" 2
+# 8 "game.c" 2
 # 1 "loseSong.h" 1
 # 20 "loseSong.h"
 extern const unsigned char loseSong[374131];
-# 8 "game.c" 2
+# 9 "game.c" 2
 # 1 "winSong.h" 1
 # 20 "winSong.h"
 extern const unsigned char winSong[318006];
-# 9 "game.c" 2
+# 10 "game.c" 2
 # 1 "gameSong.h" 1
 # 20 "gameSong.h"
 extern const unsigned char gameSong[1100494];
-# 10 "game.c" 2
+# 11 "game.c" 2
 # 1 "pauseNoise.h" 1
 # 20 "pauseNoise.h"
 extern const unsigned char pauseNoise[84562];
-# 11 "game.c" 2
+# 12 "game.c" 2
 # 1 "owSound.h" 1
 # 20 "owSound.h"
 extern const unsigned char owSound[3516];
-# 12 "game.c" 2
+# 13 "game.c" 2
 # 1 "punchSound.h" 1
 # 20 "punchSound.h"
 extern const unsigned char punchSound[4206];
-# 13 "game.c" 2
+# 14 "game.c" 2
 # 1 "collectSound.h" 1
 # 20 "collectSound.h"
 extern const unsigned char collectSound[12384];
-# 14 "game.c" 2
+# 15 "game.c" 2
 # 1 "sanSound.h" 1
 # 20 "sanSound.h"
 extern const unsigned char sanSound[13967];
-# 15 "game.c" 2
+# 16 "game.c" 2
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 1 3
 # 10 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 3
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\machine\\ieeefp.h" 1 3
@@ -1077,7 +1113,7 @@ extern long double _strtold_r (struct _reent *, const char *restrict, char **res
 extern long double strtold (const char *restrict, char **restrict);
 # 336 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h" 3
 
-# 16 "game.c" 2
+# 17 "game.c" 2
 # 1 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 1 3
 
 
@@ -1323,27 +1359,44 @@ extern long double erfl (long double);
 extern long double erfcl (long double);
 # 662 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\math.h" 3
 
-# 17 "game.c" 2
+# 18 "game.c" 2
 
 
-# 18 "game.c"
+# 19 "game.c"
 int hOff;
+int totalHoff;
 int vOff;
+int diff;
 OBJ_ATTR shadowOAM[128];
 extern int lost;
 extern int won;
 extern int TPCollected;
-TOILETPAPER paper[22];
+TOILETPAPER paper[20];
 ANISPRITE player;
-CUSTOMER customers[6];
+CUSTOMER customers[4];
 SANITIZER sanitizer[6];
-HEART hearts[3];
+HEART hearts[5];
+TOILETPAPER paper[20];
+CUSTOMER customers[4];
+ANISPRITE player;
+SANITIZER sanitizer[6];
+HEART hearts[5];
+ESCORE escore;
+HSCORE hscore;
+TDIGIT tDigit;
+ODIGIT oDigit;
 int timer;
-int speed;
+double speed;
 int playerHealth;
 int hitflag;
 double dx, dy, distance;
 int heartCount;
+int evy;
+enum
+{
+    EASY,
+    HARD
+};
 
 void initPlayer()
 {
@@ -1355,18 +1408,19 @@ void initPlayer()
     player.rdel = 1;
     player.height = 32;
     player.width = 32;
-    player.worldRow = 155;
-    player.worldCol = 200;
-    player.screenRow = player.worldRow;
-    player.screenCol = player.worldCol;
-    playerHealth = 2;
+    player.worldRow = 155 + vOff;
+    player.worldCol = 200 + playerHoff;
+    player.screenRow = player.worldRow - vOff;
+    player.screenCol = player.worldCol - playerHoff;
+    playerHealth = 4;
     hitflag = 0;
+    evy = 0;
 }
 void drawPlayer()
 {
     shadowOAM[0].attr0 = (0xFF & player.screenRow) | (0 << 14);
     shadowOAM[0].attr1 = (0x1FF & player.screenCol) | (2 << 14);
-    shadowOAM[0].attr2 = ((player.curFrame * 4)*32 + (player.aniState * 4)) | ((0) << 12);
+    shadowOAM[0].attr2 = ((player.curFrame * 4)*32 + (player.aniState * 4)) | ((0) << 12) | ((1) << 10);
 }
 void updatePlayer()
 {
@@ -1375,10 +1429,15 @@ void updatePlayer()
         if (player.screenCol > 0)
         {
             player.worldCol -= player.cdel;
-            if (hOff >= 0 && player.screenCol < 240 / 2)
+            if (totalHoff >= 0 && player.screenCol < 240 / 2)
             {
                 hOff--;
                 playerHoff--;
+                totalHoff--;
+                if (evy > 0)
+                {
+                    evy--;
+                }
             }
         }
     }
@@ -1387,10 +1446,15 @@ void updatePlayer()
         if (player.worldCol + player.width - 1 < 1024 - 1)
         {
             player.worldCol += player.cdel;
-            if (playerHoff < 1024 - 240 - 1 && hOff < 1024 - 240 - 1 && player.screenCol > 240 / 2)
+            if (totalHoff < 1024 - 240 - 1 && hOff < 1024 - 240 - 1 && player.screenCol > 240 / 2)
             {
                 hOff++;
                 playerHoff++;
+                totalHoff++;
+                if (evy < 16)
+                {
+                    evy++;
+                }
             }
         }
     }
@@ -1416,28 +1480,30 @@ void updatePlayer()
             }
         }
     }
+    (*(volatile u16 *)0x04000054) = (((evy)) << 0);
     animateSprites();
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
 void initPaper()
 {
-    for (int i = 0; i < 22; i++)
+    for (int i = 0; i < 20; i++)
     {
-        paper[i].worldCol = 64 + 128 * i;
+        paper[i].worldCol = 64 + (128 * (i % 8));
         paper[i].width = 32;
         paper[i].height = 32;
         paper[i].aniState = 0;
         paper[i].curFrame = 5;
         paper[i].numFrames = 4;
-        paper[i].active = 1;
         if (i < 8)
         {
             paper[i].worldRow = 64;
+            paper[i].active = 1;
         }
         else if (i < 16)
         {
             paper[i].worldRow = 116;
+            paper[i].active = 1;
         }
         paper[i].screenRow = paper[i].worldRow;
         paper[i].screenCol = paper[i].worldCol;
@@ -1445,15 +1511,15 @@ void initPaper()
 }
 void drawPaper()
 {
-    for (int i = 0; i < 22; i++)
+    for (int i = 0; i < 20; i++)
     {
         if (paper[i].active)
         {
             shadowOAM[i + 1].attr0 = (0xFF & paper[i].screenRow) | (0 << 14);
             shadowOAM[i + 1].attr1 = (0x1FF & paper[i].screenCol) | (2 << 14);
-            shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32 + (paper[i].aniState * 4));
+            shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32 + (paper[i].aniState * 4)) | ((1) << 10);
         }
-        if (paper[i].active == 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + 160 < paper[i].worldRow || hOff + 240 < paper[i].worldRow)
+        if (paper[i].active == 0 || paper[i].screenCol < 0 || paper[i].screenCol > 240 || paper[i].screenRow > 160 || paper[i].screenRow < 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + 160 < paper[i].worldRow || hOff + 240 < paper[i].worldRow)
         {
             shadowOAM[i + 1].attr0 = (2 << 8);
         }
@@ -1462,7 +1528,7 @@ void drawPaper()
 void updatePaper()
 {
 
-    for (int i = 0; i < 22; i++)
+    for (int i = 0; i < 20; i++)
     {
 
         if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height,
@@ -1470,22 +1536,27 @@ void updatePaper()
             paper[i].active)
         {
             playSoundB(collectSound, 12384, 0);
-            TPCollected++;
             paper[i].active = 0;
+            TPCollected++;
+            oDigit.aniState = (oDigit.aniState + 1) % 10;
+            if (oDigit.aniState % 10 == 0 && TPCollected > 9)
+            {
+                tDigit.aniState = (tDigit.aniState + 1) % 10;
+            }
         }
         if (TPCollected == totalPaper)
         {
             won = 1;
         }
         paper[i].screenRow = paper[i].worldRow - vOff;
-        paper[i].screenCol = paper[i].worldCol - hOff;
+        paper[i].screenCol = paper[i].worldCol - totalHoff;
     }
 }
 void initCustomer()
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 4; i++)
     {
-        customers[i].worldCol = 64 + 128 * i;
+        customers[i].worldCol = 64 + 256 * i;
         customers[i].worldRow = 32 + 16 * i;
         customers[i].aniState = 4;
         customers[i].curFrame = 1;
@@ -1502,15 +1573,15 @@ void initCustomer()
 }
 void drawCustomer()
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 4; i++)
     {
         if (customers[i].active)
         {
             shadowOAM[i + 50].attr0 = (0xFF & customers[i].screenRow) | (0 << 14);
             shadowOAM[i + 50].attr1 = (0x1FF & customers[i].screenCol) | (2 << 14);
-            shadowOAM[i + 50].attr2 = ((customers[i].curFrame * 4)*32 + (customers[i].aniState * 4));
+            shadowOAM[i + 50].attr2 = ((customers[i].curFrame * 4)*32 + (customers[i].aniState * 4)) | ((1) << 10);
         }
-        if (customers[i].active == 0 || vOff > customers[i].worldRow || hOff > customers[i].worldCol || hOff + 240 < customers[i].worldCol || vOff + 160 < customers[i].worldRow)
+        if (customers[i].active == 0 || vOff > customers[i].worldRow || totalHoff > customers[i].worldCol || totalHoff + 240 < customers[i].worldCol || vOff + 160 < customers[i].worldRow)
         {
             shadowOAM[i + 50].attr0 = (2 << 8);
         }
@@ -1518,8 +1589,8 @@ void drawCustomer()
 }
 void updateCustomer()
 {
-    speed = 2;
-    for (int i = 0; i < 6; i++)
+    speed = 1.5;
+    for (int i = 0; i < 4; i++)
     {
         dx = player.screenCol - customers[i].screenCol;
         dy = player.screenRow - customers[i].screenRow;
@@ -1591,21 +1662,21 @@ void updateCustomer()
             customers[i].active)
         {
             playSoundB(owSound, 3516, 0);
-            if (collisionBitmapBitmap[((player.worldRow + (int)dy) * (1024) + (player.worldCol + (int)dx))] != ((0) | (0) << 5 | (0) << 10) && player.worldRow + (int)dy > 0 && player.worldCol + (int)dx > 0)
+            if (collisionBitmapBitmap[((player.worldRow + (int)dy + 1) * (1024) + (player.worldCol + (int)dx + 1))] != ((0) | (0) << 5 | (0) << 10) && player.worldRow + (int)dy > 0 && player.worldCol + (int)dx > 0)
             {
                 player.worldRow += dy;
                 player.worldCol += dx;
-            }
-            hitflag = 1;
-            if (playerHealth == 0)
-            {
-                lost = 1;
+                hitflag = 1;
+                if (playerHealth == 0)
+                {
+                    lost = 1;
+                }
             }
         }
         if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))))
         {
             player.curFrame = 4;
-            if (player.aniCounter % 10 == 0)
+            if (player.aniCounter % 20 == 0)
             {
                 player.curFrame = 0;
             }
@@ -1616,28 +1687,31 @@ void updateCustomer()
                 customers[i].livesRemaining--;
                 customers[i].follow = 1;
             }
-            if (customers[i].livesRemaining == 0)
+            if (customers[i].active && customers[i].livesRemaining == 0)
             {
                 customers[i].active = 0;
-                for (int j = 16; j < 22; j++)
+                for (int j = 16; j < 20; j++)
                 {
-                    paper[j].active = 1;
-                    paper[j].worldCol = customers[i].worldCol;
-                    paper[j].worldRow = customers[i].worldRow;
-                    break;
+                    if (paper[j].active == 0)
+                    {
+                        paper[j].worldCol = customers[i].worldCol;
+                        paper[j].worldRow = customers[i].worldRow;
+                        paper[j].active = 1;
+                        break;
+                    }
                 }
             }
         }
         customers[i].screenRow = customers[i].worldRow - vOff;
-        customers[i].screenCol = customers[i].worldCol - hOff;
+        customers[i].screenCol = customers[i].worldCol - totalHoff;
     }
 }
 void initSanitizer()
 {
     for (int i = 0; i < 6; i++)
     {
-        sanitizer[i].worldCol = 64 + 128 * i;
-        sanitizer[i].worldRow = 16;
+        sanitizer[i].worldCol = 64 + 128 * i + totalHoff;
+        sanitizer[i].worldRow = 16 + vOff;
         sanitizer[i].height = 16;
         sanitizer[i].width = 16;
         sanitizer[i].curFrame = 12;
@@ -1654,9 +1728,9 @@ void drawSanitizer()
         {
             shadowOAM[i + 100].attr0 = (0xFF & sanitizer[i].screenRow) | (0 << 14);
             shadowOAM[i + 100].attr1 = (0x1FF & sanitizer[i].screenCol) | (1 << 14);
-            shadowOAM[i + 100].attr2 = ((sanitizer[i].curFrame * 2)*32 + (sanitizer[i].aniState * 2));
+            shadowOAM[i + 100].attr2 = ((sanitizer[i].curFrame * 2)*32 + (sanitizer[i].aniState * 2)) | ((1) << 10);
         }
-        if (sanitizer[i].active == 0 || vOff > sanitizer[i].worldRow || hOff > sanitizer[i].worldCol || vOff + 160 < sanitizer[i].worldRow || hOff + 240 < sanitizer[i].worldRow)
+        if (sanitizer[i].active == 0 || sanitizer[i].screenCol < 0 || sanitizer[i].screenCol > 240 || sanitizer[i].screenRow > 160 || sanitizer[i].screenRow < 0 || vOff > sanitizer[i].worldRow || totalHoff > sanitizer[i].worldCol || vOff + 160 < sanitizer[i].worldRow || totalHoff + 240 < sanitizer[i].worldRow)
         {
             shadowOAM[i + 100].attr0 = (2 << 8);
         }
@@ -1666,20 +1740,20 @@ void updateSanitizer()
 {
     for (int i = 0; i < 6; i++)
     {
-        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 2)
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 4)
         {
             playerHealth++;
             hearts[playerHealth].active = 1;
             playSoundB(sanSound, 13967, 0);
             sanitizer[i].active = 0;
         }
-        sanitizer[i].screenCol = sanitizer[i].worldCol - hOff;
+        sanitizer[i].screenCol = sanitizer[i].worldCol - totalHoff;
         sanitizer[i].screenRow = sanitizer[i].worldRow - vOff;
     }
 }
 void initHeart()
 {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         hearts[i].screenCol = 5 + 18 * i;
         hearts[i].screenRow = 10;
@@ -1692,19 +1766,79 @@ void initHeart()
 }
 void drawHeart()
 {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         if (hearts[i].active)
         {
             shadowOAM[i + 60].attr0 = (0xFF & hearts[i].screenRow) | (0 << 14);
             shadowOAM[i + 60].attr1 = (0x1FF & hearts[i].screenCol) | (1 << 14);
-            shadowOAM[i + 60].attr2 = ((hearts[i].curFrame * 2)*32 + (hearts[i].aniState * 2));
+            shadowOAM[i + 60].attr2 = ((hearts[i].curFrame * 2)*32 + (hearts[i].aniState * 2)) | ((0) << 10);
         }
         else
         {
             shadowOAM[i + 60].attr0 = (2 << 8);
         }
     }
+}
+void initEScore()
+{
+    escore.width = 32;
+    escore.height = 8;
+    escore.screenCol = 200;
+    escore.screenRow = 150;
+    escore.aniState = 3;
+    escore.curFrame = 26;
+}
+void drawEScore()
+{
+    shadowOAM[89].attr0 = (0xFF & escore.screenRow) | (1 << 14);
+    shadowOAM[89].attr1 = (0x1FF & escore.screenCol) | (1 << 14);
+    shadowOAM[89].attr2 = ((escore.curFrame)*32 + (escore.aniState * 4)) | ((0) << 10);
+}
+void initHScore()
+{
+    hscore.width = 32;
+    hscore.height = 8;
+    hscore.screenCol = 200;
+    hscore.screenRow = 150;
+    hscore.aniState = 4;
+    hscore.curFrame = 26;
+}
+void drawHScore()
+{
+    shadowOAM[88].attr0 = (0xFF & hscore.screenRow) | (1 << 14);
+    shadowOAM[88].attr1 = (0x1FF & hscore.screenCol) | (1 << 14);
+    shadowOAM[88].attr2 = ((hscore.curFrame)*32 + (hscore.aniState * 4)) | ((0) << 10);
+}
+void initODigit()
+{
+    oDigit.width = 8;
+    oDigit.height = 8;
+    oDigit.screenCol = 192;
+    oDigit.screenRow = 150;
+    oDigit.aniState = 0;
+    oDigit.curFrame = 26;
+}
+void drawODigit()
+{
+    shadowOAM[90].attr0 = (0xFF & oDigit.screenRow) | (0 << 14);
+    shadowOAM[90].attr1 = (0x1FF & oDigit.screenCol) | (0 << 14);
+    shadowOAM[90].attr2 = ((oDigit.curFrame)*32 + (oDigit.aniState)) | ((0) << 10);
+}
+void initTDigit()
+{
+    tDigit.width = 8;
+    tDigit.height = 8;
+    tDigit.screenCol = 184;
+    tDigit.screenRow = 150;
+    tDigit.aniState = 0;
+    tDigit.curFrame = 26;
+}
+void drawTDigit()
+{
+    shadowOAM[91].attr0 = (0xFF & tDigit.screenRow) | (0 << 14);
+    shadowOAM[91].attr1 = (0x1FF & tDigit.screenCol) | (0 << 14);
+    shadowOAM[91].attr2 = ((tDigit.curFrame)*32 + (tDigit.aniState)) | ((0) << 10);
 }
 void initGame()
 {
@@ -1713,9 +1847,20 @@ void initGame()
     initHeart();
     initPaper();
     initSanitizer();
+    initODigit();
+    initTDigit();
+    if (diff == EASY)
+    {
+        initEScore();
+    }
+    if (diff == HARD)
+    {
+        initHScore();
+    }
     vOff = player.worldRow / 2;
     hOff = player.worldCol / 2;
     playerHoff = player.worldCol / 2;
+    totalHoff = player.worldCol / 2;
     screenBlock = 28;
     TPCollected = 0;
     won = 0;
@@ -1728,33 +1873,14 @@ void updateGame()
     if (hOff > 256 && screenBlock < 31)
     {
         screenBlock++;
-
         hOff -= 256;
-
-        for (int i = 0; i < 6; i++)
-        {
-            customers[i].worldCol -= 256;
-        }
-        for (int i = 0; i < totalPaper; i++)
-        {
-            paper[i].worldCol -= 256;
-        }
-        (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((screenBlock) << 8) | (1 << 14);
+        (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((screenBlock) << 8) | (1 << 14) | 1;
     }
     if (hOff < 0 && screenBlock > 28)
     {
         screenBlock--;
         hOff += 256;
-
-        for (int i = 0; i < 6; i++)
-        {
-            customers[i].worldCol += 256;
-        }
-        for (int i = 0; i < totalPaper; i++)
-        {
-            paper[i].worldCol += 256;
-        }
-        (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((screenBlock) << 8) | (1 << 14);
+        (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((screenBlock) << 8) | (1 << 14) | 1;
     }
     updatePlayer();
     updatePaper();
@@ -1768,6 +1894,16 @@ void drawGame()
     drawPaper();
     drawCustomer();
     drawSanitizer();
+    drawTDigit();
+    drawODigit();
+    if (diff == EASY)
+    {
+        drawEScore();
+    }
+    if (diff == HARD)
+    {
+        drawHScore();
+    }
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
 }
@@ -1800,7 +1936,7 @@ void animateSprites()
     {
         player.aniCounter++;
     }
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 4; i++)
     {
         if (customers[i].follow && customers[i].aniCounter % 20 == 0)
         {
@@ -1813,7 +1949,7 @@ void animateSprites()
         customers[i].aniCounter++;
     }
 
-    for (int i = 0; i < 22; i++)
+    for (int i = 0; i < 20; i++)
     {
         if (paper[i].aniCounter % 20 == 0 && paper[i].active)
         {

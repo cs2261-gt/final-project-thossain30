@@ -175,13 +175,13 @@ void stopSoundA()
 
     // TODO 4.3 - Complete the stopSound function
     soundA.isPlaying = 0;
-    dma[0].cnt = 0;
+    dma[1].cnt = 0;
     REG_TM0CNT = TIMER_OFF;
 }
 void stopSoundB()
 {
     soundB.isPlaying = 0;
-    dma[1].cnt = 0;
+    dma[2].cnt = 0;
     REG_TM1CNT = TIMER_OFF;
 }
 void stopSound()

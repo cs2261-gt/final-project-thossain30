@@ -57,7 +57,7 @@ typedef struct
 
 
 extern OBJ_ATTR shadowOAM[];
-# 159 "myLib.h"
+# 168 "myLib.h"
 void hideSprites();
 
 
@@ -82,10 +82,10 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 202 "myLib.h"
+# 211 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 212 "myLib.h"
+# 221 "myLib.h"
 typedef volatile struct
 {
     volatile const void *src;
@@ -95,9 +95,9 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 253 "myLib.h"
+# 262 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 343 "myLib.h"
+# 352 "myLib.h"
 typedef struct
 {
     const unsigned char *data;

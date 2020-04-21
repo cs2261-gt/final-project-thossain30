@@ -540,71 +540,70 @@ diffBackgroundMap:
 	.short	1
 	.short	1
 	.short	1
-	.short	1
 	.short	45
 	.short	46
 	.short	47
 	.short	48
 	.short	49
 	.short	50
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
 	.short	51
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
 	.short	52
+	.short	1
 	.short	53
 	.short	54
 	.short	55
 	.short	56
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
 	.short	57
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
 	.short	58
 	.short	59
 	.short	60
@@ -636,13 +635,51 @@ diffBackgroundMap:
 	.short	1
 	.short	1
 	.short	1
-	.short	1
+	.short	51
 	.short	64
+	.short	1
+	.short	1076
 	.short	65
 	.short	66
 	.short	67
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
+	.short	1
 	.short	68
 	.short	69
+	.short	70
+	.short	71
+	.short	72
+	.short	73
+	.short	74
+	.short	75
+	.short	76
+	.short	77
+	.short	78
+	.short	79
 	.short	1
 	.short	1
 	.short	1
@@ -663,55 +700,18 @@ diffBackgroundMap:
 	.short	1
 	.short	1
 	.short	1
+	.short	80
+	.short	81
+	.short	82
+	.short	83
+	.short	84
+	.short	85
 	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
+	.short	86
+	.short	87
+	.short	88
+	.short	89
+	.short	90
 	.short	1
 	.short	1
 	.short	1
@@ -1302,7 +1302,7 @@ diffBackgroundMap:
 	.short	1
 	.short	1
 	.type	diffBackgroundTiles, %object
-	.size	diffBackgroundTiles, 2240
+	.size	diffBackgroundTiles, 2912
 diffBackgroundTiles:
 	.short	0
 	.short	0
@@ -2024,85 +2024,69 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
 	.short	8191
 	.short	-1
 	.short	8191
 	.short	-1
 	.short	-3585
-	.short	-1
+	.short	-15
 	.short	-3585
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
 	.short	-15
-	.short	-1
-	.short	-15
-	.short	-1
 	.short	-225
-	.short	-1
 	.short	-225
-	.short	-1
-	.short	-3585
-	.short	-1
-	.short	-3585
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	4607
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	4369
-	.short	-15
-	.short	-1
-	.short	-15
-	.short	-1
-	.short	-1
-	.short	-3585
-	.short	8191
-	.short	-3823
-	.short	-3585
-	.short	-3585
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
+	.short	-225
+	.short	-225
+	.short	4383
 	.short	-239
+	.short	-15
+	.short	-3585
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	4383
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	4383
+	.short	4369
+	.short	-3585
+	.short	8191
+	.short	-3585
+	.short	-1
+	.short	-3585
+	.short	-225
 	.short	4607
+	.short	-239
 	.short	-3585
 	.short	-225
 	.short	-3585
+	.short	-1
+	.short	-3585
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	4607
+	.short	-15
+	.short	-225
+	.short	-225
+	.short	-1
+	.short	-225
+	.short	4607
+	.short	-239
+	.short	-225
 	.short	-225
 	.short	-1
 	.short	-1
@@ -2110,88 +2094,164 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	4593
-	.short	4593
+	.short	4383
+	.short	4383
 	.short	8177
-	.short	8191
-	.short	8191
-	.short	8191
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-15
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	4607
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-3823
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-3823
-	.short	4607
-	.short	8191
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	4607
-	.short	-15
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-15
-	.short	8191
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	8191
-	.short	-1
-	.short	4607
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	8191
-	.short	-1
 	.short	-3585
-	.short	-1
+	.short	-15
+	.short	-3585
 	.short	-3809
+	.short	8191
+	.short	8191
+	.short	8191
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	4383
+	.short	-1
+	.short	-3585
+	.short	-1
+	.short	-3585
+	.short	-1
+	.short	-225
+	.short	-1
+	.short	-225
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	8191
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
+	.short	-3585
+	.short	-239
+	.short	4383
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-3585
+	.short	-1
+	.short	4383
 	.short	4369
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-239
+	.short	-225
+	.short	4607
+	.short	-3823
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
 	.short	8177
+	.short	-1
+	.short	-3823
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	8191
+	.short	-1
+	.short	4383
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-239
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	8191
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	4369
+	.short	-1
+	.short	-15
+	.short	-15
+	.short	-15
+	.short	-15
+	.short	-15
+	.short	-15
+	.short	4369
+	.short	-15
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
 	.short	-1
 	.short	-1
 	.short	-1
@@ -2201,133 +2261,66 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-1
 	.short	-3823
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-3823
 	.short	4607
-	.short	-3585
-	.short	-1
-	.short	-3585
 	.short	-225
-	.short	4369
-	.short	4383
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-3599
-	.short	-15
-	.short	-3599
-	.short	-15
-	.short	-3809
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-15
-	.short	4607
-	.short	-15
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	4369
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	4383
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-15
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-225
-	.short	-1
-	.short	-239
-	.short	-1
-	.short	-3585
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	4383
-	.short	-1
-	.short	-3585
-	.short	-1
-	.short	-3585
-	.short	-1
-	.short	-3585
-	.short	-1
-	.short	4607
-	.short	-1
-	.short	-3585
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
 	.short	8191
-	.short	-239
-	.short	-1
-	.short	-15
-	.short	-1
-	.short	-15
-	.short	-1
-	.short	8177
+	.short	-225
+	.short	8191
+	.short	-225
+	.short	8191
+	.short	4383
 	.short	4369
-	.short	-3599
-	.short	-1
+	.short	-225
+	.short	8191
+	.short	-225
+	.short	8191
+	.short	-225
+	.short	8191
 	.short	-15
 	.short	-1
 	.short	-1
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-239
+	.short	4607
+	.short	-15
+	.short	-225
 	.short	7967
-	.short	-3585
-	.short	-3823
-	.short	-3585
+	.short	-1
+	.short	-225
+	.short	4607
+	.short	-239
+	.short	-225
 	.short	-225
 	.short	-1
 	.short	-1
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-3585
 	.short	-1
-	.short	-3809
+	.short	4593
+	.short	4607
+	.short	-239
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-225
 	.short	-1
-	.short	-3585
-	.short	8177
-	.short	-3599
-	.short	-3585
-	.short	-3809
-	.short	-3585
-	.short	-3585
+	.short	-239
+	.short	-1
+	.short	-225
+	.short	-1
+	.short	-225
+	.short	-1
+	.short	-239
 	.short	-1
 	.short	-225
 	.short	-1
@@ -2335,6 +2328,25 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-225
 	.short	-1
+	.short	-15
+	.short	-225
+	.short	4369
+	.short	-15
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-225
+	.short	-225
+	.short	4593
 	.short	4369
 	.short	-1
 	.short	-1
@@ -2344,33 +2356,202 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-3585
-	.short	4383
-	.short	-3585
 	.short	-1
-	.short	-3585
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
+	.short	-225
+	.short	-239
+	.short	4607
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-3823
+	.short	-1
+	.short	-225
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	4383
+	.short	7967
+	.short	-15
+	.short	-239
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-1
+	.short	-3809
+	.short	-1
+	.short	8191
+	.short	-15
+	.short	-1
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	4369
+	.short	7953
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-1
+	.short	8177
+	.short	-1
+	.short	4369
+	.short	-1
+	.short	8177
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
 	.short	-1
 	.short	-239
+	.short	8191
+	.short	-15
 	.short	-1
+	.short	-15
 	.short	-1
+	.short	-15
 	.short	-1
+	.short	-15
 	.short	-1
+	.short	-15
 	.short	-1
+	.short	-15
 	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
+	.short	-15
 	.short	-3585
+	.short	4369
+	.short	-239
+	.short	-15
+	.short	-225
+	.short	-15
 	.short	-1
+	.short	8177
+	.short	-1
+	.short	4369
+	.short	-1
+	.short	8177
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	4607
+	.short	-3599
+	.short	-225
+	.short	-3809
+	.short	-15
 	.short	-3585
+	.short	-15
 	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
 	.short	-3585
-	.short	-1
 	.short	4383
+	.short	4369
+	.short	-225
+	.short	8177
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
 	.short	-1
 	.short	-1
 	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	4607
+	.short	-15
+	.short	-1
+	.short	-1
+	.short	4607
+	.short	-15
+	.short	8191
+	.short	-15
+	.short	8191
+	.short	-225
+	.short	8191
+	.short	-225
+	.short	8191
+	.short	-3585
+	.short	8191
+	.short	-3585
+	.short	8191
+	.short	-3585
+	.short	8191
+	.short	8191
+	.short	8191
+	.short	-239
+	.short	8191
+	.short	-15
+	.short	-3585
+	.short	-15
+	.short	-3585
+	.short	-15
+	.short	-3585
+	.short	8177
+	.short	-225
+	.short	8177
+	.short	-225
+	.short	8177
+	.short	-225
+	.short	8177
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-3823
+	.short	7967
+	.short	8191
+	.short	-3823
+	.short	4369
+	.short	-225
+	.short	-1
+	.short	-225
+	.short	-1
+	.short	-225
 	.short	-1
 	.short	-1
 	.short	-1
@@ -2378,11 +2559,50 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-1
 	.short	8177
+	.short	8177
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-15
+	.short	-225
+	.short	-15
 	.short	-1
-	.short	-3599
 	.short	-1
-	.short	-3599
-	.short	8191
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-239
+	.short	-225
+	.short	4593
+	.short	8177
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
+	.short	-3585
+	.short	4369
 	.short	7953
 	.short	-1
 	.short	-1
@@ -2392,13 +2612,109 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-3823
-	.short	-225
-	.short	-3585
-	.short	-225
-	.short	-3585
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
 	.short	-225
 	.short	4369
+	.short	7953
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
+	.short	-3585
+	.short	4369
+	.short	-239
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-225
+	.short	-225
+	.short	4607
+	.short	-15
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
+	.short	8191
+	.short	-239
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	8191
+	.short	8191
+	.short	4607
+	.short	-15
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-15
+	.short	8177
+	.short	8177
+	.short	-239
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	8191
+	.short	-225
+	.short	-3823
 	.short	-3823
 	.short	-1
 	.short	-1
@@ -2408,14 +2724,34 @@ diffBackgroundTiles:
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-3585
-	.short	-3585
-	.short	-3585
-	.short	-3585
-	.short	-3585
-	.short	4383
-	.short	8191
-	.short	-3599
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-225
+	.short	8177
+	.short	-3823
+	.short	-3809
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-239
+	.short	-1
+	.short	-15
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
 	.short	-1
 	.short	-1
 	.short	-1
