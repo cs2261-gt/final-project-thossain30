@@ -186,7 +186,7 @@ void updatePaper()
             paper[i].active)
         {
             //paper is collected
-            playSoundB(collectSound, COLLECTSOUNDLEN, 0);
+            playSoundB(collectSound, COLLECTSOUNDLEN - 100, 0);
             paper[i].active = 0;
             TPCollected++;
             oDigit.aniState = (oDigit.aniState + 1) % 10;

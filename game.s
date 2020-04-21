@@ -354,7 +354,7 @@ updatePaper:
 	.word	won
 	.word	collectSound
 	.word	playSoundB
-	.word	12384
+	.word	12284
 	.word	oDigit
 	.word	1717986919
 	.word	tDigit
