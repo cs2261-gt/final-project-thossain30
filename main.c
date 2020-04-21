@@ -27,14 +27,13 @@ Added in sprites for health (hearts)
 Finished art for other background states
 Animation for collectables
 Animation for characters (player and enemy)
+Completed sound
+Added in number score
 */
 
 /* To Do
-Complete all sound stuff (resuming game music after going from pause to game)
-Figure out why collision is iffy
 Figure out how to prevent enemies from pushing player into 'black' parts of collision map
 Figure out how to prevent enemy from traversing through 'black' parts of collision map
-Add in number score
 */
 // Prototypes
 void initialize();
@@ -197,7 +196,7 @@ void difficulty()
         diff = EASY;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, GAMESONGLEN, 1);
+        playSoundA(gameSong, GAMESONGLEN - 110, 1);
         initGame();
         goToGame();
     }
@@ -208,7 +207,7 @@ void difficulty()
         diff = HARD;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, GAMESONGLEN, 1);
+        playSoundA(gameSong, GAMESONGLEN - 110, 1);
         initGame();
         goToGame();
     }
@@ -328,9 +327,8 @@ void goToGame()
     DMANow(3, gameBackgroundPal, PALETTE, gameBackgroundPalLen / 2);
     DMANow(3, gameBackgroundTiles, &CHARBLOCK[0], gameBackgroundTilesLen / 2);
     DMANow(3, gameBackgroundMap, &SCREENBLOCK[28], gameBackgroundMapLen / 2);
-    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_SIZE_WIDE | 1;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_SIZE_WIDE | 2;
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
-    REG_BLDCNT = BLD_OBJa | BLD_WHITE;
 
     REG_BG0VOFF = vOff;
     REG_BG0HOFF = hOff;

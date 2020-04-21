@@ -14,7 +14,7 @@ int totalPaper;
 
 #define TOTALCUSTOMER 4
 #define TOTALPAPER 20
-#define TOTALSAN 6
+#define TOTALSAN 4
 #define TOTALHEARTS 5
 
 void initGame();

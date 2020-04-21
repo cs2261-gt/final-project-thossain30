@@ -58,7 +58,7 @@ typedef struct
 
 
 extern OBJ_ATTR shadowOAM[];
-# 168 "myLib.h"
+# 174 "myLib.h"
 void hideSprites();
 
 
@@ -83,10 +83,10 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 211 "myLib.h"
+# 217 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 221 "myLib.h"
+# 227 "myLib.h"
 typedef volatile struct
 {
     volatile const void *src;
@@ -96,9 +96,9 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 262 "myLib.h"
+# 268 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 352 "myLib.h"
+# 358 "myLib.h"
 typedef struct
 {
     const unsigned char *data;
@@ -219,7 +219,7 @@ typedef struct score
 extern TOILETPAPER paper[20];
 extern CUSTOMER customers[4];
 extern ANISPRITE player;
-extern SANITIZER sanitizer[6];
+extern SANITIZER sanitizer[4];
 extern HEART hearts[5];
 extern ESCORE escore;
 extern HSCORE hscore;
@@ -1374,12 +1374,12 @@ extern int TPCollected;
 TOILETPAPER paper[20];
 ANISPRITE player;
 CUSTOMER customers[4];
-SANITIZER sanitizer[6];
+SANITIZER sanitizer[4];
 HEART hearts[5];
 TOILETPAPER paper[20];
 CUSTOMER customers[4];
 ANISPRITE player;
-SANITIZER sanitizer[6];
+SANITIZER sanitizer[4];
 HEART hearts[5];
 ESCORE escore;
 HSCORE hscore;
@@ -1392,6 +1392,8 @@ int hitflag;
 double dx, dy, distance;
 int heartCount;
 int evy;
+int eva;
+int evb;
 enum
 {
     EASY,
@@ -1414,14 +1416,15 @@ void initPlayer()
     player.screenCol = player.worldCol - playerHoff;
     playerHealth = 4;
     hitflag = 0;
-    evy = 0;
 }
+
 void drawPlayer()
 {
-    shadowOAM[0].attr0 = (0xFF & player.screenRow) | (0 << 14);
+    shadowOAM[0].attr0 = (0xFF & player.screenRow) | (0 << 14) | (1 << 10);
     shadowOAM[0].attr1 = (0x1FF & player.screenCol) | (2 << 14);
     shadowOAM[0].attr2 = ((player.curFrame * 4)*32 + (player.aniState * 4)) | ((0) << 12) | ((1) << 10);
 }
+
 void updatePlayer()
 {
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 5))) && collisionBitmapBitmap[((player.worldRow + (player.height / 4)) * (1024) + (player.worldCol - player.cdel))] != ((0) | (0) << 5 | (0) << 10) && collisionBitmapBitmap[((player.worldRow + player.height - 1) * (1024) + (player.worldCol - player.cdel))] != ((0) | (0) << 5 | (0) << 10))
@@ -1434,10 +1437,6 @@ void updatePlayer()
                 hOff--;
                 playerHoff--;
                 totalHoff--;
-                if (evy > 0)
-                {
-                    evy--;
-                }
             }
         }
     }
@@ -1451,10 +1450,6 @@ void updatePlayer()
                 hOff++;
                 playerHoff++;
                 totalHoff++;
-                if (evy < 16)
-                {
-                    evy++;
-                }
             }
         }
     }
@@ -1480,11 +1475,11 @@ void updatePlayer()
             }
         }
     }
-    (*(volatile u16 *)0x04000054) = (((evy)) << 0);
     animateSprites();
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
+
 void initPaper()
 {
     for (int i = 0; i < 20; i++)
@@ -1509,13 +1504,14 @@ void initPaper()
         paper[i].screenCol = paper[i].worldCol;
     }
 }
+
 void drawPaper()
 {
     for (int i = 0; i < 20; i++)
     {
         if (paper[i].active)
         {
-            shadowOAM[i + 1].attr0 = (0xFF & paper[i].screenRow) | (0 << 14);
+            shadowOAM[i + 1].attr0 = (0xFF & paper[i].screenRow) | (0 << 14) | (0 << 10);
             shadowOAM[i + 1].attr1 = (0x1FF & paper[i].screenCol) | (2 << 14);
             shadowOAM[i + 1].attr2 = ((paper[i].curFrame * 4)*32 + (paper[i].aniState * 4)) | ((1) << 10);
         }
@@ -1525,6 +1521,7 @@ void drawPaper()
         }
     }
 }
+
 void updatePaper()
 {
 
@@ -1535,6 +1532,7 @@ void updatePaper()
                       paper[i].screenCol, paper[i].screenRow, paper[i].width, paper[i].height) &&
             paper[i].active)
         {
+
             playSoundB(collectSound, 12384, 0);
             paper[i].active = 0;
             TPCollected++;
@@ -1544,6 +1542,7 @@ void updatePaper()
                 tDigit.aniState = (tDigit.aniState + 1) % 10;
             }
         }
+
         if (TPCollected == totalPaper)
         {
             won = 1;
@@ -1552,6 +1551,7 @@ void updatePaper()
         paper[i].screenCol = paper[i].worldCol - totalHoff;
     }
 }
+
 void initCustomer()
 {
     for (int i = 0; i < 4; i++)
@@ -1571,13 +1571,14 @@ void initCustomer()
         customers[i].screenRow = customers[i].worldRow;
     }
 }
+
 void drawCustomer()
 {
     for (int i = 0; i < 4; i++)
     {
         if (customers[i].active)
         {
-            shadowOAM[i + 50].attr0 = (0xFF & customers[i].screenRow) | (0 << 14);
+            shadowOAM[i + 50].attr0 = (0xFF & customers[i].screenRow) | (0 << 14) | (0 << 10);
             shadowOAM[i + 50].attr1 = (0x1FF & customers[i].screenCol) | (2 << 14);
             shadowOAM[i + 50].attr2 = ((customers[i].curFrame * 4)*32 + (customers[i].aniState * 4)) | ((1) << 10);
         }
@@ -1587,69 +1588,23 @@ void drawCustomer()
         }
     }
 }
+
 void updateCustomer()
 {
+
     speed = 1.5;
     for (int i = 0; i < 4; i++)
     {
         dx = player.screenCol - customers[i].screenCol;
         dy = player.screenRow - customers[i].screenRow;
         distance = sqrt(dx * dx + dy * dy);
-        if (dx > 0 && dy > 0)
-        {
-            if (dx > dy)
-            {
-                customers[i].aniState = 6;
-            }
-            else
-            {
-                customers[i].aniState = 4;
-            }
-        }
-        if (dx < 0 && dy > 0)
-        {
-            if (abs(dx) > dy)
-            {
-                customers[i].aniState = 7;
-            }
-            else
-            {
-                customers[i].aniState = 4;
-            }
-        }
-        if (dx > 0 && dy < 0)
-        {
-            if (abs(dy) > dx)
-            {
-                customers[i].aniState = 5;
-            }
-            else
-            {
-                customers[i].aniState = 6;
-            }
-        }
-        if (dx < 0 && dy < 0)
-        {
-            if (abs(dx) > abs(dy))
-            {
-                customers[i].aniState = 7;
-            }
-            else
-            {
-                customers[i].aniState = 5;
-            }
-        }
+# 300 "game.c"
         if (customers[i].follow && timer % 2 == 0)
         {
-
-
             customers[i].worldCol += speed * (dx / distance);
-
-
-
             customers[i].worldRow += speed * (dy / distance);
-
         }
+
         if (hitflag == 1)
         {
             hearts[playerHealth].active = 0;
@@ -1657,11 +1612,13 @@ void updateCustomer()
             hitflag = 0;
         }
 
+
         if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height, customers[i].screenCol + (customers[i].width / 4), customers[i].screenRow,
                       customers[i].width / 2, customers[i].height) &&
             customers[i].active)
         {
             playSoundB(owSound, 3516, 0);
+
             if (collisionBitmapBitmap[((player.worldRow + (int)dy + 1) * (1024) + (player.worldCol + (int)dx + 1))] != ((0) | (0) << 5 | (0) << 10) && player.worldRow + (int)dy > 0 && player.worldCol + (int)dx > 0)
             {
                 player.worldRow += dy;
@@ -1673,6 +1630,7 @@ void updateCustomer()
                 }
             }
         }
+
         if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))))
         {
             player.curFrame = 4;
@@ -1687,9 +1645,11 @@ void updateCustomer()
                 customers[i].livesRemaining--;
                 customers[i].follow = 1;
             }
+
             if (customers[i].active && customers[i].livesRemaining == 0)
             {
                 customers[i].active = 0;
+
                 for (int j = 16; j < 20; j++)
                 {
                     if (paper[j].active == 0)
@@ -1706,9 +1666,10 @@ void updateCustomer()
         customers[i].screenCol = customers[i].worldCol - totalHoff;
     }
 }
+
 void initSanitizer()
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 4; i++)
     {
         sanitizer[i].worldCol = 64 + 128 * i + totalHoff;
         sanitizer[i].worldRow = 16 + vOff;
@@ -1720,13 +1681,14 @@ void initSanitizer()
         sanitizer[i].active = 1;
     }
 }
+
 void drawSanitizer()
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 4; i++)
     {
         if (sanitizer[i].active)
         {
-            shadowOAM[i + 100].attr0 = (0xFF & sanitizer[i].screenRow) | (0 << 14);
+            shadowOAM[i + 100].attr0 = (0xFF & sanitizer[i].screenRow) | (0 << 14) | (0 << 10);
             shadowOAM[i + 100].attr1 = (0x1FF & sanitizer[i].screenCol) | (1 << 14);
             shadowOAM[i + 100].attr2 = ((sanitizer[i].curFrame * 2)*32 + (sanitizer[i].aniState * 2)) | ((1) << 10);
         }
@@ -1736,12 +1698,15 @@ void drawSanitizer()
         }
     }
 }
+
 void updateSanitizer()
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 4; i++)
     {
+
         if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 4)
         {
+
             playerHealth++;
             hearts[playerHealth].active = 1;
             playSoundB(sanSound, 13967, 0);
@@ -1751,6 +1716,7 @@ void updateSanitizer()
         sanitizer[i].screenRow = sanitizer[i].worldRow - vOff;
     }
 }
+
 void initHeart()
 {
     for (int i = 0; i < 5; i++)
@@ -1764,13 +1730,14 @@ void initHeart()
         hearts[i].active = 1;
     }
 }
+
 void drawHeart()
 {
     for (int i = 0; i < 5; i++)
     {
         if (hearts[i].active)
         {
-            shadowOAM[i + 60].attr0 = (0xFF & hearts[i].screenRow) | (0 << 14);
+            shadowOAM[i + 60].attr0 = (0xFF & hearts[i].screenRow) | (0 << 14) | (0 << 10);
             shadowOAM[i + 60].attr1 = (0x1FF & hearts[i].screenCol) | (1 << 14);
             shadowOAM[i + 60].attr2 = ((hearts[i].curFrame * 2)*32 + (hearts[i].aniState * 2)) | ((0) << 10);
         }
@@ -1780,6 +1747,7 @@ void drawHeart()
         }
     }
 }
+
 void initEScore()
 {
     escore.width = 32;
@@ -1789,12 +1757,14 @@ void initEScore()
     escore.aniState = 3;
     escore.curFrame = 26;
 }
+
 void drawEScore()
 {
-    shadowOAM[89].attr0 = (0xFF & escore.screenRow) | (1 << 14);
+    shadowOAM[89].attr0 = (0xFF & escore.screenRow) | (1 << 14) | (0 << 10);
     shadowOAM[89].attr1 = (0x1FF & escore.screenCol) | (1 << 14);
     shadowOAM[89].attr2 = ((escore.curFrame)*32 + (escore.aniState * 4)) | ((0) << 10);
 }
+
 void initHScore()
 {
     hscore.width = 32;
@@ -1804,12 +1774,14 @@ void initHScore()
     hscore.aniState = 4;
     hscore.curFrame = 26;
 }
+
 void drawHScore()
 {
-    shadowOAM[88].attr0 = (0xFF & hscore.screenRow) | (1 << 14);
+    shadowOAM[88].attr0 = (0xFF & hscore.screenRow) | (1 << 14) | (0 << 10);
     shadowOAM[88].attr1 = (0x1FF & hscore.screenCol) | (1 << 14);
     shadowOAM[88].attr2 = ((hscore.curFrame)*32 + (hscore.aniState * 4)) | ((0) << 10);
 }
+
 void initODigit()
 {
     oDigit.width = 8;
@@ -1819,12 +1791,14 @@ void initODigit()
     oDigit.aniState = 0;
     oDigit.curFrame = 26;
 }
+
 void drawODigit()
 {
-    shadowOAM[90].attr0 = (0xFF & oDigit.screenRow) | (0 << 14);
+    shadowOAM[90].attr0 = (0xFF & oDigit.screenRow) | (0 << 14) | (0 << 10);
     shadowOAM[90].attr1 = (0x1FF & oDigit.screenCol) | (0 << 14);
     shadowOAM[90].attr2 = ((oDigit.curFrame)*32 + (oDigit.aniState)) | ((0) << 10);
 }
+
 void initTDigit()
 {
     tDigit.width = 8;
@@ -1834,12 +1808,14 @@ void initTDigit()
     tDigit.aniState = 0;
     tDigit.curFrame = 26;
 }
+
 void drawTDigit()
 {
-    shadowOAM[91].attr0 = (0xFF & tDigit.screenRow) | (0 << 14);
+    shadowOAM[91].attr0 = (0xFF & tDigit.screenRow) | (0 << 14) | (0 << 10);
     shadowOAM[91].attr1 = (0x1FF & tDigit.screenCol) | (0 << 14);
     shadowOAM[91].attr2 = ((tDigit.curFrame)*32 + (tDigit.aniState)) | ((0) << 10);
 }
+
 void initGame()
 {
     initCustomer();
@@ -1867,9 +1843,11 @@ void initGame()
     lost = 0;
     timer = 0;
 }
+
 void updateGame()
 {
     timer++;
+
     if (hOff > 256 && screenBlock < 31)
     {
         screenBlock++;
@@ -1887,6 +1865,7 @@ void updateGame()
     updateSanitizer();
     updateCustomer();
 }
+
 void drawGame()
 {
     drawPlayer();
@@ -1907,8 +1886,10 @@ void drawGame()
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
 }
+
 void animateSprites()
 {
+
     player.prevAniState = player.aniState;
     player.aniState = 4;
 
@@ -1936,6 +1917,7 @@ void animateSprites()
     {
         player.aniCounter++;
     }
+
     for (int i = 0; i < 4; i++)
     {
         if (customers[i].follow && customers[i].aniCounter % 20 == 0)
@@ -1957,7 +1939,7 @@ void animateSprites()
         }
         paper[i].aniCounter++;
     }
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 4; i++)
     {
         if (sanitizer[i].aniCounter % 12 == 0 && sanitizer[i].active)
         {

@@ -732,14 +732,11 @@ goToGame:
 	mov	lr, pc
 	bx	r4
 	mov	r2, #67108864
-	mov	ip, #4352
-	mov	r1, #4194304
-	mov	r0, #144
+	mov	r1, #4352
 	ldr	r3, .L82+24
 	strh	r3, [r2, #8]	@ movhi
 	ldr	r3, .L82+28
-	strh	ip, [r2]	@ movhi
-	strh	r0, [r1, #80]	@ movhi
+	strh	r1, [r2]	@ movhi
 	ldrh	r1, [r3]
 	ldr	r3, .L82+32
 	strh	r1, [r2, #18]	@ movhi
@@ -780,7 +777,7 @@ goToGame:
 	.word	gameBackgroundTiles
 	.word	100720640
 	.word	gameBackgroundMap
-	.word	23553
+	.word	23554
 	.word	vOff
 	.word	hOff
 	.word	83886592
@@ -897,7 +894,7 @@ difficulty:
 	.word	diff
 	.word	srand
 	.word	stopSound
-	.word	1100494
+	.word	1100384
 	.word	gameSong
 	.word	playSoundA
 	.word	initGame

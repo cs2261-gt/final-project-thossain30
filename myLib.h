@@ -156,10 +156,16 @@ extern OBJ_ATTR shadowOAM[];
 #define ATTR2_PALROW(row) ((row) << 12)
 
 //Blending Registers
-#define REG_BLDCNT (*(volatile u16 *)0x0400050)
-#define BLD_OBJa (1 << 4)
-#define BLD_WHITE (1 << 7)
+#define REG_BLDCNT (*(volatile u16 *)0x04000050)
+#define BLD_OBJa (1 << 4)  //set to blend sprites. Top layer
+#define BLD_BG0b (1 << 8)  //set to blend bgo bottom layer
+#define BLD_WHITE (1 << 7) //White alpha blending
+#define BLD_STD (1 << 6)   //standard alpha blending
+#define BLD_OFF (0 << 6)   //blend off
 
+#define REG_BLDALPHA (*(volatile u16 *)0x04000052)
+#define BLD_EVA(num) ((num) << 0) //top blend weight
+#define BLD_EVB(num) ((num) << 8) //bottom blend weight
 //blending alpha stuff
 #define REG_BLDY (*(volatile u16 *)0x04000054)
 #define BLD_EY(num) ((num) << 0)

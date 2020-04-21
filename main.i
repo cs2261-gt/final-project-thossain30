@@ -57,7 +57,7 @@ typedef struct
 
 
 extern OBJ_ATTR shadowOAM[];
-# 168 "myLib.h"
+# 174 "myLib.h"
 void hideSprites();
 
 
@@ -82,10 +82,10 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 211 "myLib.h"
+# 217 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 221 "myLib.h"
+# 227 "myLib.h"
 typedef volatile struct
 {
     volatile const void *src;
@@ -95,9 +95,9 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 262 "myLib.h"
+# 268 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 352 "myLib.h"
+# 358 "myLib.h"
 typedef struct
 {
     const unsigned char *data;
@@ -220,7 +220,7 @@ typedef struct score
 extern TOILETPAPER paper[20];
 extern CUSTOMER customers[4];
 extern ANISPRITE player;
-extern SANITIZER sanitizer[6];
+extern SANITIZER sanitizer[4];
 extern HEART hearts[5];
 extern ESCORE escore;
 extern HSCORE hscore;
@@ -361,7 +361,7 @@ extern const unsigned char collectSound[12384];
 # 20 "sanSound.h"
 extern const unsigned char sanSound[13967];
 # 21 "main.c" 2
-# 40 "main.c"
+# 39 "main.c"
 void initialize();
 void goToMenu();
 void menu();
@@ -522,7 +522,7 @@ void difficulty()
         diff = EASY;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, 1100494, 1);
+        playSoundA(gameSong, 1100494 - 110, 1);
         initGame();
         goToGame();
     }
@@ -533,7 +533,7 @@ void difficulty()
         diff = HARD;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, 1100494, 1);
+        playSoundA(gameSong, 1100494 - 110, 1);
         initGame();
         goToGame();
     }
@@ -653,9 +653,8 @@ void goToGame()
     DMANow(3, gameBackgroundPal, ((unsigned short *)0x5000000), 512 / 2);
     DMANow(3, gameBackgroundTiles, &((charblock *)0x6000000)[0], 14368 / 2);
     DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[28], 8192 / 2);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 14) | 1;
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 14) | 2;
     (*(unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
-    (*(volatile u16 *)0x0400050) = (1 << 4) | (1 << 7);
 
     (*(volatile unsigned short *)0x04000012) = vOff;
     (*(volatile unsigned short *)0x04000010) = hOff;
