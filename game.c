@@ -29,7 +29,6 @@ extern int won;
 extern int TPCollected;
 TOILETPAPER paper[TOTALPAPER];
 ANISPRITE player;
-SHADOW shadow;
 CUSTOMER customers[TOTALCUSTOMER];
 SANITIZER sanitizer[TOTALSAN];
 HEART hearts[TOTALHEARTS];
@@ -145,47 +144,6 @@ void updatePlayer()
     REG_BLDALPHA = BLD_EVA(eva) | BLD_EVB(evb);
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
-}
-//initializes player shadow
-void initShadow()
-{
-    shadow.width = 32;
-    shadow.height = 32;
-    shadow.worldCol = player.worldCol;
-    shadow.worldRow = player.worldRow;
-    shadow.screenCol = player.screenCol;
-    shadow.screenRow = player.screenRow;
-    shadow.curFrame = 5;
-    shadow.aniState = 4;
-    shadow.active = 0;
-}
-void drawShadow()
-{
-    shadowOAM[1].attr0 = (ROWMASK & shadow.screenRow) | ATTR0_SQUARE | ATTR0_AFFINE;
-    shadowOAM[1].attr1 = (COLMASK & shadow.screenCol) | ATTR1_MEDIUM | ATTR1_AFFIND(2);
-    shadowOAM[1].attr2 = ATTR2_TILEID(shadow.aniState * 4, shadow.curFrame * 4) | ATTR2_PRIORITY(2);
-    shadowOAM_AFF[1].a = 256;
-    shadowOAM_AFF[1].d = 256;
-}
-void updateShadow() {
-    if (gameBackgroundMap[OFFSET(player.screenCol, player.screenRow, MAPWIDTH)] == 17407) {
-        shadow.active = 1;
-    } else {
-        shadow.active = 0;
-    }
-    if (player.prevAniState == 2) {
-        obj_aff_rotate(&shadowOAM_AFF[1], 300 - player.screenRow);
-    }
-    if (player.prevAniState == 3) {
-        obj_aff_rotate(&shadowOAM_AFF[1], 120 - player.screenRow);
-    }
-}
-//rotates affine objects
-void obj_aff_rotate(OBJ_AFFINE* oaff, u16 alpha) {
-    int ss = lu_sin(alpha) >> 4;
-    int cc = lu_cos(alpha) >> 4;
-    oaff->a = cc;   oaff->b = -ss;
-    oaff->c = ss;   oaff->d = cc;
 }
 //initialize the paper
 void initPaper()
@@ -307,7 +265,7 @@ void drawCustomer()
 void updateCustomer()
 {
     //allows customer to follow player once player hits them
-    speed = 1.5;
+    speed = 1.3;
     for (int i = 0; i < TOTALCUSTOMER; i++)
     {
         dx = player.screenCol - customers[i].screenCol;
@@ -361,22 +319,10 @@ void updateCustomer()
         //increments customers' position when they move
         if (customers[i].follow && timer % 2 == 0)
         {
-            if (collisionBitmapBitmap[OFFSET(customers[i].worldCol += speed * (dx / distance), customers[i].worldRow, MAPWIDTH)] != BLACK) 
-            {
-                customers[i].worldCol += speed * (dx / distance); 
-            }
-            if (collisionBitmapBitmap[OFFSET(customers[i].worldCol, customers[i].worldRow += speed * (dy / distance), MAPWIDTH)] != BLACK)
-            {
-                customers[i].worldRow += speed * (dy / distance);
-            }
+            customers[i].worldCol += speed * (dx / distance);
+            customers[i].worldRow += speed * (dy / distance);      
         }
-        //decrement's player health if triggered
-        if (hitflag == 1)
-        {
-            hearts[playerHealth].active = 0;
-            playerHealth--;
-            hitflag = 0;
-        }
+        
 
         //checks to see if customer collides with player
         if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height, 
@@ -387,7 +333,7 @@ void updateCustomer()
             playSoundB(owSound, OWSOUNDLEN - 100, 0);
             eva = 3;
             evb = 13;
-
+            hitflag = 1;
             //pushes player backwards
             if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx + 1, player.worldRow + (int)dy + 1, MAPWIDTH)] != BLACK  //top left
                 && player.worldRow + (int)dy + 1 > 0 && player.worldCol + (int)dx + 1 > 0 //boundary check
@@ -398,8 +344,14 @@ void updateCustomer()
             {
                 player.worldRow += dy;
                 player.worldCol += dx;
-                hitflag = 1;
             }
+        }
+        //decement player health if triggered
+        if (hitflag == 1)
+        {
+            hearts[playerHealth].active = 0;
+            playerHealth--;
+            hitflag = 0;
         }
         if (playerHealth == 0)
             {

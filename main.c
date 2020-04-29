@@ -29,16 +29,10 @@ Animation for collectables
 Animation for characters (player and enemy)
 Completed sound
 Added in number score
+Added alpha blending
 */
 
-/* To Do
-Figure out how to prevent enemies from pushing player into 'black' parts of collision map
-Figure out how to prevent enemy from traversing through 'black' parts of collision map
-Alpha blending?
-Potential shadow to implement an affine sprite?
-*/
 
-// For example 87 degrees = (87 / 360 ) * 512 = 124 theta
 void initialize();
 void goToMenu();
 void menu();
@@ -58,6 +52,9 @@ void difficulty();
 void srand();
 void rand();
 
+s32 lu_sin(u32 theta);
+s32 lu_cos(u32 theta);
+
 enum
 {
     MENU,
@@ -75,6 +72,8 @@ enum
 };
 int state;
 extern int diff;
+
+extern s16 sin_lut[514];
 
 unsigned short buttons;
 unsigned short oldButtons;

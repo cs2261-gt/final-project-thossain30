@@ -391,7 +391,7 @@ extern const unsigned char collectSound[12384];
 # 20 "sanSound.h"
 extern const unsigned char sanSound[13967];
 # 21 "main.c" 2
-# 42 "main.c"
+# 36 "main.c"
 void initialize();
 void goToMenu();
 void menu();
@@ -411,6 +411,9 @@ void difficulty();
 void srand();
 void rand();
 
+s32 lu_sin(u32 theta);
+s32 lu_cos(u32 theta);
+
 enum
 {
     MENU,
@@ -428,6 +431,8 @@ enum
 };
 int state;
 extern int diff;
+
+extern s16 sin_lut[514];
 
 unsigned short buttons;
 unsigned short oldButtons;

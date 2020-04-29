@@ -1406,7 +1406,6 @@ extern int won;
 extern int TPCollected;
 TOILETPAPER paper[20];
 ANISPRITE player;
-SHADOW shadow;
 CUSTOMER customers[4];
 SANITIZER sanitizer[8];
 HEART hearts[5];
@@ -1522,47 +1521,6 @@ void updatePlayer()
     (*(volatile u16 *)0x04000052) = ((eva) << 0) | ((evb) << 8);
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
-}
-
-void initShadow()
-{
-    shadow.width = 32;
-    shadow.height = 32;
-    shadow.worldCol = player.worldCol;
-    shadow.worldRow = player.worldRow;
-    shadow.screenCol = player.screenCol;
-    shadow.screenRow = player.screenRow;
-    shadow.curFrame = 5;
-    shadow.aniState = 4;
-    shadow.active = 0;
-}
-void drawShadow()
-{
-    shadowOAM[1].attr0 = (0xFF & shadow.screenRow) | (0 << 14) | (1 << 8);
-    shadowOAM[1].attr1 = (0x1FF & shadow.screenCol) | (2 << 14) | ((2) << 9);
-    shadowOAM[1].attr2 = ((shadow.curFrame * 4)*32 + (shadow.aniState * 4)) | ((2) << 10);
-    shadowOAM_AFF[1].a = 256;
-    shadowOAM_AFF[1].d = 256;
-}
-void updateShadow() {
-    if (gameBackgroundMap[((player.screenRow) * (1024) + (player.screenCol))] == 17407) {
-        shadow.active = 1;
-    } else {
-        shadow.active = 0;
-    }
-    if (player.prevAniState == 2) {
-        obj_aff_rotate(&shadowOAM_AFF[1], 300 - player.screenRow);
-    }
-    if (player.prevAniState == 3) {
-        obj_aff_rotate(&shadowOAM_AFF[1], 120 - player.screenRow);
-    }
-}
-
-void obj_aff_rotate(OBJ_AFFINE* oaff, u16 alpha) {
-    int ss = lu_sin(alpha) >> 4;
-    int cc = lu_cos(alpha) >> 4;
-    oaff->a = cc; oaff->b = -ss;
-    oaff->c = ss; oaff->d = cc;
 }
 
 void initPaper()
@@ -1684,7 +1642,7 @@ void drawCustomer()
 void updateCustomer()
 {
 
-    speed = 1.5;
+    speed = 1.3;
     for (int i = 0; i < 4; i++)
     {
         dx = player.screenCol - customers[i].screenCol;
@@ -1738,22 +1696,10 @@ void updateCustomer()
 
         if (customers[i].follow && timer % 2 == 0)
         {
-            if (collisionBitmapBitmap[((customers[i].worldRow) * (1024) + (customers[i].worldCol += speed * (dx / distance)))] != ((0) | (0) << 5 | (0) << 10))
-            {
-                customers[i].worldCol += speed * (dx / distance);
-            }
-            if (collisionBitmapBitmap[((customers[i].worldRow += speed * (dy / distance)) * (1024) + (customers[i].worldCol))] != ((0) | (0) << 5 | (0) << 10))
-            {
-                customers[i].worldRow += speed * (dy / distance);
-            }
+            customers[i].worldCol += speed * (dx / distance);
+            customers[i].worldRow += speed * (dy / distance);
         }
 
-        if (hitflag == 1)
-        {
-            hearts[playerHealth].active = 0;
-            playerHealth--;
-            hitflag = 0;
-        }
 
 
         if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height,
@@ -1764,7 +1710,7 @@ void updateCustomer()
             playSoundB(owSound, 3516 - 100, 0);
             eva = 3;
             evb = 13;
-
+            hitflag = 1;
 
             if (collisionBitmapBitmap[((player.worldRow + (int)dy + 1) * (1024) + (player.worldCol + (int)dx + 1))] != ((0) | (0) << 5 | (0) << 10)
                 && player.worldRow + (int)dy + 1 > 0 && player.worldCol + (int)dx + 1 > 0
@@ -1775,8 +1721,14 @@ void updateCustomer()
             {
                 player.worldRow += dy;
                 player.worldCol += dx;
-                hitflag = 1;
             }
+        }
+
+        if (hitflag == 1)
+        {
+            hearts[playerHealth].active = 0;
+            playerHealth--;
+            hitflag = 0;
         }
         if (playerHealth == 0)
             {
