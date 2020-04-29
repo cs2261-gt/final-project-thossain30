@@ -14,7 +14,7 @@ int totalPaper;
 
 #define TOTALCUSTOMER 4
 #define TOTALPAPER 20
-#define TOTALSAN 4
+#define TOTALSAN 8
 #define TOTALHEARTS 5
 
 void initGame();
@@ -34,6 +34,9 @@ void drawSanitizer();
 void updateSanitizer();
 void initHeart();
 void drawHeart();
+void initShadow();
+void drawShadow();
+void updateShadow();
 void initEScore();
 void drawEScore();
 void initHScore();
@@ -58,6 +61,19 @@ typedef struct pool
     int aniCounter;
     int numFrames;
 } TOILETPAPER, SANITIZER;
+typedef struct
+{
+    int width;
+    int height;
+    int curFrame;
+    int aniState;
+    int worldCol;
+    int worldRow;
+    int screenCol;
+    int screenRow;
+    int active;
+} SHADOW;
+
 typedef struct
 {
     int screenRow;
@@ -102,6 +118,7 @@ typedef struct score
 extern TOILETPAPER paper[TOTALPAPER];
 extern CUSTOMER customers[TOTALCUSTOMER];
 extern ANISPRITE player;
+extern SHADOW shadow;
 extern SANITIZER sanitizer[TOTALSAN];
 extern HEART hearts[TOTALHEARTS];
 extern ESCORE escore;

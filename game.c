@@ -16,22 +16,21 @@
 #include <stdlib.h>
 #include <math.h>
 
+
 int hOff;
 int totalHoff;
 int vOff;
 int diff;
 OBJ_ATTR shadowOAM[128];
+OBJ_AFFINE* shadowOAM_AFF = (OBJ_AFFINE*) shadowOAM;
+
 extern int lost;
 extern int won;
 extern int TPCollected;
 TOILETPAPER paper[TOTALPAPER];
 ANISPRITE player;
+SHADOW shadow;
 CUSTOMER customers[TOTALCUSTOMER];
-SANITIZER sanitizer[TOTALSAN];
-HEART hearts[TOTALHEARTS];
-TOILETPAPER paper[TOTALPAPER];
-CUSTOMER customers[TOTALCUSTOMER];
-ANISPRITE player;
 SANITIZER sanitizer[TOTALSAN];
 HEART hearts[TOTALHEARTS];
 ESCORE escore;
@@ -69,6 +68,8 @@ void initPlayer()
     player.screenCol = player.worldCol - playerHoff;
     playerHealth = 4;
     hitflag = 0;
+    eva = 16;
+    evb = 0;
 }
 //draw player
 void drawPlayer()
@@ -80,7 +81,9 @@ void drawPlayer()
 //player movement
 void updatePlayer()
 {
-    if (BUTTON_HELD(BUTTON_LEFT) && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + (player.height / 4), MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
+    if (BUTTON_HELD(BUTTON_LEFT) 
+        && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + (player.height / 4), MAPWIDTH)] != BLACK 
+        && collisionBitmapBitmap[OFFSET(player.worldCol - player.cdel, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
     {
         if (player.screenCol > 0)
         {
@@ -93,7 +96,9 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_RIGHT) && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + (player.height / 4), MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
+    if (BUTTON_HELD(BUTTON_RIGHT) 
+        && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + (player.height / 4), MAPWIDTH)] != BLACK 
+        && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + player.cdel - 1, player.worldRow + player.height - 1, MAPWIDTH)] != BLACK)
     {
         if (player.worldCol + player.width - 1 < MAPWIDTH - 1)
         {
@@ -106,7 +111,9 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_UP) && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow - player.rdel + (player.height / 4), MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow - player.rdel + (player.height / 4), MAPWIDTH)] != BLACK)
+    if (BUTTON_HELD(BUTTON_UP) 
+        && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow - player.rdel + (player.height / 4), MAPWIDTH)] != BLACK 
+        && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow - player.rdel + (player.height / 4), MAPWIDTH)] != BLACK)
     {
         if (player.screenRow > 0)
         {
@@ -117,7 +124,9 @@ void updatePlayer()
             }
         }
     }
-    if (BUTTON_HELD(BUTTON_DOWN) && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow + player.height + player.rdel - 1, MAPWIDTH)] != BLACK && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow + player.height + player.rdel - 1, MAPWIDTH)] != BLACK)
+    if (BUTTON_HELD(BUTTON_DOWN) 
+        && collisionBitmapBitmap[OFFSET(player.worldCol + player.width - 1, player.worldRow + player.height + player.rdel - 1, MAPWIDTH)] != BLACK 
+        && collisionBitmapBitmap[OFFSET(player.worldCol, player.worldRow + player.height + player.rdel - 1, MAPWIDTH)] != BLACK)
     {
         if (player.worldRow + player.height - 1 < MAPHEIGHT - 1)
         {
@@ -128,11 +137,57 @@ void updatePlayer()
             }
         }
     }
+    if (gameBackgroundMap[OFFSET(player.worldCol, player.worldRow, MAPWIDTH)] == 17407) {
+        eva = 3;
+        evb = 13;
+    }
     animateSprites();
+    REG_BLDALPHA = BLD_EVA(eva) | BLD_EVB(evb);
     player.screenRow = player.worldRow - vOff;
     player.screenCol = player.worldCol - playerHoff;
 }
-//init. paper
+//initializes player shadow
+void initShadow()
+{
+    shadow.width = 32;
+    shadow.height = 32;
+    shadow.worldCol = player.worldCol;
+    shadow.worldRow = player.worldRow;
+    shadow.screenCol = player.screenCol;
+    shadow.screenRow = player.screenRow;
+    shadow.curFrame = 5;
+    shadow.aniState = 4;
+    shadow.active = 0;
+}
+void drawShadow()
+{
+    shadowOAM[1].attr0 = (ROWMASK & shadow.screenRow) | ATTR0_SQUARE | ATTR0_AFFINE;
+    shadowOAM[1].attr1 = (COLMASK & shadow.screenCol) | ATTR1_MEDIUM | ATTR1_AFFIND(2);
+    shadowOAM[1].attr2 = ATTR2_TILEID(shadow.aniState * 4, shadow.curFrame * 4) | ATTR2_PRIORITY(2);
+    shadowOAM_AFF[1].a = 256;
+    shadowOAM_AFF[1].d = 256;
+}
+void updateShadow() {
+    if (gameBackgroundMap[OFFSET(player.screenCol, player.screenRow, MAPWIDTH)] == 17407) {
+        shadow.active = 1;
+    } else {
+        shadow.active = 0;
+    }
+    if (player.prevAniState == 2) {
+        obj_aff_rotate(&shadowOAM_AFF[1], 300 - player.screenRow);
+    }
+    if (player.prevAniState == 3) {
+        obj_aff_rotate(&shadowOAM_AFF[1], 120 - player.screenRow);
+    }
+}
+//rotates affine objects
+void obj_aff_rotate(OBJ_AFFINE* oaff, u16 alpha) {
+    int ss = lu_sin(alpha) >> 4;
+    int cc = lu_cos(alpha) >> 4;
+    oaff->a = cc;   oaff->b = -ss;
+    oaff->c = ss;   oaff->d = cc;
+}
+//initialize the paper
 void initPaper()
 {
     for (int i = 0; i < TOTALPAPER; i++)
@@ -164,13 +219,17 @@ void drawPaper()
     {
         if (paper[i].active)
         {
-            shadowOAM[i + 1].attr0 = (ROWMASK & paper[i].screenRow) | ATTR0_SQUARE | ATTR0_NOBLEND;
-            shadowOAM[i + 1].attr1 = (COLMASK & paper[i].screenCol) | ATTR1_MEDIUM;
-            shadowOAM[i + 1].attr2 = ATTR2_TILEID(paper[i].aniState * 4, paper[i].curFrame * 4) | ATTR2_PRIORITY(1);
+            shadowOAM[i + 5].attr0 = (ROWMASK & paper[i].screenRow) | ATTR0_SQUARE | ATTR0_NOBLEND;
+            shadowOAM[i + 5].attr1 = (COLMASK & paper[i].screenCol) | ATTR1_MEDIUM;
+            shadowOAM[i + 5].attr2 = ATTR2_TILEID(paper[i].aniState * 4, paper[i].curFrame * 4) | ATTR2_PRIORITY(2);
         }
-        if (paper[i].active == 0 || paper[i].screenCol < 0 || paper[i].screenCol > 240 || paper[i].screenRow > 160 || paper[i].screenRow < 0 || vOff > paper[i].worldRow || hOff > paper[i].worldCol || vOff + SCREENHEIGHT < paper[i].worldRow || hOff + SCREENWIDTH < paper[i].worldRow)
+        if (paper[i].active == 0 || paper[i].screenCol < 0 
+            || paper[i].screenCol > 240 || paper[i].screenRow > 160 
+            || paper[i].screenRow < 0 || vOff > paper[i].worldRow 
+            || hOff > paper[i].worldCol || vOff + SCREENHEIGHT < paper[i].worldRow 
+            || hOff + SCREENWIDTH < paper[i].worldRow)
         {
-            shadowOAM[i + 1].attr0 = ATTR0_HIDE;
+            shadowOAM[i + 5].attr0 = ATTR0_HIDE;
         }
     }
 }
@@ -189,6 +248,7 @@ void updatePaper()
             playSoundB(collectSound, COLLECTSOUNDLEN - 100, 0);
             paper[i].active = 0;
             TPCollected++;
+            //updates the score
             oDigit.aniState = (oDigit.aniState + 1) % 10;
             if (oDigit.aniState % 10 == 0 && TPCollected > 9)
             {
@@ -233,9 +293,11 @@ void drawCustomer()
         {
             shadowOAM[i + 50].attr0 = (ROWMASK & customers[i].screenRow) | ATTR0_SQUARE | ATTR0_NOBLEND;
             shadowOAM[i + 50].attr1 = (COLMASK & customers[i].screenCol) | ATTR1_MEDIUM;
-            shadowOAM[i + 50].attr2 = ATTR2_TILEID(customers[i].aniState * 4, customers[i].curFrame * 4) | ATTR2_PRIORITY(1);
+            shadowOAM[i + 50].attr2 = ATTR2_TILEID(customers[i].aniState * 4, customers[i].curFrame * 4) | ATTR2_PRIORITY(2);
         }
-        if (customers[i].active == 0 || vOff > customers[i].worldRow || totalHoff > customers[i].worldCol || totalHoff + SCREENWIDTH < customers[i].worldCol || vOff + SCREENHEIGHT < customers[i].worldRow)
+        if (customers[i].active == 0 ||
+            vOff > customers[i].worldRow || totalHoff > customers[i].worldCol || 
+            totalHoff + SCREENWIDTH < customers[i].worldCol || vOff + SCREENHEIGHT < customers[i].worldRow)
         {
             shadowOAM[i + 50].attr0 = ATTR0_HIDE;
         }
@@ -252,55 +314,61 @@ void updateCustomer()
         dy = player.screenRow - customers[i].screenRow;
         distance = sqrt(dx * dx + dy * dy);
         //checks to see which direction to face when following player
-        // if (dx > 0 && dy > 0)
-        // {
-        //     if (dx > dy)
-        //     {
-        //         customers[i].aniState = 6;
-        //     }
-        //     else
-        //     {
-        //         customers[i].aniState = 4;
-        //     }
-        // }
-        // if (dx < 0 && dy > 0)
-        // {
-        //     if ((dx * -1) > dy)
-        //     {
-        //         customers[i].aniState = 7;
-        //     }
-        //     else
-        //     {
-        //         customers[i].aniState = 4;
-        //     }
-        // }
-        // if (dx > 0 && dy < 0)
-        // {
-        //     if ((dy * -1) > dx)
-        //     {
-        //         customers[i].aniState = 5;
-        //     }
-        //     else
-        //     {
-        //         customers[i].aniState = 6;
-        //     }
-        // }
-        // if (dx < 0 && dy < 0)
-        // {
-        //     if ((dx * -1) > (dy * -1))
-        //     {
-        //         customers[i].aniState = 7;
-        //     }
-        //     else
-        //     {
-        //         customers[i].aniState = 5;
-        //     }
-        // }
+        if (dx > 0 && dy > 0)
+        {
+            if (dx > dy)
+            {
+                customers[i].aniState = 6;
+            }
+            else
+            {
+                customers[i].aniState = 4;
+            }
+        }
+        if (dx < 0 && dy > 0)
+        {
+            if ((dx * -1) > dy)
+            {
+                customers[i].aniState = 7;
+            }
+            else
+            {
+                customers[i].aniState = 4;
+            }
+        }
+        if (dx > 0 && dy < 0)
+        {
+            if ((dy * -1) > dx)
+            {
+                customers[i].aniState = 5;
+            }
+            else
+            {
+                customers[i].aniState = 6;
+            }
+        }
+        if (dx < 0 && dy < 0)
+        {
+            if ((dx * -1) > (dy * -1))
+            {
+                customers[i].aniState = 7;
+            }
+            else
+            {
+                customers[i].aniState = 5;
+            }
+        }
         //increments customers' position when they move
         if (customers[i].follow && timer % 2 == 0)
         {
-            customers[i].worldCol += speed * (dx / distance);
-            customers[i].worldRow += speed * (dy / distance);
+            if (collisionBitmapBitmap[OFFSET(customers[i].worldCol += speed * (dx / distance), customers[i].worldRow, MAPWIDTH)] != BLACK) 
+            {
+                customers[i].worldCol += speed * (dx / distance); 
+            }
+            if (collisionBitmapBitmap[OFFSET(customers[i].worldCol, customers[i].worldRow += speed * (dy / distance), MAPWIDTH)] != BLACK)
+            {
+                customers[i].worldRow += speed * (dy / distance);
+            }
         }
         //decrement's player health if triggered
         if (hitflag == 1)
@@ -311,24 +379,38 @@ void updateCustomer()
         }
 
         //checks to see if customer collides with player
-        if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height, customers[i].screenCol + (customers[i].width / 4), customers[i].screenRow,
-                      customers[i].width / 2, customers[i].height) &&
-            customers[i].active)
+        if (collision(player.screenCol + (player.width / 4), player.screenRow, player.width / 2, player.height, 
+            customers[i].screenCol + (customers[i].width / 4), customers[i].screenRow,
+            customers[i].width / 2, customers[i].height) 
+            && customers[i].active)
         {
-            playSoundB(owSound, OWSOUNDLEN, 0);
+            playSoundB(owSound, OWSOUNDLEN - 100, 0);
+            eva = 3;
+            evb = 13;
+
             //pushes player backwards
-            if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx + 1, player.worldRow + (int)dy + 1, MAPWIDTH)] != BLACK && player.worldRow + (int)dy > 0 && player.worldCol + (int)dx > 0)
+            if (collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx + 1, player.worldRow + (int)dy + 1, MAPWIDTH)] != BLACK  //top left
+                && player.worldRow + (int)dy + 1 > 0 && player.worldCol + (int)dx + 1 > 0 //boundary check
+                && player.worldRow + (int)dy + 1 < player.screenRow + SCREENHEIGHT//boundary check
+                && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + (int)dx , player.worldRow + (int)dy, MAPWIDTH)] != BLACK // top right
+                && collisionBitmapBitmap[OFFSET(player.worldCol + player.width + (int)dx, player.worldRow + player.height + (int)dy, MAPWIDTH)] != BLACK //bottom right
+                && collisionBitmapBitmap[OFFSET(player.worldCol + (int)dx, player.worldRow + player.height + (int)dy, MAPWIDTH)] != BLACK) 
             {
                 player.worldRow += dy;
                 player.worldCol += dx;
                 hitflag = 1;
-                if (playerHealth == 0)
-                {
-                    lost = 1;
-                }
             }
         }
-        //checks to see if player hits a customer
+        if (playerHealth == 0)
+            {
+                lost = 1;
+            }
+        if (timer % 20 == 0)
+        {
+            eva = 16;
+            evb = 0;
+        }
+        //checks to see if player pressses A
         if (BUTTON_PRESSED(BUTTON_A))
         {
             player.curFrame = 4;
@@ -336,10 +418,12 @@ void updateCustomer()
             {
                 player.curFrame = 0;
             }
-            if (collision(player.screenCol - 15, player.screenRow - 15, player.width + 30, player.height + 30, customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
+            //checks to see if pplayer collides with customer while pressing A (thus punching)
+            if (collision(player.screenCol - 15, player.screenRow - 15, player.width + 30, player.height + 30, 
+                customers[i].screenCol, customers[i].screenRow, customers[i].width, customers[i].height) &&
                 customers[i].active)
             {
-                playSoundB(punchSound, PUNCHSOUNDLEN, 0);
+                playSoundB(punchSound, PUNCHSOUNDLEN - 100, 0);
                 customers[i].livesRemaining--;
                 customers[i].follow = 1;
             }
@@ -360,6 +444,7 @@ void updateCustomer()
                 }
             }
         }
+        REG_BLDALPHA = BLD_EVA(eva) | BLD_EVB(evb);
         customers[i].screenRow = customers[i].worldRow - vOff;
         customers[i].screenCol = customers[i].worldCol - totalHoff;
     }
@@ -388,9 +473,14 @@ void drawSanitizer()
         {
             shadowOAM[i + 100].attr0 = (ROWMASK & sanitizer[i].screenRow) | ATTR0_SQUARE | ATTR0_NOBLEND;
             shadowOAM[i + 100].attr1 = (COLMASK & sanitizer[i].screenCol) | ATTR1_SMALL;
-            shadowOAM[i + 100].attr2 = ATTR2_TILEID(sanitizer[i].aniState * 2, sanitizer[i].curFrame * 2) | ATTR2_PRIORITY(1);
+            shadowOAM[i + 100].attr2 = ATTR2_TILEID(sanitizer[i].aniState * 2, sanitizer[i].curFrame * 2) | ATTR2_PRIORITY(2);
         }
-        if (sanitizer[i].active == 0 || sanitizer[i].screenCol < 0 || sanitizer[i].screenCol > 240 || sanitizer[i].screenRow > 160 || sanitizer[i].screenRow < 0 || vOff > sanitizer[i].worldRow || totalHoff > sanitizer[i].worldCol || vOff + SCREENHEIGHT < sanitizer[i].worldRow || totalHoff + SCREENWIDTH < sanitizer[i].worldRow)
+        //hides if sanitizer was collected or is outside of screen
+        if (sanitizer[i].active == 0 || sanitizer[i].screenCol < 0 
+            || sanitizer[i].screenCol > 240 || sanitizer[i].screenRow > 160 
+            || sanitizer[i].screenRow < 0 || vOff > sanitizer[i].worldRow 
+            || totalHoff > sanitizer[i].worldCol || vOff + SCREENHEIGHT < sanitizer[i].worldRow 
+            || totalHoff + SCREENWIDTH < sanitizer[i].worldRow)
         {
             shadowOAM[i + 100].attr0 = ATTR0_HIDE;
         }
@@ -402,12 +492,14 @@ void updateSanitizer()
     for (int i = 0; i < TOTALSAN; i++)
     {
         //checks if player collides with hand sanitizer
-        if (collision(player.screenCol, player.screenRow, player.width, player.height, sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) && sanitizer[i].active && playerHealth < 4)
+        if (collision(player.screenCol, player.screenRow, player.width, player.height, 
+            sanitizer[i].screenCol, sanitizer[i].screenRow, sanitizer[i].width, sanitizer[i].height) 
+            && sanitizer[i].active && playerHealth < 4)
         {
             //restores player health
             playerHealth++;
             hearts[playerHealth].active = 1;
-            playSoundB(sanSound, SANSOUNDLEN, 0);
+            playSoundB(sanSound, SANSOUNDLEN - 100, 0);
             sanitizer[i].active = 0;
         }
         sanitizer[i].screenCol = sanitizer[i].worldCol - totalHoff;
@@ -445,6 +537,7 @@ void drawHeart()
         }
     }
 }
+
 //init /10 if player picks easy option
 void initEScore()
 {
@@ -550,13 +643,13 @@ void updateGame()
     {
         screenBlock++;
         hOff -= 256;
-        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE | 1;
+        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE | 2;
     }
     if (hOff < 0 && screenBlock > 28)
     {
         screenBlock--;
         hOff += 256;
-        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE | 1;
+        REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(screenBlock) | BG_SIZE_WIDE | 2;
     }
     updatePlayer();
     updatePaper();

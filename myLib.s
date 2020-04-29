@@ -603,6 +603,7 @@ hideSprites:
 .L99:
 	.word	shadowOAM
 	.size	hideSprites, .-hideSprites
+	.comm	shadowOAM_AFF,4096,4
 	.comm	shadowOAM,1024,4
 	.global	dma
 	.global	videoBuffer

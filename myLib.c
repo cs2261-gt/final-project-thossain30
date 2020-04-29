@@ -8,6 +8,7 @@ DMA *dma = (DMA *)0x40000B0;
 
 // The shadowOAM
 OBJ_ATTR shadowOAM[128];
+OBJ_AFFINE shadowOAM_AFF[128];
 
 // Set a pixel on the screen in Mode 3
 void setPixel3(int col, int row, unsigned short color) {

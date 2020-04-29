@@ -34,8 +34,11 @@ Added in number score
 /* To Do
 Figure out how to prevent enemies from pushing player into 'black' parts of collision map
 Figure out how to prevent enemy from traversing through 'black' parts of collision map
+Alpha blending?
+Potential shadow to implement an affine sprite?
 */
-// Prototypes
+
+// For example 87 degrees = (87 / 360 ) * 512 = 124 theta
 void initialize();
 void goToMenu();
 void menu();
@@ -151,7 +154,7 @@ void goToMenu()
     DMANow(3, shadowOAM, OAM, 512);
 
     stopSound();
-    playSoundA(menuSong, MENUSONGLEN, 1);
+    playSoundA(menuSong, MENUSONGLEN - 100, 1);
 
     state = MENU;
 
@@ -196,7 +199,7 @@ void difficulty()
         diff = EASY;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, GAMESONGLEN - 110, 1);
+        playSoundA(gameSong, GAMESONGLEN - 120, 1);
         initGame();
         goToGame();
     }
@@ -207,7 +210,7 @@ void difficulty()
         diff = HARD;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, GAMESONGLEN - 110, 1);
+        playSoundA(gameSong, GAMESONGLEN - 120, 1);
         initGame();
         goToGame();
     }
@@ -270,7 +273,7 @@ void pause()
     else if (BUTTON_PRESSED(BUTTON_SELECT))
     {
         stopSound();
-        playSoundA(menuSong, MENUSONGLEN, 1);
+        playSoundA(menuSong, MENUSONGLEN - 110, 1);
         goToMenu();
     }
 }
@@ -295,7 +298,7 @@ void lose()
     {
         stopSound();
         goToMenu();
-        playSoundA(menuSong, MENUSONGLEN, 1);
+        playSoundA(menuSong, MENUSONGLEN - 110, 1);
     }
 }
 void goToWin()
@@ -318,7 +321,7 @@ void win()
     if (BUTTON_PRESSED(BUTTON_START))
     {
         stopSound();
-        playSoundA(menuSong, MENUSONGLEN, 1);
+        playSoundA(menuSong, MENUSONGLEN - 120, 1);
         goToMenu();
     }
 }
@@ -329,6 +332,7 @@ void goToGame()
     DMANow(3, gameBackgroundMap, &SCREENBLOCK[28], gameBackgroundMapLen / 2);
     REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(28) | BG_SIZE_WIDE | 2;
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
+    REG_BLDCNT = BLD_STD | BLD_WHITE | BLD_OBJa | BLD_BG0b;
 
     REG_BG0VOFF = vOff;
     REG_BG0HOFF = hOff;
@@ -351,13 +355,13 @@ void game()
     {
         goToWin();
         stopSound();
-        playSoundA(winSong, WINSONGLEN, 1);
+        playSoundA(winSong, WINSONGLEN - 120, 1);
     }
     if (lost)
     {
         goToLose();
         stopSound();
-        playSoundA(loseSong, LOSESONGLEN, 1);
+        playSoundA(loseSong, LOSESONGLEN - 120, 1);
     }
     if (BUTTON_PRESSED(BUTTON_START))
     {

@@ -9,10 +9,12 @@
 
 typedef unsigned char u8;
 typedef unsigned short u16;
+typedef signed short s16;
 typedef unsigned int u32;
-# 64 "myLib.h"
+typedef signed int s32;
+# 66 "myLib.h"
 extern unsigned short *videoBuffer;
-# 85 "myLib.h"
+# 87 "myLib.h"
 typedef struct
 {
     u16 tileimg[8192];
@@ -53,11 +55,22 @@ typedef struct
     unsigned short attr2;
     unsigned short fill;
 } OBJ_ATTR;
+typedef struct OBJ_AFFINE
+{
+    u16 fill0[3];
+    short a;
+    u16 fill1[3];
+    short b;
+    u16 fill2[3];
+    short c;
+    u16 fill3[3];
+    short d;
+} OBJ_AFFINE;
 
 
 
 extern OBJ_ATTR shadowOAM[];
-# 174 "myLib.h"
+# 189 "myLib.h"
 void hideSprites();
 
 
@@ -82,10 +95,10 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 217 "myLib.h"
+# 232 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 227 "myLib.h"
+# 242 "myLib.h"
 typedef volatile struct
 {
     volatile const void *src;
@@ -95,9 +108,9 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 268 "myLib.h"
+# 283 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 358 "myLib.h"
+# 373 "myLib.h"
 typedef struct
 {
     const unsigned char *data;
@@ -152,6 +165,9 @@ void drawSanitizer();
 void updateSanitizer();
 void initHeart();
 void drawHeart();
+void initShadow();
+void drawShadow();
+void updateShadow();
 void initEScore();
 void drawEScore();
 void initHScore();
@@ -176,6 +192,19 @@ typedef struct pool
     int aniCounter;
     int numFrames;
 } TOILETPAPER, SANITIZER;
+typedef struct
+{
+    int width;
+    int height;
+    int curFrame;
+    int aniState;
+    int worldCol;
+    int worldRow;
+    int screenCol;
+    int screenRow;
+    int active;
+} SHADOW;
+
 typedef struct
 {
     int screenRow;
@@ -220,7 +249,8 @@ typedef struct score
 extern TOILETPAPER paper[20];
 extern CUSTOMER customers[4];
 extern ANISPRITE player;
-extern SANITIZER sanitizer[4];
+extern SHADOW shadow;
+extern SANITIZER sanitizer[8];
 extern HEART hearts[5];
 extern ESCORE escore;
 extern HSCORE hscore;
@@ -361,7 +391,7 @@ extern const unsigned char collectSound[12384];
 # 20 "sanSound.h"
 extern const unsigned char sanSound[13967];
 # 21 "main.c" 2
-# 39 "main.c"
+# 42 "main.c"
 void initialize();
 void goToMenu();
 void menu();
@@ -477,7 +507,7 @@ void goToMenu()
     DMANow(3, shadowOAM, ((OBJ_ATTR *)(0x7000000)), 512);
 
     stopSound();
-    playSoundA(menuSong, 317934, 1);
+    playSoundA(menuSong, 317934 - 100, 1);
 
     state = MENU;
 
@@ -522,7 +552,7 @@ void difficulty()
         diff = EASY;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, 1100494 - 110, 1);
+        playSoundA(gameSong, 1100494 - 120, 1);
         initGame();
         goToGame();
     }
@@ -533,7 +563,7 @@ void difficulty()
         diff = HARD;
         srand(seed);
         stopSound();
-        playSoundA(gameSong, 1100494 - 110, 1);
+        playSoundA(gameSong, 1100494 - 120, 1);
         initGame();
         goToGame();
     }
@@ -596,7 +626,7 @@ void pause()
     else if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2)))))
     {
         stopSound();
-        playSoundA(menuSong, 317934, 1);
+        playSoundA(menuSong, 317934 - 110, 1);
         goToMenu();
     }
 }
@@ -621,7 +651,7 @@ void lose()
     {
         stopSound();
         goToMenu();
-        playSoundA(menuSong, 317934, 1);
+        playSoundA(menuSong, 317934 - 110, 1);
     }
 }
 void goToWin()
@@ -644,7 +674,7 @@ void win()
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {
         stopSound();
-        playSoundA(menuSong, 317934, 1);
+        playSoundA(menuSong, 317934 - 120, 1);
         goToMenu();
     }
 }
@@ -655,6 +685,7 @@ void goToGame()
     DMANow(3, gameBackgroundMap, &((screenblock *)0x6000000)[28], 8192 / 2);
     (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 14) | 2;
     (*(unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
+    (*(volatile u16 *)0x04000050) = (1 << 6) | (1 << 7) | (1 << 4) | (1 << 8);
 
     (*(volatile unsigned short *)0x04000012) = vOff;
     (*(volatile unsigned short *)0x04000010) = hOff;
@@ -677,13 +708,13 @@ void game()
     {
         goToWin();
         stopSound();
-        playSoundA(winSong, 318006, 1);
+        playSoundA(winSong, 318006 - 120, 1);
     }
     if (lost)
     {
         goToLose();
         stopSound();
-        playSoundA(loseSong, 374131, 1);
+        playSoundA(loseSong, 374131 - 120, 1);
     }
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3)))))
     {

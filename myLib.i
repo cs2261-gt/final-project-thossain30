@@ -9,10 +9,12 @@
 
 typedef unsigned char u8;
 typedef unsigned short u16;
+typedef signed short s16;
 typedef unsigned int u32;
-# 64 "myLib.h"
+typedef signed int s32;
+# 66 "myLib.h"
 extern unsigned short *videoBuffer;
-# 85 "myLib.h"
+# 87 "myLib.h"
 typedef struct
 {
     u16 tileimg[8192];
@@ -53,11 +55,22 @@ typedef struct
     unsigned short attr2;
     unsigned short fill;
 } OBJ_ATTR;
+typedef struct OBJ_AFFINE
+{
+    u16 fill0[3];
+    short a;
+    u16 fill1[3];
+    short b;
+    u16 fill2[3];
+    short c;
+    u16 fill3[3];
+    short d;
+} OBJ_AFFINE;
 
 
 
 extern OBJ_ATTR shadowOAM[];
-# 174 "myLib.h"
+# 189 "myLib.h"
 void hideSprites();
 
 
@@ -82,10 +95,10 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 217 "myLib.h"
+# 232 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 227 "myLib.h"
+# 242 "myLib.h"
 typedef volatile struct
 {
     volatile const void *src;
@@ -95,9 +108,9 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 268 "myLib.h"
+# 283 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-# 358 "myLib.h"
+# 373 "myLib.h"
 typedef struct
 {
     const unsigned char *data;
@@ -124,6 +137,7 @@ DMA *dma = (DMA *)0x40000B0;
 
 
 OBJ_ATTR shadowOAM[128];
+OBJ_AFFINE shadowOAM_AFF[128];
 
 
 void setPixel3(int col, int row, unsigned short color) {

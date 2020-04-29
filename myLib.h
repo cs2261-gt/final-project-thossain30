@@ -4,7 +4,9 @@
 // Common Typedefs
 typedef unsigned char u8;
 typedef unsigned short u16;
+typedef signed short s16;
 typedef unsigned int u32;
+typedef signed int s32;
 
 // Common Macros
 #define OFFSET(col, row, rowlen) ((row) * (rowlen) + (col))
@@ -122,10 +124,22 @@ typedef struct
     unsigned short attr2;
     unsigned short fill;
 } OBJ_ATTR;
+typedef struct OBJ_AFFINE
+{
+    u16 fill0[3];
+    short a;
+    u16 fill1[3];
+    short b;
+    u16 fill2[3];
+    short c;
+    u16 fill3[3];
+    short d;
+} OBJ_AFFINE;
 
 // Object Attribute Memory
 #define OAM ((OBJ_ATTR *)(0x7000000))
 extern OBJ_ATTR shadowOAM[];
+
 
 // Attribute 0
 #define ATTR0_REGULAR (0 << 8)      // Normal Rendering
@@ -149,6 +163,7 @@ extern OBJ_ATTR shadowOAM[];
 #define ATTR1_SMALL (1 << 14) // --------------------------------------------
 #define ATTR1_MEDIUM (2 << 14)
 #define ATTR1_LARGE (3 << 14)
+#define ATTR1_AFFIND(index) ((index) << 9)
 
 // Attribute 2
 #define ATTR2_TILEID(col, row) ((row)*32 + (col))
@@ -162,11 +177,11 @@ extern OBJ_ATTR shadowOAM[];
 #define BLD_WHITE (1 << 7) //White alpha blending
 #define BLD_STD (1 << 6)   //standard alpha blending
 #define BLD_OFF (0 << 6)   //blend off
-
+//blending alpha stuff
 #define REG_BLDALPHA (*(volatile u16 *)0x04000052)
 #define BLD_EVA(num) ((num) << 0) //top blend weight
 #define BLD_EVB(num) ((num) << 8) //bottom blend weight
-//blending alpha stuff
+//white or black mode blending
 #define REG_BLDY (*(volatile u16 *)0x04000054)
 #define BLD_EY(num) ((num) << 0)
 
